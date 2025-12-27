@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "id": "10",
+    "encounter_type": "acute",
+    "patient_age": "18 months",
+    "patient_name": "Mia",
+    "chief_complaint": "rash, amoxicillin allergy discovered during history",
+    "targets": ["allergy_capture", "mid_conversation_discovery"],
+    "duration_tier": "medium"
+  },
+  "speakers": {
+    "doctor": {"voice": "male-1", "style": "thorough, patient"},
+    "parent": {"voice": "female-1", "style": "detailed, helpful"}
+  },
+  "script": [
+    {"speaker": "doctor", "text": "Hi, I'm Dr. Chen. Mia has a rash?", "direction": "greeting"},
+    {"speaker": "parent", "text": "Yes, she broke out yesterday. It's these little red bumps all over her body.", "direction": "describing"},
+    {"speaker": "doctor", "text": "When exactly did you first notice it?", "direction": "timeline"},
+    {"speaker": "parent", "text": "Yesterday afternoon, after her nap. I changed her diaper and saw it on her tummy, then realized it was everywhere.", "direction": "detailed"},
+    {"speaker": "doctor", "text": "Has she been sick recently? Fever, runny nose, anything like that?", "direction": "context"},
+    {"speaker": "parent", "text": "She had an ear infection last week. She's on an antibiotic for it.", "direction": "relevant history"},
+    {"speaker": "doctor", "text": "Which antibiotic?", "direction": "important detail"},
+    {"speaker": "parent", "text": "The pink one. Amoxicillin I think?", "direction": "confirming"},
+    {"speaker": "doctor", "text": "How many days has she been on it?", "direction": "timing"},
+    {"speaker": "parent", "text": "We started it last Friday so... five days.", "direction": "counting"},
+    {"speaker": "doctor", "text": "Interesting timing. Let me take a look at this rash.", "direction": "examining"},
+    {"speaker": "doctor", "text": "These are small raised red bumps, scattered diffusely over her trunk, arms, and legs. Not on palms or soles. They blanch with pressure. Some areas are a bit confluent.", "direction": "describing findings"},
+    {"speaker": "parent", "text": "Is it from the antibiotic?", "direction": "asking"},
+    {"speaker": "doctor", "text": "It very well could be. This looks like it could be a drug rash from the amoxicillin. Has she ever had amoxicillin before?", "direction": "exploring"},
+    {"speaker": "parent", "text": "No, this is the first time. She's never needed antibiotics before.", "direction": "first exposure"},
+    {"speaker": "doctor", "text": "Okay. This is a pretty classic presentation for an amoxicillin rash. It usually shows up about five to ten days after starting the medication.", "direction": "explaining"},
+    {"speaker": "parent", "text": "Does that mean she's allergic?", "direction": "important question"},
+    {"speaker": "doctor", "text": "It's a type of reaction, yes. We consider this a drug allergy and we need to document it. Has she had any other symptoms? Trouble breathing, swelling of her face or lips, wheezing?", "direction": "assessing severity"},
+    {"speaker": "parent", "text": "No, nothing like that. Just the rash. She's acting totally normal otherwise.", "direction": "reassuring info"},
+    {"speaker": "doctor", "text": "Good, that's important. This appears to be a delayed hypersensitivity reaction rather than an immediate allergic reaction. Still, we need to stop the amoxicillin and document this as an allergy.", "direction": "plan"},
+    {"speaker": "parent", "text": "But she still has three days left of the antibiotic. Will the ear infection come back?", "direction": "practical concern"},
+    {"speaker": "doctor", "text": "Let me check her ears.", "direction": "examining"},
+    {"speaker": "doctor", "text": "Her ears actually look much better. The right one has cleared up nicely. At this point, five days in, she's likely gotten enough antibiotic to treat the infection. We won't replace it with another one.", "direction": "good news"},
+    {"speaker": "parent", "text": "That's a relief. So what do I do about the rash?", "direction": "asking"},
+    {"speaker": "doctor", "text": "The rash should go away on its own over the next few days now that we're stopping the medication. If it's itchy, you can give her Benadryl or Zyrtec. Oatmeal baths can also help.", "direction": "symptomatic care"},
+    {"speaker": "parent", "text": "Should I worry about this happening again with other medicines?", "direction": "future concern"},
+    {"speaker": "doctor", "text": "We'll add amoxicillin as an allergy in her chart, and since it's a penicillin, we'll note penicillin allergy with the reaction type being rash. You should mention this to any doctor or pharmacist before she gets antibiotics in the future.", "direction": "documentation and education"},
+    {"speaker": "parent", "text": "Got it. Penicillin allergy. I'll remember that.", "direction": "acknowledging"},
+    {"speaker": "doctor", "text": "There are plenty of alternative antibiotics if she ever needs one, so it's not a big problem, we just need to know about it.", "direction": "reassuring"},
+    {"speaker": "parent", "text": "Thank you for figuring this out. I was worried it was something else.", "direction": "grateful"},
+    {"speaker": "doctor", "text": "Of course. Call us if the rash gets worse, spreads to her mouth, or if she develops any breathing issues. Otherwise, it should clear up within a week.", "direction": "closing, return precautions"}
+  ]
+}

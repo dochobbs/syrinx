@@ -1,0 +1,197 @@
+{
+  "metadata": {
+    "id": "syrinx_006",
+    "encounter_type": "follow-up",
+    "patient_age": "5 years",
+    "patient_name": "Child",
+    "chief_complaint": "eczema treatment not working",
+    "targets": [],
+    "duration_tier": null
+  },
+  "speakers": {
+    "child": {
+      "voice": "child-girl",
+      "style": "young child, cooperative"
+    },
+    "parent": {
+      "voice": "female-2",
+      "style": "frustrated"
+    },
+    "doctor": {
+      "voice": "female-1",
+      "style": null
+    }
+  },
+  "script": [
+    {
+      "speaker": "doctor",
+      "text": "Hi there! Come on in and have a seat. I see we're back to check on Emma's eczema today.",
+      "direction": "warm"
+    },
+    {
+      "speaker": "parent",
+      "text": "Yes, and honestly, nothing seems to be working. The cream you gave us last month isn't helping at all.",
+      "direction": "frustrated"
+    },
+    {
+      "speaker": "child",
+      "text": "My skin still itches a lot, especially at night.",
+      "direction": "matter-of-fact"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I'm sorry to hear that, Emma. Let's take a look and see what's going on. Can you tell me which areas are bothering you the most?",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "child",
+      "text": "My arms and behind my knees. And sometimes my face gets red.",
+      "direction": "explaining"
+    },
+    {
+      "speaker": "parent",
+      "text": "She's been scratching so much she's bleeding in some spots. I feel like we've tried everything.",
+      "direction": "frustrated"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I can hear how frustrating this has been for both of you. Let me ask - have you been using the hydrocortisone cream twice daily as we discussed?",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "Yes, religiously. Morning and night. But it's like putting water on her skin - no improvement at all.",
+      "direction": "exasperated"
+    },
+    {
+      "speaker": "doctor",
+      "text": "And what about the moisturizer routine? Are we still doing that throughout the day?",
+      "direction": "questioning"
+    },
+    {
+      "speaker": "parent",
+      "text": "Three times a day with the Cetaphil cream you recommended. Nothing's changed.",
+      "direction": "frustrated"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Emma, can you roll up your sleeves for me so I can take a look at your arms?",
+      "direction": "gentle"
+    },
+    {
+      "speaker": "child",
+      "text": "Okay, but don't touch the scratchy parts too hard.",
+      "direction": "cautious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I'll be very gentle, I promise. [examining] I can see the inflammation is more widespread than before, and there are some areas of lichenification from the scratching.",
+      "direction": "[examining]"
+    },
+    {
+      "speaker": "parent",
+      "text": "Lichenifi-what? Is that bad?",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Lichenification - it just means the skin has thickened from chronic scratching. It's not dangerous, but it shows we need a stronger approach.",
+      "direction": "explaining"
+    },
+    {
+      "speaker": "child",
+      "text": "Will it go away?",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Yes, sweetie, it will get better with the right treatment. Let me check behind your knees too. [examining]",
+      "direction": "reassuring [examining]"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I can see why the mild hydrocortisone isn't cutting it anymore. Have you noticed any new triggers lately - different soaps, foods, stress?",
+      "direction": "thoughtful"
+    },
+    {
+      "speaker": "parent",
+      "text": "Well, she started kindergarten this year. Could that be making it worse?",
+      "direction": "realizing"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Absolutely. New environment, different stress levels, possibly different hand soaps at school. That could definitely be a factor.",
+      "direction": "confirming"
+    },
+    {
+      "speaker": "child",
+      "text": "I don't like the soap at school. It smells funny and makes my hands feel weird.",
+      "direction": "complaining"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's a very important clue, Emma. Thank you for telling me that. [typing] I think we need to step up our treatment plan.",
+      "direction": "pleased [typing]"
+    },
+    {
+      "speaker": "parent",
+      "text": "What does that mean exactly? Stronger steroids?",
+      "direction": "apprehensive"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I'm going to prescribe a medium-potency topical steroid called triamcinolone. It's stronger than what we tried before but still very safe for Emma's age.",
+      "direction": "explaining"
+    },
+    {
+      "speaker": "doctor",
+      "text": "We'll use it twice daily for two weeks, then step down to once daily. And I want to add a prescription moisturizer with ceramides.",
+      "direction": "detailing"
+    },
+    {
+      "speaker": "parent",
+      "text": "And that should work better than what we've been doing?",
+      "direction": "hopeful but skeptical"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I believe it will. We're also going to talk to your school about providing a gentle, fragrance-free soap for Emma to use.",
+      "direction": "confident"
+    },
+    {
+      "speaker": "child",
+      "text": "Can I bring my own soap to school?",
+      "direction": "curious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's a great idea! We can definitely arrange that. I'll write a note for your teacher explaining your special soap needs.",
+      "direction": "encouraging"
+    },
+    {
+      "speaker": "parent",
+      "text": "How long before we should see improvement?",
+      "direction": "eager"
+    },
+    {
+      "speaker": "doctor",
+      "text": "You should start seeing less redness and itching within a few days. Let's plan to check back in two weeks to see how we're doing.",
+      "direction": "optimistic"
+    },
+    {
+      "speaker": "child",
+      "text": "Will I stop itching at night?",
+      "direction": "hopeful"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's exactly what we're aiming for, Emma. Better sleep for everyone!",
+      "direction": "warm"
+    }
+  ],
+  "_generated": {
+    "tool": "syrinx",
+    "timestamp": "2025-12-27T10:53:14.689108",
+    "errors_injected": []
+  }
+}

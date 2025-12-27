@@ -1,0 +1,122 @@
+{
+  "metadata": {
+    "id": "syrinx_002",
+    "encounter_type": "acute",
+    "patient_age": "6 months",
+    "patient_name": "Olivia Chen",
+    "chief_complaint": "cough and congestion",
+    "targets": [
+      "detect_missed-allergy"
+    ],
+    "duration_tier": "short",
+    "patient_sex": "female"
+  },
+  "speakers": {
+    "doctor": {
+      "voice": "female-1",
+      "style": "warm, thorough"
+    },
+    "parent": {
+      "voice": "female-2",
+      "style": "anxious first-time mom, asks many questions"
+    }
+  },
+  "script": [
+    {
+      "speaker": "doctor",
+      "text": "Hi there! I'm Dr. Martinez. I see we're here for little Livvy today. What's been going on?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "parent",
+      "text": "Hi, yes. She's had this cough and congestion for about three days now. I'm really worried - she's never been sick before.",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I understand this can be scary with your first baby. Tell me more about the cough - is it worse at any particular time?",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "It seems worse at night and when she's lying down. And she had a reaction to amoxicillin when she had that ear infection at 4 months - got a rash all over her body.",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Okay, noted about the nighttime symptoms. Any fever? How's her eating and sleeping?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "parent",
+      "text": "No fever that I can tell. She's been nursing okay but seems more fussy than usual. [baby fussing] See? She's been like this a lot.",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Let me take a look at her. [examining] Her breathing sounds a bit congested but not labored. Let me listen to her chest.",
+      "direction": "calm"
+    },
+    {
+      "speaker": "parent",
+      "text": "Is that normal? The congestion sounds so loud to me. Should I be using a humidifier?",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "[examining] Her lungs sound clear, which is good news. This looks like a typical upper respiratory infection - very common in babies.",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "So it's just a cold? When will it get better? Do we need antibiotics?",
+      "direction": "hopeful"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Most of these viral infections resolve on their own in 7-10 days. But given her congestion, I'd like to prescribe Augmentin to prevent any secondary bacterial infection.",
+      "direction": "explaining"
+    },
+    {
+      "speaker": "parent",
+      "text": "Wait, isn't that similar to amoxicillin? I mentioned she had that allergic reaction before...",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Oh right, let me prescribe azithromycin instead. That's in a different class and will be safer for her.",
+      "direction": "thoughtful"
+    },
+    {
+      "speaker": "parent",
+      "text": "Okay, thank you. What else can I do to help her feel better? She seems so miserable.",
+      "direction": "relieved"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Saline drops in her nose and a cool mist humidifier will help. Keep nursing frequently for hydration. Come back if she develops fever or trouble breathing.",
+      "direction": "instructive"
+    },
+    {
+      "speaker": "parent",
+      "text": "Should I be worried about it getting worse? When exactly should I bring her back?",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "If she has trouble feeding, seems unusually lethargic, or develops a fever over 100.4, call us right away. Otherwise, this should improve gradually over the next week.",
+      "direction": "reassuring"
+    }
+  ],
+  "_generated": {
+    "tool": "syrinx",
+    "timestamp": "2025-12-27T10:49:43.079257",
+    "errors_injected": [
+      {
+        "category": "clinical",
+        "type": "missed-allergy",
+        "severity": "moderate"
+      }
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "id": "12",
+    "encounter_type": "well-child",
+    "patient_age": "2 months",
+    "patient_name": "Charlotte",
+    "chief_complaint": "2 month well check, vaccines, baby on reflux meds + vitamin D, anxious mom about vaccines",
+    "targets": ["multiple_medications", "anxious_parent", "vaccine_counseling"],
+    "duration_tier": "medium"
+  },
+  "speakers": {
+    "doctor": {"voice": "male-1", "style": "patient, evidence-based"},
+    "parent": {"voice": "female-1", "style": "anxious, information-seeking"}
+  },
+  "script": [
+    {"speaker": "doctor", "text": "Good morning! Charlotte looks great. How's she been doing?", "direction": "cheerful greeting"},
+    {"speaker": "parent", "text": "She's good overall. The reflux has been better since we started the medication.", "direction": "updating"},
+    {"speaker": "doctor", "text": "That's good to hear. Remind me what she's on for that?", "direction": "med review"},
+    {"speaker": "parent", "text": "Famotidine, the liquid. Point four mLs twice a day. And she's also on vitamin D drops, 400 units once a day.", "direction": "detailed, precise"},
+    {"speaker": "doctor", "text": "Perfect. Is she still spitting up or has that improved?", "direction": "assessing"},
+    {"speaker": "parent", "text": "Still spitting up but less often, and she doesn't seem uncomfortable anymore.", "direction": "improvement"},
+    {"speaker": "doctor", "text": "Excellent. As long as she's gaining weight and comfortable, that's what matters. Let me check her weight.", "direction": "transitioning"},
+    {"speaker": "doctor", "text": "Eleven pounds four ounces. She was eight pounds at birth. That's great growth, following her curve nicely.", "direction": "growth assessment"},
+    {"speaker": "parent", "text": "Good. Um, I wanted to talk about the vaccines today. I've been reading a lot and I have some concerns.", "direction": "raising concern"},
+    {"speaker": "doctor", "text": "Of course. What's on your mind?", "direction": "open, listening"},
+    {"speaker": "parent", "text": "It just seems like a lot of vaccines at once. She's so little. Is it safe to give that many at the same time?", "direction": "worried"},
+    {"speaker": "doctor", "text": "That's a really common concern, and I'm glad you're asking. At two months, she'll get vaccines for five diseases, but it's only three shots plus one oral dose.", "direction": "clarifying"},
+    {"speaker": "parent", "text": "But isn't that overwhelming for her immune system? Couldn't we spread them out?", "direction": "proposing alternative"},
+    {"speaker": "doctor", "text": "I understand why that seems intuitive, but actually her immune system handles it easily. Babies encounter thousands of antigens every day just from normal exposure. These vaccines are a tiny fraction of what her immune system already manages.", "direction": "educating"},
+    {"speaker": "parent", "text": "But what about side effects? I read that vaccines can cause fevers and fussiness.", "direction": "another concern"},
+    {"speaker": "doctor", "text": "Some babies do get a low fever or extra fussiness for a day or two. That's actually a sign the immune system is responding. You can give Tylenol if she seems uncomfortable.", "direction": "honest about effects"},
+    {"speaker": "parent", "text": "What about more serious reactions? I've read stories online.", "direction": "anxious, online research"},
+    {"speaker": "doctor", "text": "Serious reactions are extremely rare. The diseases these vaccines prevent are far more dangerous. Whooping cough, for example, can be fatal in babies this age.", "direction": "risk perspective"},
+    {"speaker": "parent", "text": "That's scary.", "direction": "reacting"},
+    {"speaker": "doctor", "text": "It is, which is why we vaccinate. The vaccines are very well studied. Millions of babies get them safely every year. The schedule is designed to protect her as early as possible when she's most vulnerable.", "direction": "reassurance with evidence"},
+    {"speaker": "parent", "text": "Can we at least wait a little longer? Start at three months instead?", "direction": "negotiating"},
+    {"speaker": "doctor", "text": "I really recommend starting today. Every week she's unprotected is a risk, especially with whooping cough circulating. What if we walk through each vaccine and I explain what it protects against?", "direction": "gentle, informative approach"},
+    {"speaker": "parent", "text": "Okay, I guess that would help.", "direction": "open to learning"},
+    {"speaker": "doctor", "text": "So today is DTaP, which protects against diphtheria, tetanus, and pertussis. Hib protects against a bacteria that causes meningitis. Pneumococcal protects against another meningitis cause. Polio is the oral one. And hepatitis B if she didn't finish her series yet.", "direction": "explaining"},
+    {"speaker": "parent", "text": "She got hep B at the hospital.", "direction": "recalling"},
+    {"speaker": "doctor", "text": "Right, so this would be her second dose. She needs three total.", "direction": "confirming"},
+    {"speaker": "parent", "text": "Okay. I guess... I just worry. I'm her mom, it's my job to protect her.", "direction": "emotional"},
+    {"speaker": "doctor", "text": "And you're doing that by being here and asking questions. Vaccinating her is one of the best ways to protect her. I wouldn't recommend anything I didn't believe was safe and important.", "direction": "validating, reassuring"},
+    {"speaker": "parent", "text": "Alright. Let's do them. All of them today.", "direction": "deciding"},
+    {"speaker": "doctor", "text": "Good decision. She might be fussy tonight. You can give Tylenol, one point two five mLs, if she seems uncomfortable or has a fever. We'll see her back at four months for the next round.", "direction": "plan, anticipatory guidance"},
+    {"speaker": "parent", "text": "How much Tylenol again?", "direction": "confirming"},
+    {"speaker": "doctor", "text": "One point two five mLs. That's for infant Tylenol concentration.", "direction": "dose confirmation"},
+    {"speaker": "parent", "text": "Got it. And she keeps the famotidine and vitamin D?", "direction": "confirming other meds"},
+    {"speaker": "doctor", "text": "Yes, continue both of those. Same doses. We'll reassess the famotidine at four months.", "direction": "medication continuity"},
+    {"speaker": "parent", "text": "Thank you for taking the time to explain everything.", "direction": "grateful"},
+    {"speaker": "doctor", "text": "Always. The nurse will be in shortly with the vaccines.", "direction": "closing"}
+  ]
+}

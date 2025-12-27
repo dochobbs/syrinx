@@ -1,0 +1,209 @@
+{
+  "metadata": {
+    "id": "syrinx_008",
+    "encounter_type": "mental-health",
+    "patient_age": "14 years",
+    "patient_name": "Child",
+    "chief_complaint": "anxiety and depression",
+    "targets": [
+      "communication_quality"
+    ],
+    "duration_tier": null
+  },
+  "speakers": {
+    "mom": {
+      "voice": "female-2",
+      "style": "disagreeing about treatment"
+    },
+    "teen": {
+      "voice": "female-2",
+      "style": "teenager, initially guarded"
+    },
+    "dad": {
+      "voice": "male-1",
+      "style": "supportive"
+    },
+    "doctor": {
+      "voice": "female-1",
+      "style": null
+    }
+  },
+  "script": [
+    {
+      "speaker": "doctor",
+      "text": "Good morning! I'm Dr. Martinez. I understand you're here today because of some concerns about anxiety and depression. Can you tell me what's been going on?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "teen",
+      "text": "I don't know... I just feel really anxious all the time and sad. Like nothing matters anymore.",
+      "direction": "quiet"
+    },
+    {
+      "speaker": "mom",
+      "text": "She's been having panic attacks at school and crying herself to sleep almost every night for the past two months.",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "dad",
+      "text": "I think she's just stressed about high school starting. This is normal teenage stuff, right? She doesn't need medication or therapy.",
+      "direction": "dismissive"
+    },
+    {
+      "speaker": "mom",
+      "text": "Tom, this is not normal! She missed twelve days of school last month because of the anxiety.",
+      "direction": "frustrated"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Let me ask a few more questions. Sarah, how long have you been feeling this way?",
+      "direction": "calm"
+    },
+    {
+      "speaker": "teen",
+      "text": "Maybe since the beginning of the school year? But it's gotten way worse lately.",
+      "direction": "hesitant"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Have you had any thoughts about hurting yourself or not wanting to be here anymore?",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "teen",
+      "text": "Sometimes I think about it... but I wouldn't actually do anything.",
+      "direction": "quiet"
+    },
+    {
+      "speaker": "dad",
+      "text": "See, she's fine! She's not going to hurt herself. We just need to toughen up a bit.",
+      "direction": "dismissive"
+    },
+    {
+      "speaker": "mom",
+      "text": "Tom! That's exactly the wrong thing to say right now!",
+      "direction": "angry"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I can see there are different perspectives here. Sarah, it sounds like you're really struggling. Can you tell me about your sleep and appetite?",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "teen",
+      "text": "I barely sleep. Maybe three or four hours a night. And I'm not really hungry anymore.",
+      "direction": "tired"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Any family history of anxiety or depression that you know of?",
+      "direction": "calm"
+    },
+    {
+      "speaker": "mom",
+      "text": "My sister has depression and takes medication for it. It runs in my family.",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "dad",
+      "text": "That doesn't mean Sarah has to go down that path. We can handle this ourselves.",
+      "direction": "firm"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I understand your concerns about treatment, but given Sarah's symptoms - the panic attacks, sleep disturbance, appetite changes, and occasional thoughts of self-harm - this does meet criteria for clinical depression and anxiety.",
+      "direction": "explaining"
+    },
+    {
+      "speaker": "teen",
+      "text": "I don't want to talk about this anymore. Can we just go home?",
+      "direction": "withdrawn"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Sarah, I know this is hard to discuss, but getting help is really important for feeling better. We have several treatment options.",
+      "direction": "gentle"
+    },
+    {
+      "speaker": "teen",
+      "text": "I said I don't want to talk about it!",
+      "direction": "agitated"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Okay, let's move on then. I'd like to discuss treatment recommendations with your parents.",
+      "direction": "accepting"
+    },
+    {
+      "speaker": "mom",
+      "text": "What do you recommend, doctor?",
+      "direction": "eager"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I'd recommend starting with therapy - specifically cognitive behavioral therapy - and we should also consider a low-dose SSRI medication.",
+      "direction": "professional"
+    },
+    {
+      "speaker": "dad",
+      "text": "Absolutely not. No medications. She's only fourteen years old.",
+      "direction": "firm"
+    },
+    {
+      "speaker": "mom",
+      "text": "But if it helps her feel better, shouldn't we try it?",
+      "direction": "conflicted"
+    },
+    {
+      "speaker": "doctor",
+      "text": "The research shows that the combination of therapy and medication is most effective for moderate to severe depression in adolescents.",
+      "direction": "explaining"
+    },
+    {
+      "speaker": "dad",
+      "text": "I don't care about research. I'm not putting my daughter on psychiatric drugs.",
+      "direction": "adamant"
+    },
+    {
+      "speaker": "teen",
+      "text": "Maybe... maybe I could try just talking to someone first?",
+      "direction": "tentative"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's a great start, Sarah. We can begin with therapy and see how you respond. I'll give you some referrals for therapists who specialize in teen anxiety and depression.",
+      "direction": "encouraging"
+    },
+    {
+      "speaker": "mom",
+      "text": "Thank you, doctor. Should we schedule a follow-up?",
+      "direction": "relieved"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Yes, let's see you back in four weeks to see how therapy is going. And Sarah, if things get worse, especially those thoughts we talked about, please call me immediately.",
+      "direction": "serious"
+    },
+    {
+      "speaker": "teen",
+      "text": "Okay... I guess.",
+      "direction": "resigned"
+    },
+    {
+      "speaker": "dad",
+      "text": "We appreciate your time, doctor.",
+      "direction": "polite but firm"
+    }
+  ],
+  "_generated": {
+    "tool": "syrinx",
+    "timestamp": "2025-12-27T10:57:24.227596",
+    "errors_injected": [
+      {
+        "category": "communication",
+        "type": "patient-reluctance",
+        "severity": "moderate"
+      }
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "id": "16",
+    "encounter_type": "well-child",
+    "patient_age": "8 years",
+    "patient_name": "Ryan",
+    "chief_complaint": "annual physical, on ADHD med + melatonin + daily vitamin, growth check, BMI counseling",
+    "targets": ["multiple_medications", "growth_monitoring", "BMI_counseling"],
+    "duration_tier": "short"
+  },
+  "speakers": {
+    "doctor": {"voice": "male-1", "style": "friendly, direct"},
+    "parent": {"voice": "female-1", "style": "organized, matter-of-fact"},
+    "child": {"voice": "child-boy", "style": "squirmy, distracted"}
+  },
+  "script": [
+    {"speaker": "doctor", "text": "Hey Ryan! Here for your yearly checkup. How's third grade going?", "direction": "engaging child"},
+    {"speaker": "child", "text": "Good. We have a class pet now, a hamster.", "direction": "distracted, sharing"},
+    {"speaker": "doctor", "text": "Cool! What's its name?", "direction": "rapport"},
+    {"speaker": "child", "text": "Speedy. But he's actually kind of slow.", "direction": "amused"},
+    {"speaker": "doctor", "text": "Ha! Let me talk to Mom for a minute, then I'll check you out.", "direction": "transitioning"},
+    {"speaker": "parent", "text": "He's doing well overall. The ADHD medication has really helped at school.", "direction": "updating"},
+    {"speaker": "doctor", "text": "That's great. Let me review his meds. He's on Concerta 27 milligrams every morning, right?", "direction": "med review"},
+    {"speaker": "parent", "text": "Yes. And melatonin two milligrams at bedtime because the Concerta was keeping him up. Plus a daily vitamin.", "direction": "complete list"},
+    {"speaker": "doctor", "text": "Any side effects from the Concerta? Appetite, mood, headaches?", "direction": "monitoring"},
+    {"speaker": "parent", "text": "His appetite is still low at lunch. He makes up for it at dinner and on weekends.", "direction": "noting"},
+    {"speaker": "doctor", "text": "That's typical. We'll watch his weight. Speaking of which, let me get his measurements.", "direction": "transitioning"},
+    {"speaker": "doctor", "text": "Ryan, hop on the scale. Fifty-eight pounds. And let's get your height. Fifty inches.", "direction": "measuring"},
+    {"speaker": "doctor", "text": "Okay, so his BMI is 15.9, which is 40th percentile. He's actually dropped from 50th percentile last year.", "direction": "calculating"},
+    {"speaker": "parent", "text": "Is that because of the medication?", "direction": "concerned"},
+    {"speaker": "doctor", "text": "Possibly. Stimulant medications can suppress appetite and affect growth. He's still in normal range, but I want to watch this.", "direction": "explaining"},
+    {"speaker": "parent", "text": "Should we change medications?", "direction": "asking"},
+    {"speaker": "doctor", "text": "Not yet. He's doing well academically and behaviorally on this dose. Let's try some strategies first. Give him a good breakfast before the medication kicks in. Pack calorie-dense snacks. And encourage eating after the medication wears off in the evening.", "direction": "plan"},
+    {"speaker": "parent", "text": "We already do a big breakfast. I can try more snacks.", "direction": "acknowledging"},
+    {"speaker": "doctor", "text": "Also, consider a medication holiday on weekends if his behavior is manageable without it. That gives his appetite a chance to recover.", "direction": "option"},
+    {"speaker": "parent", "text": "We tried that but he's a handful without it. Maybe we can try again over summer.", "direction": "practical"},
+    {"speaker": "doctor", "text": "That's reasonable. Summer is a good time for drug holidays.", "direction": "agreeing"},
+    {"speaker": "doctor", "text": "Ryan, come let me listen to your heart.", "direction": "to child"},
+    {"speaker": "doctor", "text": "Heart sounds good. Lungs are clear. Let me see your throat. Say ahh. Looks fine.", "direction": "examining"},
+    {"speaker": "parent", "text": "Does he need any shots?", "direction": "asking"},
+    {"speaker": "doctor", "text": "No vaccines due today. His next round is at eleven.", "direction": "no vaccines"},
+    {"speaker": "parent", "text": "Perfect. He'll be happy about that.", "direction": "relieved"},
+    {"speaker": "doctor", "text": "Ryan, you're all done! Keep being awesome in school.", "direction": "to child"},
+    {"speaker": "child", "text": "Can I get a sticker?", "direction": "asking"},
+    {"speaker": "doctor", "text": "Absolutely. Mom, let's recheck his weight in three months. If he's still trending down, we might adjust the medication.", "direction": "follow up plan"},
+    {"speaker": "parent", "text": "Sounds good. I'll schedule the weight check.", "direction": "agreeing"},
+    {"speaker": "doctor", "text": "Keep the melatonin and vitamin going. Same doses. Call if any concerns.", "direction": "closing"}
+  ]
+}

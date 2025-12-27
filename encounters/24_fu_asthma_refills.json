@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "id": "24",
+    "encounter_type": "follow-up",
+    "patient_age": "6 years",
+    "patient_name": "Jackson",
+    "chief_complaint": "asthma follow-up, on 3 controllers, needs refills and action plan update",
+    "targets": ["multiple_medications", "refills", "asthma_action_plan"],
+    "duration_tier": "medium"
+  },
+  "speakers": {
+    "doctor": {"voice": "male-1", "style": "systematic, thorough"},
+    "parent": {"voice": "female-1", "style": "experienced asthma mom"}
+  },
+  "script": [
+    {"speaker": "doctor", "text": "Hi, Jackson's here for his asthma check. How's he been doing?", "direction": "opening"},
+    {"speaker": "parent", "text": "Really well actually. No flares since his last visit. He even made it through cold season without needing prednisone.", "direction": "good news"},
+    {"speaker": "doctor", "text": "That's great to hear. Let me review his medications. He's on Flovent 110 two puffs twice daily, Singulair 5 milligrams at bedtime, and albuterol as needed?", "direction": "med review"},
+    {"speaker": "parent", "text": "Yes, that's right. Oh, and we added Flonase for his allergies. The allergist suggested it.", "direction": "additional med"},
+    {"speaker": "doctor", "text": "Good, nasal steroids can help with asthma too by controlling the upper airway inflammation. How often is he needing the albuterol?", "direction": "rescue use"},
+    {"speaker": "parent", "text": "Hardly ever. Maybe once a month if he runs around a lot.", "direction": "well-controlled"},
+    {"speaker": "doctor", "text": "That's excellent. Less than twice a week is our goal for rescue inhaler use. He's well below that.", "direction": "interpreting"},
+    {"speaker": "parent", "text": "Should we try to step down his medications since he's doing so well?", "direction": "asking"},
+    {"speaker": "doctor", "text": "It's tempting, but I'd like to keep him stable through spring allergy season first. Let's reassess in June. If he's still doing well, we can try stepping down the Flovent.", "direction": "clinical reasoning"},
+    {"speaker": "parent", "text": "That makes sense. I don't want to rock the boat.", "direction": "agreeing"},
+    {"speaker": "doctor", "text": "Let me listen to his lungs.", "direction": "examining"},
+    {"speaker": "doctor", "text": "Deep breath buddy. And another. Lungs are crystal clear. No wheezing at all.", "direction": "exam findings"},
+    {"speaker": "parent", "text": "Music to my ears.", "direction": "relieved"},
+    {"speaker": "doctor", "text": "I need to update his asthma action plan for school. Let me go through it with you.", "direction": "action plan"},
+    {"speaker": "parent", "text": "Yes, they need a new one every year.", "direction": "acknowledging"},
+    {"speaker": "doctor", "text": "Green zone, when he's doing well: continue Flovent two puffs twice daily and Singulair at bedtime. No albuterol needed.", "direction": "green zone"},
+    {"speaker": "doctor", "text": "Yellow zone, if he's coughing, wheezing, or short of breath: give albuterol two puffs, can repeat every four hours. Continue Flovent and Singulair. Call us if needing albuterol more than every four hours.", "direction": "yellow zone"},
+    {"speaker": "doctor", "text": "Red zone, if albuterol isn't helping, lips look blue, or he can't talk in full sentences: give albuterol and call 911.", "direction": "red zone"},
+    {"speaker": "parent", "text": "Got it. Same as before basically.", "direction": "familiar"},
+    {"speaker": "doctor", "text": "Exactly. I'll print you a new copy for the school. Now, do you need refills?", "direction": "refills"},
+    {"speaker": "parent", "text": "Yes, everything. We're running low on all of them.", "direction": "requesting"},
+    {"speaker": "doctor", "text": "I'll send Flovent 110, one inhaler, 90-day supply. Singulair 5 milligrams, 90-day supply. And albuterol, two inhalers so you have one for home and one for school.", "direction": "refills"},
+    {"speaker": "parent", "text": "What about the Flonase?", "direction": "asking"},
+    {"speaker": "doctor", "text": "That's over the counter now, so you can just buy it at the pharmacy. But keep using it daily through allergy season.", "direction": "clarifying"},
+    {"speaker": "parent", "text": "Oh right, I forgot. When do we come back?", "direction": "follow up"},
+    {"speaker": "doctor", "text": "Let's do three months, so late spring. We'll see how allergy season treats him and talk about stepping down then.", "direction": "plan"},
+    {"speaker": "parent", "text": "Perfect. Thank you, Doctor.", "direction": "closing"},
+    {"speaker": "doctor", "text": "Keep up the good work. He's doing great.", "direction": "closing"}
+  ]
+}

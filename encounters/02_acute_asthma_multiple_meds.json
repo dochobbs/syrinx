@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "id": "02",
+    "encounter_type": "acute",
+    "patient_age": "6 years",
+    "patient_name": "Marcus",
+    "chief_complaint": "asthma exacerbation, on 4 medications",
+    "targets": ["medication_reconciliation", "dose_adjustment"],
+    "duration_tier": "medium"
+  },
+  "speakers": {
+    "doctor": {"voice": "female-1", "style": "warm, thorough"},
+    "parent": {"voice": "female-2", "style": "experienced, organized"},
+    "child": {"voice": "child-boy", "style": "uncomfortable, quiet"}
+  },
+  "script": [
+    {"speaker": "doctor", "text": "Hi Marcus, hi Mom. I see he's here for breathing trouble?", "direction": "greeting, concerned"},
+    {"speaker": "parent", "text": "Yeah, he's been coughing a lot the past two days, especially at night. And today he's wheezing. I've been giving him his albuterol every four hours.", "direction": "organized, reporting"},
+    {"speaker": "doctor", "text": "Okay. Let me just review his medications real quick. He's on albuterol as needed, Flovent twice daily, Singulair at night, and Zyrtec for allergies. Is that still current?", "direction": "confirming meds"},
+    {"speaker": "parent", "text": "Yes, that's right. The albuterol is the inhaler with the spacer, two puffs. Flovent is also two puffs morning and night. Singulair is the five milligram chewable at bedtime. And Zyrtec is the liquid, one teaspoon, I give that in the morning.", "direction": "detailed, precise"},
+    {"speaker": "doctor", "text": "Perfect. And he's been taking all of those consistently?", "direction": "verifying adherence"},
+    {"speaker": "parent", "text": "Yes, we're pretty good about it. I have a chart on the fridge.", "direction": "confident"},
+    {"speaker": "doctor", "text": "That's great. Marcus, can you tell me how you're feeling? Is it hard to breathe?", "direction": "engaging child"},
+    {"speaker": "child", "text": "My chest feels tight. And I keep coughing.", "direction": "uncomfortable"},
+    {"speaker": "doctor", "text": "I'm sorry buddy, that doesn't feel good. Let me listen to you.", "direction": "sympathetic"},
+    {"speaker": "doctor", "text": "Okay, I can hear some wheezing in both lungs, more on the right side. He's moving air okay but definitely having some bronchospasm. Let's do a breathing treatment here and see how he responds.", "direction": "examining, planning"},
+    {"speaker": "parent", "text": "Should we increase his Flovent? This seems to happen every time the weather changes.", "direction": "asking, pattern recognition"},
+    {"speaker": "doctor", "text": "That's a good thought. What dose is his Flovent right now?", "direction": "clarifying"},
+    {"speaker": "parent", "text": "It's the 44 microgram one. Two puffs twice a day.", "direction": "specific"},
+    {"speaker": "doctor", "text": "Given that he's having more frequent flares, I think we should step him up to the 110 microgram strength. Same thing, two puffs twice daily, but stronger dose.", "direction": "adjusting"},
+    {"speaker": "parent", "text": "Okay. And should we keep doing the albuterol every four hours?", "direction": "practical"},
+    {"speaker": "doctor", "text": "For the next two to three days, yes, you can do albuterol every four to six hours as needed. Once he's back to baseline, go back to using it only when he needs it.", "direction": "instructions"},
+    {"speaker": "parent", "text": "What about a steroid burst? Last time they gave him that prednisone liquid.", "direction": "experienced parent"},
+    {"speaker": "doctor", "text": "I'm going to hold off on that for now. Let's see how he does with the increased Flovent and regular albuterol. If he's not better in 48 hours or gets worse, then we'll add the oral steroid.", "direction": "clinical reasoning"},
+    {"speaker": "child", "text": "I don't like that medicine. It tastes bad.", "direction": "interjecting"},
+    {"speaker": "doctor", "text": "I know, it's not fun. Hopefully we won't need it. The nurse is going to come give you a breathing treatment now, and you should feel a lot better after.", "direction": "reassuring child"},
+    {"speaker": "parent", "text": "So to summarize, we're increasing the Flovent to the 110, keeping everything else the same, albuterol every four to six hours for now, and call if he's not better in two days?", "direction": "confirming plan"},
+    {"speaker": "doctor", "text": "Exactly right. And call sooner if he's working harder to breathe, breathing fast, or the albuterol isn't lasting four hours.", "direction": "return precautions"},
+    {"speaker": "parent", "text": "Got it. Should I schedule a follow up?", "direction": "practical"},
+    {"speaker": "doctor", "text": "Yes, let's have him come back in two weeks so we can see how the new Flovent dose is working. We might keep him there or adjust again depending on how he does.", "direction": "follow up plan"},
+    {"speaker": "parent", "text": "Thank you, Doctor. Say thank you, Marcus.", "direction": "prompting child"},
+    {"speaker": "child", "text": "Thank you.", "direction": "quiet, polite"},
+    {"speaker": "doctor", "text": "You're welcome. Hang in there, buddy.", "direction": "warm closing"}
+  ]
+}

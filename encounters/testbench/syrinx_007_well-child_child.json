@@ -1,0 +1,272 @@
+{
+  "metadata": {
+    "id": "syrinx_007",
+    "encounter_type": "well-child",
+    "patient_age": "4 years",
+    "patient_name": "Child",
+    "chief_complaint": "pre-K physical with developmental screening, parental concerns about speech and behavior",
+    "targets": [],
+    "duration_tier": "long"
+  },
+  "speakers": {
+    "child": {
+      "voice": "child-girl",
+      "style": "young child, cooperative"
+    },
+    "doctor": {
+      "voice": "female-1",
+      "style": null
+    },
+    "parent": {
+      "voice": "female-2",
+      "style": "concerned"
+    }
+  },
+  "script": [
+    {
+      "speaker": "doctor",
+      "text": "Good morning! I'm Dr. Martinez. You must be Emma, and you're here for your pre-K physical today.",
+      "direction": "warm"
+    },
+    {
+      "speaker": "parent",
+      "text": "Yes, that's right. I'm Sarah, her mom. Emma, can you say hi to the doctor?",
+      "direction": "encouraging"
+    },
+    {
+      "speaker": "child",
+      "text": "Hi doctor lady.",
+      "direction": "shy"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Hi Emma! I love your princess shirt. So you're going to start pre-K soon - that's so exciting! Mom, what brings you in today besides the school physical?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "parent",
+      "text": "Well, we need the forms for school, but I'm also concerned about her speech. She's hard to understand sometimes, and her behavior has been challenging lately.",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I see. Can you tell me more about the speech concerns? When did you first notice this?",
+      "direction": "attentive"
+    },
+    {
+      "speaker": "parent",
+      "text": "It's been ongoing, but it seems worse lately. Strangers can't understand her, and even I have trouble sometimes. She gets frustrated and has tantrums.",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Emma, can you tell me your favorite color?",
+      "direction": "engaging"
+    },
+    {
+      "speaker": "child",
+      "text": "Puh-pul! I like puh-pul!",
+      "direction": "excited"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Purple is beautiful! And what do you like to do for fun?",
+      "direction": "encouraging"
+    },
+    {
+      "speaker": "child",
+      "text": "I like to daw and pay wif my dolls.",
+      "direction": "animated"
+    },
+    {
+      "speaker": "parent",
+      "text": "See what I mean? She's trying to say 'draw' and 'play with' but the sounds aren't clear.",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I can hear some of those speech patterns. Let's talk about the behavioral concerns too. What kinds of behaviors are you seeing?",
+      "direction": "understanding"
+    },
+    {
+      "speaker": "parent",
+      "text": "Lots of tantrums, especially when she can't communicate what she wants. She hits sometimes, and she doesn't follow directions well.",
+      "direction": "frustrated"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Those behaviors often go hand in hand with communication difficulties. Has she had any ear infections or hearing concerns?",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "She had a few ear infections as a baby, but nothing recent. Her hearing seems fine - she responds to everything.",
+      "direction": "thoughtful"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Good to know. Any concerns about her development otherwise? Is she potty trained, can she dress herself, things like that?",
+      "direction": "calm"
+    },
+    {
+      "speaker": "parent",
+      "text": "She's been potty trained for about six months. She can put on simple clothes but needs help with buttons and zippers. She knows her colors and can count to ten.",
+      "direction": "relieved"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That all sounds very age-appropriate. Emma, show me how you can hop on one foot!",
+      "direction": "playful"
+    },
+    {
+      "speaker": "child",
+      "text": "Look! Look! I can do it!",
+      "direction": "proud"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Wow, you're so good at that! Now let's check your body to make sure everything is healthy. Is it okay if I listen to your heart?",
+      "direction": "gentle"
+    },
+    {
+      "speaker": "child",
+      "text": "Okay. Is it gonna hurt?",
+      "direction": "cautious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Not at all, it just feels cool. Here we go.",
+      "direction": "reassuring [examining]"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Your heart sounds perfect. Now I'm going to look in your ears - this might tickle a little.",
+      "direction": "calm [examining]"
+    },
+    {
+      "speaker": "child",
+      "text": "That tickles! Hehe!",
+      "direction": "giggling"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Your ears look great, no fluid or infection. Let me check your throat now - can you say 'ahh' like a lion?",
+      "direction": "encouraging [examining]"
+    },
+    {
+      "speaker": "child",
+      "text": "Ahhhh! Roar!",
+      "direction": "cooperative"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Perfect! Everything looks healthy. Now Emma, can you walk across the room for me like you're on a balance beam?",
+      "direction": "instructive"
+    },
+    {
+      "speaker": "child",
+      "text": "Like dis?",
+      "direction": "concentrating"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Exactly like that! You have great balance. Can you draw a circle for me on this paper?",
+      "direction": "encouraging"
+    },
+    {
+      "speaker": "child",
+      "text": "I daw lots of circles! See?",
+      "direction": "proud"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Those are wonderful circles! Now Mom, let's talk about what I'm seeing. Emma is developmentally on track in most areas, but I do hear the speech articulation issues you mentioned.",
+      "direction": "professional"
+    },
+    {
+      "speaker": "parent",
+      "text": "So what do we do about it? Will it affect her starting school?",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Many children Emma's age have some articulation challenges, and most schools are very accommodating. I'd recommend a speech evaluation to determine if she needs therapy.",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "How do I get that set up? And what about the behavior issues?",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I'll give you a referral for speech therapy. As for behavior, it often improves once communication gets easier. We can also discuss some strategies.",
+      "direction": "helpful"
+    },
+    {
+      "speaker": "child",
+      "text": "Mommy, I hungry.",
+      "direction": "tugging on parent"
+    },
+    {
+      "speaker": "parent",
+      "text": "We'll eat after we're done, sweetie. Sorry, doctor.",
+      "direction": "apologetic"
+    },
+    {
+      "speaker": "doctor",
+      "text": "No problem at all. Emma, you've been such a good patient today. Let me finish talking with your mom, okay?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "doctor",
+      "text": "For school, she'll need her immunizations updated. She needs her second varicella vaccine and her pre-K boosters.",
+      "direction": "informative [typing]"
+    },
+    {
+      "speaker": "parent",
+      "text": "Okay, we can do those today. When should I expect to hear about the speech evaluation?",
+      "direction": "practical"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Usually within two to three weeks. In the meantime, read to her daily, speak clearly, and don't correct her - just model the correct sounds naturally.",
+      "direction": "instructive"
+    },
+    {
+      "speaker": "parent",
+      "text": "That's helpful, thank you. I feel better having a plan.",
+      "direction": "relieved"
+    },
+    {
+      "speaker": "doctor",
+      "text": "She's a delightful little girl, and with some support, I expect she'll do wonderfully in pre-K. Let's get those vaccines taken care of, shall we?",
+      "direction": "encouraging"
+    },
+    {
+      "speaker": "child",
+      "text": "Do I get a sticker?",
+      "direction": "hopeful"
+    },
+    {
+      "speaker": "doctor",
+      "text": "You absolutely get a sticker! You can pick any one you want from my special sticker box.",
+      "direction": "warm"
+    },
+    {
+      "speaker": "child",
+      "text": "Yay! Thank you doctor lady!",
+      "direction": "excited"
+    },
+    {
+      "speaker": "parent",
+      "text": "Thank you so much, Dr. Martinez. This was exactly what we needed.",
+      "direction": "grateful"
+    }
+  ],
+  "_generated": {
+    "tool": "syrinx",
+    "timestamp": "2025-12-27T10:54:20.455143",
+    "errors_injected": []
+  }
+}

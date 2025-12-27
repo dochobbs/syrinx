@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "id": "20",
+    "encounter_type": "mental-health",
+    "patient_age": "10 years",
+    "patient_name": "Brandon",
+    "chief_complaint": "ADHD medication follow-up, on Concerta + guanfacine, dose adjustment, refills needed",
+    "targets": ["multiple_medications", "dose_adjustment", "refills"],
+    "duration_tier": "short"
+  },
+  "speakers": {
+    "doctor": {"voice": "male-1", "style": "efficient, warm"},
+    "parent": {"voice": "female-1", "style": "organized, informed"}
+  },
+  "script": [
+    {"speaker": "doctor", "text": "Hi, how's Brandon doing on the medications?", "direction": "getting to point"},
+    {"speaker": "parent", "text": "Better overall, but his teacher says he's still struggling in the afternoon.", "direction": "reporting"},
+    {"speaker": "doctor", "text": "Let me confirm what he's on. Concerta 36 milligrams in the morning, and guanfacine 1 milligram at bedtime?", "direction": "med review"},
+    {"speaker": "parent", "text": "That's right. The Concerta wears off by two or three o'clock, and then he falls apart.", "direction": "describing issue"},
+    {"speaker": "doctor", "text": "How's his appetite and sleep?", "direction": "side effects"},
+    {"speaker": "parent", "text": "Appetite is low at lunch, better at dinner. Sleep is good with the guanfacine.", "direction": "reporting"},
+    {"speaker": "doctor", "text": "Any headaches, stomachaches, mood changes?", "direction": "continuing"},
+    {"speaker": "parent", "text": "No, he's in a good mood. Just can't focus after the medication wears off.", "direction": "main issue"},
+    {"speaker": "doctor", "text": "There are a few options. We could increase the Concerta dose, switch to a longer-acting formulation, or add an afternoon booster dose.", "direction": "options"},
+    {"speaker": "parent", "text": "What would you recommend?", "direction": "asking"},
+    {"speaker": "doctor", "text": "Given that the morning coverage is working, I'd suggest adding a small afternoon booster. Five milligrams of immediate-release methylphenidate around two PM.", "direction": "recommendation"},
+    {"speaker": "parent", "text": "How does that work? He takes it at school?", "direction": "logistics"},
+    {"speaker": "doctor", "text": "Yes, the school nurse can give it to him. It lasts about three to four hours, so it should cover homework time.", "direction": "explaining"},
+    {"speaker": "parent", "text": "Will that affect his sleep?", "direction": "concern"},
+    {"speaker": "doctor", "text": "At two PM it should be out of his system by bedtime. The guanfacine will help with sleep too. But if he has trouble sleeping, let me know.", "direction": "reassuring"},
+    {"speaker": "parent", "text": "Okay, let's try it. And I need refills on everything.", "direction": "agreeing, practical"},
+    {"speaker": "doctor", "text": "I'll send all three. Concerta 36 milligrams, ninety-day supply. Methylphenidate IR 5 milligrams, thirty tablets for the afternoon. And guanfacine 1 milligram, ninety-day supply.", "direction": "refills"},
+    {"speaker": "parent", "text": "Thank you. How soon should I see improvement?", "direction": "asking"},
+    {"speaker": "doctor", "text": "You should notice the afternoon improvement right away. Let's check in by phone in two weeks, and come back in two months for a full follow-up.", "direction": "follow up plan"},
+    {"speaker": "parent", "text": "Sounds good. Should I have the teacher fill out another form?", "direction": "asking"},
+    {"speaker": "doctor", "text": "Yes, good idea. Have her complete a Vanderbilt in about three weeks so we can see if the afternoons are better.", "direction": "monitoring plan"},
+    {"speaker": "parent", "text": "I'll do that. Thanks, Doctor.", "direction": "closing"}
+  ]
+}

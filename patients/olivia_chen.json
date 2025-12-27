@@ -1,0 +1,37 @@
+{
+  "patient": {
+    "name": "Olivia Chen",
+    "dob": "2024-06-15",
+    "age": "6 months",
+    "sex": "female",
+    "preferred_name": "Livvy"
+  },
+  "family": {
+    "mother": {
+      "name": "Sarah Chen",
+      "style": "anxious first-time mom, asks many questions"
+    },
+    "father": {
+      "name": "Mike Chen",
+      "style": "calm, supportive, lets mom take lead"
+    }
+  },
+  "medical_history": {
+    "allergies": ["penicillin - developed rash after amoxicillin at 4 months"],
+    "medications": [],
+    "chronic_conditions": [],
+    "past_medical": [
+      "born at 38 weeks via uncomplicated vaginal delivery",
+      "jaundice treated with phototherapy for 2 days",
+      "passed newborn hearing screen"
+    ],
+    "immunizations": "up to date for age (completed 4 month vaccines)",
+    "last_well_check": "4 month visit - growing well, no concerns"
+  },
+  "social_history": {
+    "lives_with": "both parents in apartment",
+    "daycare": false,
+    "siblings": [],
+    "pets": ["dog named Max"]
+  }
+}

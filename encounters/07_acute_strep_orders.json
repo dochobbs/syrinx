@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "id": "07",
+    "encounter_type": "acute",
+    "patient_age": "7 years",
+    "patient_name": "Lily",
+    "chief_complaint": "sore throat, rapid strep positive, multiple orders needed",
+    "targets": ["multiple_orders", "return_precautions", "clear_plan"],
+    "duration_tier": "short"
+  },
+  "speakers": {
+    "doctor": {"voice": "female-1", "style": "efficient, friendly"},
+    "parent": {"voice": "male-1", "style": "practical dad"}
+  },
+  "script": [
+    {"speaker": "doctor", "text": "Hi, the nurse told me Lily's rapid strep came back positive.", "direction": "getting to point"},
+    {"speaker": "parent", "text": "Yeah, she said it was. So she needs antibiotics?", "direction": "practical"},
+    {"speaker": "doctor", "text": "She does. How long has she had the sore throat?", "direction": "brief history"},
+    {"speaker": "parent", "text": "Started yesterday. She woke up saying it hurt to swallow. And she had a fever last night, 102.", "direction": "reporting"},
+    {"speaker": "doctor", "text": "Any cough or runny nose?", "direction": "quick ROS"},
+    {"speaker": "parent", "text": "No, just the throat.", "direction": "concise"},
+    {"speaker": "doctor", "text": "Classic strep presentation. Let me take a quick look at her throat.", "direction": "examining"},
+    {"speaker": "doctor", "text": "Yep, tonsils are red and swollen with some white patches. Lymph nodes are a little tender. Definitely consistent with strep.", "direction": "confirming"},
+    {"speaker": "parent", "text": "What antibiotic does she need?", "direction": "asking"},
+    {"speaker": "doctor", "text": "I'm going to prescribe amoxicillin. She'll take it twice a day for ten days. It's important to finish the whole course even when she feels better.", "direction": "prescribing"},
+    {"speaker": "parent", "text": "Got it. Ten days, twice a day.", "direction": "confirming"},
+    {"speaker": "doctor", "text": "She can go back to school 24 hours after starting the antibiotic, as long as she doesn't have a fever.", "direction": "school guidance"},
+    {"speaker": "parent", "text": "When should she start feeling better?", "direction": "asking"},
+    {"speaker": "doctor", "text": "Usually within 24 to 48 hours. For pain and fever, you can give Tylenol or Motrin. Popsicles and cold drinks can help soothe the throat too.", "direction": "symptomatic care"},
+    {"speaker": "parent", "text": "What if she doesn't get better?", "direction": "contingency"},
+    {"speaker": "doctor", "text": "If she's not improving after three days on the antibiotic, or if she gets worse, develops a rash, has trouble breathing or swallowing, or can't drink fluids, call us right away or go to the ER.", "direction": "return precautions"},
+    {"speaker": "parent", "text": "Should my other kids get tested? I have two more at home.", "direction": "practical question"},
+    {"speaker": "doctor", "text": "Only if they develop symptoms. We don't test or treat asymptomatic contacts. Just watch for sore throat or fever.", "direction": "guidance"},
+    {"speaker": "parent", "text": "Okay. Anything else I need to do?", "direction": "wrapping up"},
+    {"speaker": "doctor", "text": "Get her a new toothbrush once she's been on antibiotics for 24 hours so she doesn't reinfect herself. And wash hands frequently to prevent spread.", "direction": "additional instructions"},
+    {"speaker": "parent", "text": "New toothbrush, got it. Thanks.", "direction": "noting"},
+    {"speaker": "doctor", "text": "I'll send the amoxicillin to your pharmacy now. Hope she feels better soon.", "direction": "closing"}
+  ]
+}

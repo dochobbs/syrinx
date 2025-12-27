@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "id": "23",
+    "encounter_type": "follow-up",
+    "patient_age": "4 years",
+    "patient_name": "Ella",
+    "chief_complaint": "ear infection recheck, not improving, medication change needed",
+    "targets": ["follow_up_assessment", "medication_change", "treatment_failure"],
+    "duration_tier": "short"
+  },
+  "speakers": {
+    "doctor": {"voice": "female-1", "style": "efficient, problem-solving"},
+    "parent": {"voice": "male-1", "style": "frustrated dad"}
+  },
+  "script": [
+    {"speaker": "doctor", "text": "Hi, back for the ear recheck. How's Ella doing?", "direction": "greeting"},
+    {"speaker": "parent", "text": "Not great. She's still complaining that her ear hurts. I don't think the antibiotic is working.", "direction": "concerned, frustrated"},
+    {"speaker": "doctor", "text": "She's been on amoxicillin for how many days now?", "direction": "clarifying"},
+    {"speaker": "parent", "text": "Seven days. She has three left.", "direction": "counting"},
+    {"speaker": "doctor", "text": "And she's been taking it consistently? Twice a day?", "direction": "adherence"},
+    {"speaker": "parent", "text": "Yes, every single dose. I set alarms.", "direction": "confirming"},
+    {"speaker": "doctor", "text": "Good. Let me take a look at her ears.", "direction": "examining"},
+    {"speaker": "doctor", "text": "Ella, I'm going to look in your ears with my light, okay?", "direction": "to child"},
+    {"speaker": "doctor", "text": "Left ear looks good. Right ear... still has fluid and the eardrum is still red. There's some bulging too.", "direction": "findings"},
+    {"speaker": "parent", "text": "So it didn't work?", "direction": "asking"},
+    {"speaker": "doctor", "text": "The amoxicillin isn't clearing this one. It happens sometimes, especially if the bacteria are resistant. We need to switch to a stronger antibiotic.", "direction": "explaining"},
+    {"speaker": "parent", "text": "What's the stronger one?", "direction": "asking"},
+    {"speaker": "doctor", "text": "I'm going to prescribe Augmentin. It's amoxicillin plus another ingredient that helps it work against resistant bacteria.", "direction": "new medication"},
+    {"speaker": "parent", "text": "Is it also a liquid?", "direction": "practical"},
+    {"speaker": "doctor", "text": "Yes, same pink liquid but a different formula. She'll take it twice a day for ten days.", "direction": "instructions"},
+    {"speaker": "parent", "text": "Does she finish the old one first?", "direction": "asking"},
+    {"speaker": "doctor", "text": "No, stop the amoxicillin and start the Augmentin right away.", "direction": "clarifying"},
+    {"speaker": "parent", "text": "Will this one definitely work?", "direction": "seeking reassurance"},
+    {"speaker": "doctor", "text": "Augmentin works on most resistant ear infections. If she's not better in three to four days, call me. But I expect this will do the trick.", "direction": "realistic"},
+    {"speaker": "parent", "text": "Should I bring her back again to recheck?", "direction": "asking"},
+    {"speaker": "doctor", "text": "Only if she's still having symptoms after finishing the Augmentin. If she improves and stays well, no need.", "direction": "conditional follow up"},
+    {"speaker": "parent", "text": "Okay. I'll start it tonight.", "direction": "agreeing"},
+    {"speaker": "doctor", "text": "Good. Give it with food, it's easier on the stomach. And keep up with Tylenol or Motrin for the pain.", "direction": "advice"},
+    {"speaker": "parent", "text": "Thanks, Doctor. Hopefully this does it.", "direction": "closing"},
+    {"speaker": "doctor", "text": "It should. Feel better, Ella.", "direction": "closing"}
+  ]
+}

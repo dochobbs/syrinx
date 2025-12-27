@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "id": "04",
+    "encounter_type": "acute",
+    "patient_age": "3 years",
+    "patient_name": "Ethan",
+    "chief_complaint": "cough x5 days, anxious mom asks repeatedly about pneumonia",
+    "targets": ["redundancy_handling", "anxious_parent"],
+    "duration_tier": "medium"
+  },
+  "speakers": {
+    "doctor": {"voice": "male-1", "style": "patient, reassuring"},
+    "parent": {"voice": "female-1", "style": "anxious, repetitive, first-time mom"}
+  },
+  "script": [
+    {"speaker": "doctor", "text": "Hi, I'm Dr. Johnson. What brings Ethan in today?", "direction": "warm greeting"},
+    {"speaker": "parent", "text": "He's had this cough for five days now and it's not getting better. I'm worried it might be pneumonia.", "direction": "anxious, worried"},
+    {"speaker": "doctor", "text": "Okay, tell me about the cough. Is it wet or dry?", "direction": "gathering history"},
+    {"speaker": "parent", "text": "It's kind of wet sounding. And he's had a runny nose too. But the cough is really bad at night. My sister's kid had pneumonia last month and it started just like this. Is it pneumonia?", "direction": "concerned, seeking reassurance"},
+    {"speaker": "doctor", "text": "I understand your concern. Let me ask a few more questions and then examine him, and we'll figure out what's going on. Has he had a fever?", "direction": "calm, systematic"},
+    {"speaker": "parent", "text": "He had a low fever the first two days, like 100. But not since then. But he could still have pneumonia without a fever, right?", "direction": "seeking confirmation"},
+    {"speaker": "doctor", "text": "It's possible but less common. How's his breathing been? Any fast breathing or working hard to breathe?", "direction": "assessing"},
+    {"speaker": "parent", "text": "I don't think so? I can't really tell. He seems okay except for the cough. But my sister said her son seemed fine too and then he had pneumonia. I just don't want to miss it.", "direction": "anxious, referencing again"},
+    {"speaker": "doctor", "text": "I hear you. Let's take a look at him.", "direction": "transitioning to exam"},
+    {"speaker": "doctor", "text": "Ethan, I'm going to listen to your chest, okay buddy? Take some deep breaths for me.", "direction": "to child"},
+    {"speaker": "doctor", "text": "Good job. His lungs actually sound clear. I don't hear any crackles or wheezing. His respiratory rate is normal, no retractions, good oxygen levels.", "direction": "examining, reassuring findings"},
+    {"speaker": "parent", "text": "So it's not pneumonia?", "direction": "hopeful but still anxious"},
+    {"speaker": "doctor", "text": "Based on my exam, no. His lungs sound healthy. This looks like a viral upper respiratory infection that's just taking its course.", "direction": "explaining"},
+    {"speaker": "parent", "text": "But the cough is so bad. It's been five days. Shouldn't it be getting better by now? I read that pneumonia can develop after a cold.", "direction": "still worried"},
+    {"speaker": "doctor", "text": "Coughs from viral infections can actually last two to three weeks, even after the other symptoms resolve. Five days is still early. The fact that his fever resolved and his lungs are clear is very reassuring.", "direction": "normalizing, educating"},
+    {"speaker": "parent", "text": "Okay. But what if it turns into pneumonia? How would I know?", "direction": "seeking warning signs"},
+    {"speaker": "doctor", "text": "Great question. Watch for a new fever, especially high fever over 102, breathing fast or hard, not eating or drinking, or seeming much more tired or sick than he is now.", "direction": "return precautions"},
+    {"speaker": "parent", "text": "Should I bring him back if the cough doesn't go away? Like, what if it's still there in another week? Could that be pneumonia?", "direction": "still fixated"},
+    {"speaker": "doctor", "text": "If he's otherwise well, eating, drinking, playing, no fever, then a lingering cough is usually just the tail end of the virus. But if you're worried or anything changes, you can always call us.", "direction": "patient, reassuring"},
+    {"speaker": "parent", "text": "Does he need an x-ray to rule out pneumonia?", "direction": "requesting test"},
+    {"speaker": "doctor", "text": "I don't recommend an x-ray right now. His exam is reassuring and x-rays involve radiation, so we only do them when truly needed. If he were to get worse, then we'd consider it.", "direction": "explaining reasoning"},
+    {"speaker": "parent", "text": "Okay. I'm sorry, I know I keep asking about pneumonia. I've just been so worried.", "direction": "self-aware, apologetic"},
+    {"speaker": "doctor", "text": "Don't apologize. It's completely understandable, especially when someone close to you just went through it. You're doing the right thing by paying attention and bringing him in.", "direction": "validating"},
+    {"speaker": "parent", "text": "So just to make sure I understand, it's not pneumonia, it's just a cold, and the cough might last a while?", "direction": "summarizing"},
+    {"speaker": "doctor", "text": "Exactly right. Supportive care, fluids, rest, honey if he'll take it, that can help with the cough. And call us if anything changes.", "direction": "confirming, guidance"},
+    {"speaker": "parent", "text": "Thank you, Doctor. I feel a lot better.", "direction": "relieved"},
+    {"speaker": "doctor", "text": "You're welcome. He's going to be fine.", "direction": "closing"}
+  ]
+}

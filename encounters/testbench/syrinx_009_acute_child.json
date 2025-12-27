@@ -1,0 +1,187 @@
+{
+  "metadata": {
+    "id": "syrinx_009",
+    "encounter_type": "acute",
+    "patient_age": "2 years",
+    "patient_name": "Child",
+    "chief_complaint": "abdominal pain",
+    "targets": [],
+    "duration_tier": "medium"
+  },
+  "speakers": {
+    "child": {
+      "voice": "child-girl",
+      "style": "toddler, simple speech"
+    },
+    "doctor": {
+      "voice": "female-1",
+      "style": "thorough"
+    },
+    "parent": {
+      "voice": "female-2",
+      "style": "concerned"
+    }
+  },
+  "script": [
+    {
+      "speaker": "doctor",
+      "text": "Good morning! I'm Dr. Martinez. What brings you in today?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "parent",
+      "text": "Hi, my daughter Emma has been complaining about her tummy hurting since last night. She's been really fussy and not eating much.",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I'm sorry to hear Emma isn't feeling well. Can you tell me more about when the pain started?",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "It started around bedtime yesterday. She was playing normally all day, then suddenly said her tummy hurt and started crying.",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Hi Emma! Can you show me where your tummy hurts?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "child",
+      "text": "Here... it hurts here!",
+      "direction": "upset"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I see you're pointing to your belly button area. Has she had any vomiting or diarrhea?",
+      "direction": "[examining]"
+    },
+    {
+      "speaker": "parent",
+      "text": "No vomiting, but she did have one loose stool this morning. Not her usual. And she barely touched her breakfast.",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Any fever? Have you taken her temperature?",
+      "direction": "thorough"
+    },
+    {
+      "speaker": "parent",
+      "text": "I checked this morning - it was 99.8. Not too high, but definitely warmer than normal.",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Emma, I'm going to feel your tummy very gently, okay? Tell me if it hurts.",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "child",
+      "text": "No! Don't touch!",
+      "direction": "scared"
+    },
+    {
+      "speaker": "parent",
+      "text": "It's okay sweetie, the doctor needs to check. She's been very protective of her stomach.",
+      "direction": "soothing"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I understand Emma. I'll be very, very gentle. Can you take some deep breaths with me?",
+      "direction": "calm"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I can feel some tenderness in the right lower area, and there's some guarding. Has she had any recent illnesses?",
+      "direction": "[examining]"
+    },
+    {
+      "speaker": "parent",
+      "text": "She had a cold about two weeks ago, but that cleared up. No other illnesses recently.",
+      "direction": "thoughtful"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Any family history of abdominal problems or inflammatory bowel conditions?",
+      "direction": "thorough"
+    },
+    {
+      "speaker": "parent",
+      "text": "Not that I know of. My husband had his appendix out when he was a teenager, but that's about it.",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Emma, can you walk around the room for me? I want to see how you move.",
+      "direction": "encouraging"
+    },
+    {
+      "speaker": "child",
+      "text": "It hurts when I walk!",
+      "direction": "whimpering"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I can see she's favoring her right side and walking bent over slightly. This is concerning for possible appendicitis.",
+      "direction": "serious"
+    },
+    {
+      "speaker": "parent",
+      "text": "Appendicitis? But she's only two! Isn't that too young?",
+      "direction": "shocked"
+    },
+    {
+      "speaker": "doctor",
+      "text": "While less common in toddlers, it can happen. The combination of right lower quadrant pain, low fever, and guarding are concerning signs.",
+      "direction": "explaining"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I'd like to get some blood work and possibly an ultrasound to help us determine what's going on.",
+      "direction": "thorough"
+    },
+    {
+      "speaker": "parent",
+      "text": "Should I be worried? What do we do next?",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I want to be thorough and rule out appendicitis. We'll get the tests done quickly, and I'll have surgery consulted as well.",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "child",
+      "text": "I want to go home!",
+      "direction": "crying"
+    },
+    {
+      "speaker": "parent",
+      "text": "I know sweetie. How long will the tests take?",
+      "direction": "soothing"
+    },
+    {
+      "speaker": "doctor",
+      "text": "The blood work will be about 30 minutes, ultrasound shortly after. I'll make sure you're both comfortable while we wait.",
+      "direction": "calm"
+    },
+    {
+      "speaker": "parent",
+      "text": "Okay, let's get started then. Whatever Emma needs.",
+      "direction": "determined"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Perfect. The nurse will be right in to get that blood draw, and I'll check back with you soon.",
+      "direction": "reassuring"
+    }
+  ],
+  "_generated": {
+    "tool": "syrinx",
+    "timestamp": "2025-12-27T10:58:20.044886",
+    "errors_injected": []
+  }
+}

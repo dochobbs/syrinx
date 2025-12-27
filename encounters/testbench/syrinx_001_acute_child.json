@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "id": "syrinx_001",
+    "encounter_type": "acute",
+    "patient_age": "8 months",
+    "patient_name": "Child",
+    "chief_complaint": "ear pain",
+    "targets": [],
+    "duration_tier": null
+  },
+  "speakers": {
+    "doctor": {
+      "voice": "female-1",
+      "style": null
+    },
+    "parent": {
+      "voice": "female-2",
+      "style": "anxious"
+    }
+  },
+  "script": [
+    {
+      "speaker": "doctor",
+      "text": "Good morning! I'm Dr. Martinez. What brings you in today?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "parent",
+      "text": "Hi, thank you for seeing us so quickly. Emma has been pulling at her right ear since yesterday and she's been so fussy. I think it might be an ear infection.",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I can see you're concerned about her. Tell me more about when this started.",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "It really started yesterday afternoon. She was fine in the morning, then after her nap she just seemed different. She keeps grabbing at her ear and crying.",
+      "direction": "[baby fussing]"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Has she had any fever?",
+      "direction": "calm"
+    },
+    {
+      "speaker": "parent",
+      "text": "Yes, I took her temperature this morning and it was 101.2. That's when I knew I needed to call you guys.",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's definitely worth checking. How has she been eating and sleeping?",
+      "direction": "[examining]"
+    },
+    {
+      "speaker": "parent",
+      "text": "She's barely eating anything. Usually she loves her bottle but she'll only take a few sips before pushing it away. And she was up most of the night crying.",
+      "direction": "exhausted"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Poor little one. Any runny nose or cough?",
+      "direction": "sympathetic"
+    },
+    {
+      "speaker": "parent",
+      "text": "She had a little runny nose earlier this week, but I thought it was just from teething. No cough though.",
+      "direction": "[baby whimpering]"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Has she had ear infections before?",
+      "direction": "calm"
+    },
+    {
+      "speaker": "parent",
+      "text": "No, this would be her first one. Is that normal for her age? I've been reading online and now I'm worried about her hearing.",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Ear infections are very common in babies. Let me take a look at her ears first, then we can discuss everything. Can you hold her on your lap facing me?",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "Of course. Come here sweetie.",
+      "direction": "[baby crying]"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I know this is uncomfortable for her. I'm going to use this otoscope to look in her ears. The right ear first.",
+      "direction": "[examining]"
+    },
+    {
+      "speaker": "parent",
+      "text": "She really doesn't like that. Is it bad?",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I can see her right eardrum is red and bulging, which confirms an ear infection. Let me check the left ear too.",
+      "direction": "[examining]"
+    },
+    {
+      "speaker": "parent",
+      "text": "Oh no, I knew it. Will she need antibiotics?",
+      "direction": "[baby fussing]"
+    },
+    {
+      "speaker": "doctor",
+      "text": "The left ear looks fine. For the right ear infection, yes, I'll prescribe an antibiotic. Let me also check her throat and lymph nodes.",
+      "direction": "[examining]"
+    },
+    {
+      "speaker": "parent",
+      "text": "Okay, whatever she needs. How long will it take to get better?",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Her throat looks good and no swollen glands. With antibiotics, she should start feeling better in 24 to 48 hours. The fever should break by then too.",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "That's such a relief. What about her eating? I'm worried she's not getting enough nutrition.",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Once her ear pain improves, her appetite should return to normal. In the meantime, keep offering small, frequent feeds. You can also give her infant acetaminophen for pain and fever.",
+      "direction": "calm"
+    },
+    {
+      "speaker": "parent",
+      "text": "I have that at home. How much should I give her?",
+      "direction": "[baby cooing]"
+    },
+    {
+      "speaker": "doctor",
+      "text": "At eight months and her weight, give her 2.5 milliliters every 4 to 6 hours as needed for fever or fussiness. I'll write that down for you.",
+      "direction": "[typing]"
+    },
+    {
+      "speaker": "parent",
+      "text": "Thank you so much. When should I bring her back if she's not better?",
+      "direction": "grateful"
+    },
+    {
+      "speaker": "doctor",
+      "text": "If her fever persists beyond 48 hours on antibiotics, or if she seems worse, bring her back sooner. Otherwise, I'd like to see her in about 10 days to make sure the infection has cleared.",
+      "direction": "calm"
+    },
+    {
+      "speaker": "parent",
+      "text": "Perfect. I'll call to schedule that follow-up. Thank you for explaining everything so clearly.",
+      "direction": "relieved"
+    },
+    {
+      "speaker": "doctor",
+      "text": "You're very welcome. You did the right thing bringing her in. Any other questions before you go?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "parent",
+      "text": "I think that covers everything. I feel so much better knowing what's wrong and how to help her.",
+      "direction": "[baby babbling]"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Excellent. The prescription will be ready at your pharmacy in about an hour. Take care!",
+      "direction": "cheerful"
+    }
+  ],
+  "_generated": {
+    "tool": "syrinx",
+    "timestamp": "2025-12-27T10:48:09.058156",
+    "errors_injected": []
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "metadata": {
+    "id": "syrinx_004",
+    "encounter_type": "acute",
+    "patient_age": "3 years",
+    "patient_name": "Child",
+    "chief_complaint": "asthma exacerbation",
+    "targets": [],
+    "duration_tier": null
+  },
+  "speakers": {
+    "doctor": {
+      "voice": "female-1",
+      "style": "rushed"
+    },
+    "child": {
+      "voice": "child-girl",
+      "style": "toddler, simple speech"
+    },
+    "parent": {
+      "voice": "female-2",
+      "style": "overwhelmed"
+    }
+  },
+  "script": [
+    {
+      "speaker": "doctor",
+      "text": "Hi, I'm Dr. Martinez. What brings you in today?",
+      "direction": "rushed"
+    },
+    {
+      "speaker": "parent",
+      "text": "It's Emma, she's been wheezing since this morning and her inhaler isn't helping like it usually does. I'm really worried.",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "child",
+      "text": "My chest feels tight mommy",
+      "direction": "whimpering"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Okay Emma, let me listen to your chest. When did the wheezing start exactly?",
+      "direction": "[examining]"
+    },
+    {
+      "speaker": "parent",
+      "text": "Around 6 AM when she woke up. She was fine yesterday but then started this dry cough last night.",
+      "direction": "overwhelmed"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Has she had any fever? Any runny nose or congestion?",
+      "direction": "rushed"
+    },
+    {
+      "speaker": "parent",
+      "text": "No fever that I noticed, but she did have some sniffles yesterday. Is she going to be okay?",
+      "direction": "worried"
+    },
+    {
+      "speaker": "child",
+      "text": "It hurts to breathe",
+      "direction": "crying softly"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I know sweetie, we're going to help you feel better. How many puffs of albuterol has she had today?",
+      "direction": "reassuring then rushed"
+    },
+    {
+      "speaker": "parent",
+      "text": "I gave her two puffs around 7 AM, then two more about an hour ago. Should I have given her more?",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's appropriate. Any known triggers? Pets, dust, recent illness in the family?",
+      "direction": "[examining]"
+    },
+    {
+      "speaker": "parent",
+      "text": "Her dad had a cold last week, and we did visit my sister who has cats on Sunday. Oh god, I should have thought of that.",
+      "direction": "overwhelmed"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Don't blame yourself. Emma, can you take a big deep breath for me like a balloon?",
+      "direction": "rushed then gentle"
+    },
+    {
+      "speaker": "child",
+      "text": "I can't, it's too hard",
+      "direction": "frustrated"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I can hear wheezing bilaterally and some retractions. What's her usual asthma control like?",
+      "direction": "[examining]"
+    },
+    {
+      "speaker": "parent",
+      "text": "Usually pretty good. She uses her inhaler maybe once or twice a week, but this is the worst it's been in months.",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Any allergies to medications?",
+      "direction": "rushed"
+    },
+    {
+      "speaker": "parent",
+      "text": "No, none that we know of.",
+      "direction": "quick"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Okay, I'm going to give her a breathing treatment with albuterol and we'll see how she responds.",
+      "direction": "rushed"
+    },
+    {
+      "speaker": "child",
+      "text": "Is it gonna taste yucky?",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "It might taste a little funny, but it's going to help your breathing. You'll wear this mask like a superhero.",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "How long will the treatment take? Should I be doing something different at home?",
+      "direction": "overwhelmed"
+    },
+    {
+      "speaker": "doctor",
+      "text": "About ten minutes. After this, if she improves, we'll likely send you home with a steroid to prevent this from happening again.",
+      "direction": "rushed"
+    },
+    {
+      "speaker": "child",
+      "text": "I don't want medicine",
+      "direction": "whining"
+    },
+    {
+      "speaker": "parent",
+      "text": "Emma, you need to listen to the doctor. Will the steroid have side effects?",
+      "direction": "firm then anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Short course, minimal side effects. She might be a little more energetic. Let's start the nebulizer treatment now.",
+      "direction": "rushed"
+    },
+    {
+      "speaker": "parent",
+      "text": "Okay, thank you. I just feel so helpless when she can't breathe properly.",
+      "direction": "overwhelmed"
+    },
+    {
+      "speaker": "doctor",
+      "text": "You did the right thing bringing her in. We'll monitor her response and go from there.",
+      "direction": "reassuring but rushed"
+    },
+    {
+      "speaker": "child",
+      "text": "Mommy, stay with me",
+      "direction": "scared"
+    },
+    {
+      "speaker": "parent",
+      "text": "I'm right here baby. How will I know if this happens again when to bring her in?",
+      "direction": "comforting then anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "If her rescue inhaler isn't providing relief after two treatments, or if she's struggling to speak or eat, come back immediately.",
+      "direction": "rushed"
+    }
+  ],
+  "_generated": {
+    "tool": "syrinx",
+    "timestamp": "2025-12-27T10:51:41.697498",
+    "errors_injected": []
+  }
+}

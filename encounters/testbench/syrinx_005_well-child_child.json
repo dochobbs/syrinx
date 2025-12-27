@@ -1,0 +1,178 @@
+{
+  "metadata": {
+    "id": "syrinx_005",
+    "encounter_type": "well-child",
+    "patient_age": "12 months",
+    "patient_name": "Child",
+    "chief_complaint": "routine well-child visit with vaccine questions",
+    "targets": [],
+    "duration_tier": null
+  },
+  "speakers": {
+    "parent": {
+      "voice": "female-2",
+      "style": "first-time mom with concerns"
+    },
+    "doctor": {
+      "voice": "female-1",
+      "style": null
+    }
+  },
+  "script": [
+    {
+      "speaker": "doctor",
+      "text": "Good morning! I'm Dr. Martinez. How are you and little Emma doing today?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "parent",
+      "text": "Hi, we're okay. She's been a little fussy this morning, but I think she's just tired.",
+      "direction": "anxious [baby cooing]"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's completely normal for a 12-month-old. Let's start by going over how she's been doing since her 9-month visit. Any concerns?",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "Well, I have some questions about her vaccines today. I've been reading things online and I'm just... worried.",
+      "direction": "hesitant"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I'm glad you brought that up. It's natural to have questions as a first-time mom. Let's talk about that after we go through her development. How's her eating?",
+      "direction": "understanding"
+    },
+    {
+      "speaker": "parent",
+      "text": "She's eating table foods now, finger foods. She loves bananas and cheerios. She's still nursing about 4 times a day.",
+      "direction": "calm"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That sounds perfect for her age. How about sleep? Is she sleeping through the night?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "parent",
+      "text": "Most nights, yes. She goes down around 7 and sleeps until about 6. Sometimes she wakes up once.",
+      "direction": "relieved [baby babbling]"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Excellent. And developmentally, is she pulling herself up to stand? Walking along furniture?",
+      "direction": "encouraging"
+    },
+    {
+      "speaker": "parent",
+      "text": "Yes! She's cruising all around the coffee table. She took a couple steps by herself last week but hasn't done it again.",
+      "direction": "excited"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's wonderful! First steps are so exciting. Is she saying any words besides mama and dada?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "parent",
+      "text": "She says 'bye bye' and waves. And she says something that sounds like 'book' when we read to her.",
+      "direction": "proud"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Perfect language development for 12 months. Now let me examine her. [examining] She looks great - good color, alert and interactive.",
+      "direction": "focused [baby fussing]"
+    },
+    {
+      "speaker": "parent",
+      "text": "She doesn't like being on the exam table. Should I hold her?",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's fine, you can hold her for most of this. [examining] Her ears look clear, throat looks good. Heart and lungs sound normal.",
+      "direction": "calm"
+    },
+    {
+      "speaker": "parent",
+      "text": "That's good to hear. So about the vaccines... I read that some parents space them out?",
+      "direction": "nervous"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I understand your concern. The CDC schedule is designed to protect children when they're most vulnerable. What specifically worries you?",
+      "direction": "patient"
+    },
+    {
+      "speaker": "parent",
+      "text": "I guess I'm worried about giving her too much at once. And I read about autism... I know you probably think I'm being silly.",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "You're not being silly at all. Multiple large studies have shown no link between vaccines and autism. The MMR vaccine is very safe.",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "But couldn't we just wait a few more months? She's not in daycare yet.",
+      "direction": "hesitant"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I understand wanting to protect her, but measles can be serious even in healthy children. The immunity from nursing has worn off by now.",
+      "direction": "explaining"
+    },
+    {
+      "speaker": "parent",
+      "text": "I didn't know that. So she's not protected anymore?",
+      "direction": "surprised [baby cooing]"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Exactly. That's why we give the MMR at 12 months. Would you like me to give you some reliable resources to read about vaccine safety?",
+      "direction": "educational"
+    },
+    {
+      "speaker": "parent",
+      "text": "Yes, that would be helpful. I want to do what's best for her. Maybe we could do just the MMR today and come back for the others?",
+      "direction": "considering"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's a reasonable compromise. We can do the MMR today and schedule the varicella and Hib vaccines for next month if that makes you more comfortable.",
+      "direction": "flexible"
+    },
+    {
+      "speaker": "parent",
+      "text": "Okay, yes. I think that would help me feel better about it. Thank you for being patient with me.",
+      "direction": "grateful"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Of course. Being a new mom comes with so many decisions. You're doing a great job. Emma is thriving.",
+      "direction": "warm"
+    },
+    {
+      "speaker": "parent",
+      "text": "Thank you. When should we come back for her 15-month checkup?",
+      "direction": "calm [baby babbling]"
+    },
+    {
+      "speaker": "doctor",
+      "text": "In about 3 months. The nurse will give you the shot today and schedule both appointments. Any other questions before we finish up?",
+      "direction": "efficient"
+    },
+    {
+      "speaker": "parent",
+      "text": "No, I think we're good. Thank you for answering all my questions. Come on Emma, time for your shot.",
+      "direction": "resigned but positive"
+    }
+  ],
+  "_generated": {
+    "tool": "syrinx",
+    "timestamp": "2025-12-27T10:52:36.144276",
+    "errors_injected": []
+  }
+}

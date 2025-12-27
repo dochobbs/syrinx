@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "id": "08",
+    "encounter_type": "acute",
+    "patient_age": "5 years",
+    "patient_name": "Noah",
+    "chief_complaint": "vomiting x2 days, dehydration assessment, complex orders",
+    "targets": ["multiple_orders", "clinical_decision_making", "contingency_plans"],
+    "duration_tier": "medium"
+  },
+  "speakers": {
+    "doctor": {"voice": "male-1", "style": "methodical, clear"},
+    "parent": {"voice": "female-1", "style": "tired, worried"}
+  },
+  "script": [
+    {"speaker": "doctor", "text": "Hi, I'm Dr. Patel. Noah's been vomiting?", "direction": "greeting, focused"},
+    {"speaker": "parent", "text": "Yes, for two days now. He can't keep anything down. I'm really worried he's getting dehydrated.", "direction": "worried, tired"},
+    {"speaker": "doctor", "text": "How many times has he vomited today?", "direction": "quantifying"},
+    {"speaker": "parent", "text": "At least six times. Every time he drinks anything, it comes right back up.", "direction": "describing"},
+    {"speaker": "doctor", "text": "Any diarrhea?", "direction": "associated symptoms"},
+    {"speaker": "parent", "text": "A little. Maybe two loose stools today.", "direction": "reporting"},
+    {"speaker": "doctor", "text": "Fever?", "direction": "continuing"},
+    {"speaker": "parent", "text": "Low grade, around 100 yesterday. I haven't checked today.", "direction": "answering"},
+    {"speaker": "doctor", "text": "How many wet diapers or trips to the bathroom to pee?", "direction": "assessing hydration"},
+    {"speaker": "parent", "text": "He's only peed once today and it was small and dark. Usually he goes way more.", "direction": "concerning finding"},
+    {"speaker": "doctor", "text": "When did he last drink anything that stayed down?", "direction": "key question"},
+    {"speaker": "parent", "text": "Maybe last night? He had some Pedialyte around eight PM and kept it down for a few hours.", "direction": "recalling"},
+    {"speaker": "doctor", "text": "Let me take a look at him.", "direction": "transitioning"},
+    {"speaker": "doctor", "text": "Noah, can you open your mouth for me? Good. His mucous membranes are a bit dry. Skin turgor is slightly decreased. Capillary refill is okay, about two seconds. He's mildly dehydrated but not severely.", "direction": "examining, assessing"},
+    {"speaker": "parent", "text": "Does he need an IV?", "direction": "anticipating"},
+    {"speaker": "doctor", "text": "Let's try something first. I'm going to give him Zofran, that's an anti-nausea medication. It dissolves on the tongue so he doesn't have to swallow it. Then we'll do an oral rehydration challenge.", "direction": "plan A"},
+    {"speaker": "parent", "text": "What's that?", "direction": "asking"},
+    {"speaker": "doctor", "text": "We'll give him small amounts of Pedialyte, about a teaspoon every few minutes, and see if he can keep it down. If the Zofran works and he tolerates the fluids, you can go home and continue that at home.", "direction": "explaining"},
+    {"speaker": "parent", "text": "And if he can't keep it down?", "direction": "contingency"},
+    {"speaker": "doctor", "text": "Then we'll need to start an IV for fluids. He might need to stay for observation or even be admitted depending on how he does.", "direction": "plan B"},
+    {"speaker": "parent", "text": "Okay. What about the vomiting at home? Can I get more of that Zofran?", "direction": "practical"},
+    {"speaker": "doctor", "text": "Yes, I'll prescribe Zofran dissolvable tablets. He can have one every eight hours as needed for the next two to three days.", "direction": "prescription"},
+    {"speaker": "parent", "text": "Should I keep giving Pedialyte or can he have regular fluids?", "direction": "home care"},
+    {"speaker": "doctor", "text": "Start with Pedialyte or diluted juice. Small sips frequently, not big gulps. Once he's keeping that down for a few hours, you can try bland foods like crackers, toast, bananas.", "direction": "guidance"},
+    {"speaker": "parent", "text": "What if he's still vomiting tomorrow?", "direction": "return precautions"},
+    {"speaker": "doctor", "text": "If he can't keep fluids down despite the Zofran, if he has no wet diapers for eight hours or more, if you see blood in his vomit, or if he becomes very lethargic or inconsolable, bring him back or go to the ER.", "direction": "warning signs"},
+    {"speaker": "parent", "text": "Could this be something serious? Like appendicitis?", "direction": "worried"},
+    {"speaker": "doctor", "text": "His exam doesn't suggest appendicitis. His belly is soft, no localized tenderness. This looks like viral gastroenteritis. But if he develops severe abdominal pain, especially on the right side, that would change things.", "direction": "reassuring, qualifying"},
+    {"speaker": "parent", "text": "Do you need to do any labs?", "direction": "asking"},
+    {"speaker": "doctor", "text": "Not right now. If he fails the oral challenge and needs an IV, we'll check electrolytes at that point. But let's see how the Zofran works first.", "direction": "stepwise approach"},
+    {"speaker": "parent", "text": "Okay. Thank you.", "direction": "accepting plan"},
+    {"speaker": "doctor", "text": "I'll have the nurse give him the Zofran now and we'll start the fluid challenge. I'll check back in about 30 minutes.", "direction": "immediate plan"}
+  ]
+}

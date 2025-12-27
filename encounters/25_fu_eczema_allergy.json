@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "id": "25",
+    "encounter_type": "follow-up",
+    "patient_age": "5 years",
+    "patient_name": "Grace",
+    "chief_complaint": "eczema follow-up, developed reaction to new steroid cream, need alternative",
+    "targets": ["allergy_capture", "medication_change", "treatment_adjustment"],
+    "duration_tier": "short"
+  },
+  "speakers": {
+    "doctor": {"voice": "female-1", "style": "problem-solving, reassuring"},
+    "parent": {"voice": "female-2", "style": "attentive mom"}
+  },
+  "script": [
+    {"speaker": "doctor", "text": "Hi, how's Grace's eczema doing with the new cream?", "direction": "opening"},
+    {"speaker": "parent", "text": "Actually, that's why we're here. She had a reaction to it.", "direction": "problem"},
+    {"speaker": "doctor", "text": "Oh no. Tell me what happened.", "direction": "concerned"},
+    {"speaker": "parent", "text": "We started the triamcinolone cream you prescribed. After two days, the areas where we put it got really red and bumpy. Worse than the eczema itself.", "direction": "describing"},
+    {"speaker": "doctor", "text": "Did it itch more or less?", "direction": "characterizing"},
+    {"speaker": "parent", "text": "Way more. She was scratching like crazy. I stopped the cream and it got better over a few days.", "direction": "course"},
+    {"speaker": "doctor", "text": "Let me take a look at her skin now.", "direction": "examining"},
+    {"speaker": "doctor", "text": "I can see some residual irritation on her arms where you applied it. The rest of her eczema patches actually look worse because we haven't been treating them.", "direction": "findings"},
+    {"speaker": "parent", "text": "I was afraid to put anything on her. Is she allergic to steroid creams?", "direction": "asking"},
+    {"speaker": "doctor", "text": "It sounds like a contact allergy to something in that particular cream. Could be the active ingredient or one of the inactive ingredients like a preservative.", "direction": "explaining"},
+    {"speaker": "parent", "text": "Can she use any steroid creams?", "direction": "practical question"},
+    {"speaker": "doctor", "text": "Probably, just not triamcinolone or creams with similar preservatives. I'm going to try her on a different one, mometasone, which has a different formulation.", "direction": "alternative"},
+    {"speaker": "parent", "text": "What if she reacts to that one too?", "direction": "worried"},
+    {"speaker": "doctor", "text": "Start with a small test area, like one patch on her arm. If it looks good after two days, you can use it more broadly. If she reacts, stop and call me.", "direction": "test approach"},
+    {"speaker": "parent", "text": "Okay. That sounds safe.", "direction": "agreeing"},
+    {"speaker": "doctor", "text": "I'm going to document triamcinolone as an allergy in her chart. The reaction was contact dermatitis, localized rash and itching.", "direction": "documenting"},
+    {"speaker": "parent", "text": "Should I tell other doctors about this?", "direction": "asking"},
+    {"speaker": "doctor", "text": "Yes, mention it any time she's prescribed a topical steroid so they can choose a different one.", "direction": "education"},
+    {"speaker": "parent", "text": "What about her regular moisturizer? Can she keep using that?", "direction": "current regimen"},
+    {"speaker": "doctor", "text": "Which one is she using?", "direction": "clarifying"},
+    {"speaker": "parent", "text": "CeraVe cream, twice a day.", "direction": "answering"},
+    {"speaker": "doctor", "text": "Perfect, keep that up. The moisturizer is the foundation of eczema care. The steroid is just for flares.", "direction": "guidance"},
+    {"speaker": "parent", "text": "How long does she use the new cream?", "direction": "duration"},
+    {"speaker": "doctor", "text": "Apply the mometasone once daily to active eczema patches only. Use it until the patches are flat and not itchy, usually five to seven days. Then stop and continue the CeraVe.", "direction": "instructions"},
+    {"speaker": "parent", "text": "And if it comes back?", "direction": "recurrence"},
+    {"speaker": "doctor", "text": "You can restart the mometasone for another five to seven days. If she's flaring constantly, we'll talk about other options.", "direction": "contingency"},
+    {"speaker": "parent", "text": "Thank you for figuring this out. I felt bad that the first cream made her worse.", "direction": "relieved"},
+    {"speaker": "doctor", "text": "Not your fault at all. Allergies happen and now we know to avoid triamcinolone. Call me after you try the test area.", "direction": "closing, reassuring"},
+    {"speaker": "parent", "text": "I will. Thanks, Doctor.", "direction": "closing"}
+  ]
+}

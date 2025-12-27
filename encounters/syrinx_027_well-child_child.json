@@ -1,0 +1,205 @@
+{
+  "metadata": {
+    "id": "syrinx_027",
+    "encounter_type": "well-child",
+    "patient_age": "4 years",
+    "patient_name": "Child",
+    "chief_complaint": "well child check",
+    "targets": [
+      "communication_quality"
+    ],
+    "duration_tier": null
+  },
+  "speakers": {
+    "doctor": {
+      "voice": "female-1",
+      "style": "uses too much jargon"
+    },
+    "child": {
+      "voice": "child-girl",
+      "style": "young child, cooperative"
+    },
+    "parent": {
+      "voice": "female-2",
+      "style": "concerned"
+    }
+  },
+  "script": [
+    {
+      "speaker": "doctor",
+      "text": "Good morning! I'm Dr. Martinez. How are we doing today for our routine pediatric health maintenance visit?",
+      "direction": "professional"
+    },
+    {
+      "speaker": "parent",
+      "text": "Hi, we're doing okay. This is Emma's four-year checkup.",
+      "direction": "polite"
+    },
+    {
+      "speaker": "child",
+      "text": "I don't want any shots today!",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Well hello Emma! We'll see about immunizations based on your current vaccination schedule and catch-up requirements. Any acute concerns or interval changes in her overall health status?",
+      "direction": "warm but clinical"
+    },
+    {
+      "speaker": "parent",
+      "text": "Um, what do you mean by interval changes? She's been pretty healthy, but I've been worried about her eating habits lately.",
+      "direction": "confused"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I'm referring to any significant health events since her last visit. Regarding her nutritional intake patterns - can you elaborate on the specific dietary concerns?",
+      "direction": "explaining"
+    },
+    {
+      "speaker": "parent",
+      "text": "She's become really picky about food. She used to eat everything, now she only wants chicken nuggets and crackers.",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's quite common for this developmental stage. We call this physiologic anorexia of early childhood combined with neophobia. Let me assess her anthropometric measurements first.",
+      "direction": "[examining]"
+    },
+    {
+      "speaker": "child",
+      "text": "What's that big word mean?",
+      "direction": "curious"
+    },
+    {
+      "speaker": "parent",
+      "text": "Yes, I'd like to know what that means too.",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "It means it's normal for kids her age to be afraid of new foods and eat less. Emma, can you step on this scale for me?",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "child",
+      "text": "Okay, but I'm not heavy!",
+      "direction": "defensive"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Her growth parameters are tracking along the 60th percentile for both height and weight, with appropriate BMI percentile maintenance.",
+      "direction": "[measuring]"
+    },
+    {
+      "speaker": "parent",
+      "text": "Is that good? I don't understand percentiles very well.",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Yes, that indicates normal linear growth velocity and weight gain trajectory. Now let me perform a comprehensive physical examination. Emma, can you say 'ahh' for me?",
+      "direction": "[examining]"
+    },
+    {
+      "speaker": "child",
+      "text": "Ahhhhh! Do I have bugs in my throat?",
+      "direction": "cooperative"
+    },
+    {
+      "speaker": "doctor",
+      "text": "No bugs! Your oropharynx appears normal with no erythema or exudate. Let me auscultate your heart and lungs now.",
+      "direction": "warm"
+    },
+    {
+      "speaker": "parent",
+      "text": "What does that mean - the eryth-whatever you said?",
+      "direction": "confused"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Sorry - no redness or infection in her throat. Heart rate is regular with no murmurs, gallops, or rubs. Pulmonary fields are clear bilaterally.",
+      "direction": "[listening with stethoscope]"
+    },
+    {
+      "speaker": "child",
+      "text": "That's cold! Why do you have to listen to me?",
+      "direction": "complaining"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I'm making sure your heart and lungs are working perfectly! Her neurological assessment shows age-appropriate gross and fine motor development with normal deep tendon reflexes.",
+      "direction": "explaining"
+    },
+    {
+      "speaker": "parent",
+      "text": "She's been having some tantrums lately. Is that normal for her age?",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Absolutely. That's typical for her developmental stage as she's establishing autonomy while lacking full executive function capabilities for emotional regulation.",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "I'm sorry, can you explain that in simpler terms?",
+      "direction": "frustrated"
+    },
+    {
+      "speaker": "doctor",
+      "text": "She's learning to be independent but doesn't have all the skills to handle big feelings yet. It's completely normal. Now, regarding immunizations, she needs her DTaP, IPV, MMR, and varicella boosters today.",
+      "direction": "explaining"
+    },
+    {
+      "speaker": "child",
+      "text": "I don't want shots! Will they hurt?",
+      "direction": "scared"
+    },
+    {
+      "speaker": "doctor",
+      "text": "They might pinch a little, but it's very quick. These vaccines will help keep you healthy and prevent serious communicable diseases.",
+      "direction": "gentle"
+    },
+    {
+      "speaker": "parent",
+      "text": "How many shots is that exactly? And what diseases do they prevent?",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Four immunizations total. They protect against diphtheria, tetanus, pertussis, polio, measles, mumps, rubella, and chickenpox - all potentially serious pediatric infectious diseases.",
+      "direction": "informative"
+    },
+    {
+      "speaker": "parent",
+      "text": "Okay, that makes sense. What about the eating issues we discussed?",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Continue offering varied foods without pressuring. Her growth parameters are adequate, so this feeding behavior shouldn't cause nutritional deficiencies. Any other questions?",
+      "direction": "professional"
+    },
+    {
+      "speaker": "child",
+      "text": "Can I have a sticker when we're done?",
+      "direction": "hopeful"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Absolutely! You've been such a good patient today. I'll see you back in a year for your five-year health maintenance visit.",
+      "direction": "warm"
+    }
+  ],
+  "_generated": {
+    "tool": "syrinx",
+    "timestamp": "2025-12-27T09:55:45.499203",
+    "errors_injected": [
+      {
+        "category": "communication",
+        "type": "excessive-jargon",
+        "severity": "moderate"
+      }
+    ]
+  }
+}

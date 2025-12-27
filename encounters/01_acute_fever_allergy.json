@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "id": "01",
+    "encounter_type": "acute",
+    "patient_age": "8 months",
+    "patient_name": "Olivia",
+    "chief_complaint": "fever x2 days, new penicillin allergy discovered",
+    "targets": ["allergy_capture", "medication_history"],
+    "duration_tier": "medium"
+  },
+  "speakers": {
+    "doctor": {"voice": "male-1", "style": "calm, thorough"},
+    "parent": {"voice": "female-1", "style": "worried first-time mom"}
+  },
+  "script": [
+    {"speaker": "doctor", "text": "Hi, I'm Dr. Patel. This is Olivia? What's going on today?", "direction": "warm greeting"},
+    {"speaker": "parent", "text": "Hi. She's had a fever since Wednesday. It's been getting up to 102, sometimes higher.", "direction": "worried"},
+    {"speaker": "doctor", "text": "Okay, so about two days now. Has she been eating and drinking normally?", "direction": "focused"},
+    {"speaker": "parent", "text": "She's drinking okay, maybe a little less than usual. But she's been really fussy and not sleeping well.", "direction": "tired"},
+    {"speaker": "doctor", "text": "Any cough, runny nose, pulling at her ears?", "direction": "systematic"},
+    {"speaker": "parent", "text": "Um, a little bit of a runny nose. Clear stuff. I haven't noticed her pulling at her ears.", "direction": "thinking"},
+    {"speaker": "doctor", "text": "Any vomiting or diarrhea?", "direction": "professional"},
+    {"speaker": "parent", "text": "No, nothing like that.", "direction": "neutral"},
+    {"speaker": "doctor", "text": "Good. Any rashes?", "direction": "continuing"},
+    {"speaker": "parent", "text": "Actually, yes. She had a rash last week, but that was from the antibiotic she was on.", "direction": "remembering"},
+    {"speaker": "doctor", "text": "Oh, tell me more about that. What antibiotic was she taking?", "direction": "alert, interested"},
+    {"speaker": "parent", "text": "She had an ear infection about ten days ago and they gave her amoxicillin. The pink liquid. She took it for maybe four days and then broke out in this red bumpy rash all over her trunk.", "direction": "explaining"},
+    {"speaker": "doctor", "text": "Did the rash itch? Any trouble breathing or swelling of her face or lips?", "direction": "assessing severity"},
+    {"speaker": "parent", "text": "It seemed itchy, she was kind of squirmy. But no, no swelling or breathing problems. The doctor at urgent care said to stop the amoxicillin and the rash went away in a couple days.", "direction": "detailed"},
+    {"speaker": "doctor", "text": "Okay, that's really important information. So she had a reaction to amoxicillin. That's a penicillin-type antibiotic, so we'll want to avoid all penicillins going forward. I'm going to add that as an allergy in her chart right now. Penicillin allergy, reaction was rash.", "direction": "documenting, clear"},
+    {"speaker": "parent", "text": "Oh, I didn't realize it was a whole class of medicines. Is that a big deal?", "direction": "concerned"},
+    {"speaker": "doctor", "text": "It's good to know because there are several antibiotics in that family we'll need to avoid. But there are plenty of alternatives, so it's not a problem, we just need to have it documented.", "direction": "reassuring"},
+    {"speaker": "parent", "text": "Okay. Should I tell other doctors about this?", "direction": "practical"},
+    {"speaker": "doctor", "text": "Absolutely. Any time she sees a new provider or goes to a pharmacy, make sure they know about the penicillin allergy. Now, let me take a look at her.", "direction": "instructive then transitioning"},
+    {"speaker": "doctor", "text": "I'm going to listen to her heart and lungs first. Heart sounds good. Lungs are clear, no wheezing or crackles.", "direction": "examining"},
+    {"speaker": "doctor", "text": "Let me check her ears. Left ear looks good. Right ear... there's some redness and fluid behind the eardrum. Looks like another ear infection.", "direction": "examining, finding"},
+    {"speaker": "parent", "text": "Oh no, another one? But we can't use that antibiotic anymore.", "direction": "worried"},
+    {"speaker": "doctor", "text": "Right, we'll use a different one. I'm going to prescribe Cefdinir, it's an orange-flavored liquid. It's not in the penicillin family so it should be safe for her.", "direction": "explaining plan"},
+    {"speaker": "parent", "text": "Okay. How long does she take it?", "direction": "practical"},
+    {"speaker": "doctor", "text": "Ten days, once a day. It's nice because it's just once daily dosing. You can give it with food.", "direction": "instructions"},
+    {"speaker": "parent", "text": "And what about the fever? Should I keep giving Tylenol?", "direction": "asking"},
+    {"speaker": "doctor", "text": "Yes, you can alternate Tylenol and Motrin every three to four hours if needed for comfort. The fever should come down within 48 to 72 hours once the antibiotic kicks in.", "direction": "guidance"},
+    {"speaker": "parent", "text": "What if it doesn't get better?", "direction": "anxious"},
+    {"speaker": "doctor", "text": "If she's not improving after three days, or if she seems worse, higher fevers, not drinking, more lethargic, call us right away. But I expect she'll turn the corner pretty quickly.", "direction": "return precautions, reassuring"},
+    {"speaker": "parent", "text": "Thank you, Doctor. I'll make sure to remember about the penicillin allergy.", "direction": "grateful"},
+    {"speaker": "doctor", "text": "I'll send the Cefdinir to your pharmacy now. Feel better, Olivia.", "direction": "closing"}
+  ]
+}

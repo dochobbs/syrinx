@@ -1,0 +1,207 @@
+{
+  "metadata": {
+    "id": "syrinx_003",
+    "encounter_type": "acute",
+    "patient_age": "4 years",
+    "patient_name": "Child",
+    "chief_complaint": "strep throat",
+    "targets": [],
+    "duration_tier": null
+  },
+  "speakers": {
+    "doctor": {
+      "voice": "female-1",
+      "style": null
+    },
+    "child": {
+      "voice": "child-girl",
+      "style": "young child, cooperative"
+    },
+    "parent": {
+      "voice": "female-2",
+      "style": "calm experienced"
+    }
+  },
+  "script": [
+    {
+      "speaker": "doctor",
+      "text": "Hi there! I'm Dr. Martinez. And who do we have here today?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "parent",
+      "text": "This is Emma. She's been complaining about her throat hurting since yesterday.",
+      "direction": "calm"
+    },
+    {
+      "speaker": "child",
+      "text": "My throat is owwy!",
+      "direction": "whining slightly"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Oh no, Emma! That doesn't sound fun at all. Can you tell me how much it hurts? Like a little bit or a lot?",
+      "direction": "gentle"
+    },
+    {
+      "speaker": "child",
+      "text": "A lot! It hurts when I swallow.",
+      "direction": "upset"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I'm sorry to hear that, sweetie. Mom, when did you first notice she wasn't feeling well?",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "parent",
+      "text": "She woke up yesterday morning saying her throat hurt. She didn't want to eat breakfast, which is unusual for her. No fever that I noticed initially.",
+      "direction": "informative"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Has she had any fever since then?",
+      "direction": "focused"
+    },
+    {
+      "speaker": "parent",
+      "text": "Yes, I took her temperature last night and it was 101.2. This morning it was 100.8.",
+      "direction": "matter-of-fact"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Emma, have you been feeling hot or cold?",
+      "direction": "gentle"
+    },
+    {
+      "speaker": "child",
+      "text": "Hot. And tired.",
+      "direction": "subdued"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Any headache, honey?",
+      "direction": "caring"
+    },
+    {
+      "speaker": "child",
+      "text": "A little bit.",
+      "direction": "quiet"
+    },
+    {
+      "speaker": "parent",
+      "text": "She's also been more clingy than usual and took a long nap yesterday, which she rarely does anymore.",
+      "direction": "observant"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Has she had any runny nose, cough, or ear pain?",
+      "direction": "systematic"
+    },
+    {
+      "speaker": "parent",
+      "text": "No runny nose or cough. She hasn't mentioned her ears hurting.",
+      "direction": "thoughtful"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Any nausea or vomiting?",
+      "direction": "routine"
+    },
+    {
+      "speaker": "parent",
+      "text": "No vomiting, but she's barely eaten anything since yesterday.",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Emma, I'm going to look in your throat now, okay? Can you open your mouth really wide for me like a lion? Roar!",
+      "direction": "playful"
+    },
+    {
+      "speaker": "child",
+      "text": "Roooar!",
+      "direction": "cooperative"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Perfect! Now say 'ahh' for me.",
+      "direction": "[examining]"
+    },
+    {
+      "speaker": "child",
+      "text": "Ahhhh",
+      "direction": "compliant"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I can see her throat is quite red and swollen. Let me feel her neck for any swollen glands.",
+      "direction": "[examining]"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Emma, I'm just going to feel under your chin and on your neck. It might feel a little funny but it won't hurt.",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "child",
+      "text": "Okay.",
+      "direction": "trusting"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Yes, I can feel some enlarged lymph nodes. Has she been around anyone with strep throat recently?",
+      "direction": "focused"
+    },
+    {
+      "speaker": "parent",
+      "text": "Her daycare sent home a note last week saying there were a few cases of strep going around.",
+      "direction": "informative"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That makes sense. Based on her symptoms and what I'm seeing on exam, this looks very much like strep throat. I'd like to do a quick test to confirm.",
+      "direction": "explaining"
+    },
+    {
+      "speaker": "parent",
+      "text": "Is that the throat swab?",
+      "direction": "knowing"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Exactly. Emma, I need to use a long cotton swab to touch the back of your throat. It might feel yucky for just a second, but then we'll be all done.",
+      "direction": "preparing"
+    },
+    {
+      "speaker": "child",
+      "text": "Will it hurt?",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "It won't hurt, but it might make you feel like you want to gag for just one second. You're being so brave!",
+      "direction": "encouraging"
+    },
+    {
+      "speaker": "parent",
+      "text": "You can squeeze my hand, Emma.",
+      "direction": "supportive"
+    },
+    {
+      "speaker": "doctor",
+      "text": "The rapid test is positive for strep. I'll start her on antibiotics, and she should start feeling better within 24 to 48 hours.",
+      "direction": "informative"
+    },
+    {
+      "speaker": "parent",
+      "text": "Good, I was hoping we caught it early. What antibiotic will you prescribe?",
+      "direction": "practical"
+    }
+  ],
+  "_generated": {
+    "tool": "syrinx",
+    "timestamp": "2025-12-27T10:50:42.980196",
+    "errors_injected": []
+  }
+}

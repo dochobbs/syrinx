@@ -1,0 +1,124 @@
+{
+  "metadata": {
+    "id": "syrinx_028",
+    "encounter_type": "acute",
+    "patient_age": "6 months",
+    "patient_name": "Olivia Chen",
+    "chief_complaint": "cough x3 days",
+    "targets": [],
+    "duration_tier": "short",
+    "patient_sex": "female"
+  },
+  "speakers": {
+    "parent": {
+      "voice": "female-2",
+      "style": "anxious first-time mom, asks many questions"
+    },
+    "doctor": {
+      "voice": "female-1",
+      "style": "warm, thorough"
+    }
+  },
+  "script": [
+    {
+      "speaker": "doctor",
+      "text": "Hi there! I'm Dr. Martinez. You must be Sarah, and this is little Livvy?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "parent",
+      "text": "Yes, hi. I'm so worried about her cough. It started three days ago and seems to be getting worse.",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I can understand your concern. Let me get some details. Tell me about this cough - is it wet or dry?",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "It sounds wet, like there's stuff in her chest. And she's been more fussy than usual, especially at night.",
+      "direction": "worried [baby fussing]"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Has she had any fever?",
+      "direction": "calm"
+    },
+    {
+      "speaker": "parent",
+      "text": "I took her temperature this morning and it was 100.2. Should I be worried about that?",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's a low-grade fever. How about her eating and drinking? Any changes there?",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "She's been nursing less frequently, maybe every four hours instead of every two. Is that normal when they're sick?",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That can happen with illness. Let me examine her now. [examining] Her breathing sounds a little fast but not labored.",
+      "direction": "calm [examining]"
+    },
+    {
+      "speaker": "parent",
+      "text": "What does that mean exactly? Is she okay?",
+      "direction": "worried [baby cooing]"
+    },
+    {
+      "speaker": "doctor",
+      "text": "[examining] I can hear some congestion in her upper chest, but her lungs sound clear. Her ears look fine too.",
+      "direction": "calm [examining]"
+    },
+    {
+      "speaker": "parent",
+      "text": "So it's not pneumonia? I was so scared it might be pneumonia.",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "No signs of pneumonia. This looks like a common viral upper respiratory infection - basically a cold.",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "Oh thank goodness. But what can I do to help her feel better? She seems so uncomfortable.",
+      "direction": "relieved but concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Keep nursing frequently, use a cool mist humidifier, and saline drops for her nose. The cough should improve in 5-7 days.",
+      "direction": "warm"
+    },
+    {
+      "speaker": "parent",
+      "text": "Should I bring her back if the fever goes higher? At what temperature should I worry?",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "For a six-month-old, come back if her fever reaches 102 or if she's having trouble breathing or eating.",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "Okay, and it's safe to give her the saline drops as much as needed?",
+      "direction": "concerned [baby fussing]"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Yes, saline is very safe. You can use it before feeding to help clear her nose. She should be feeling better soon.",
+      "direction": "warm"
+    }
+  ],
+  "_generated": {
+    "tool": "syrinx",
+    "timestamp": "2025-12-27T09:59:55.071923",
+    "errors_injected": []
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "id": "05",
+    "encounter_type": "acute",
+    "patient_age": "3 weeks",
+    "patient_name": "Baby James",
+    "chief_complaint": "fever 100.8, lethargic, poor feeding - urgent workup",
+    "targets": ["acuity_urgency", "complex_workup", "critical_findings"],
+    "duration_tier": "long"
+  },
+  "speakers": {
+    "doctor": {"voice": "female-1", "style": "calm but serious, urgent"},
+    "parent": {"voice": "female-2", "style": "scared, exhausted new mom"}
+  },
+  "script": [
+    {"speaker": "doctor", "text": "Hi, I'm Dr. Martinez. I understand James has a fever? Tell me everything that's been going on.", "direction": "serious, focused"},
+    {"speaker": "parent", "text": "I took his temperature about an hour ago and it was 100.8 under his arm. He's only three weeks old. I didn't know what to do so I came straight here.", "direction": "scared, frantic"},
+    {"speaker": "doctor", "text": "You did exactly the right thing. Any fever in a baby this young needs to be evaluated right away. When did you first notice something was off?", "direction": "validating, gathering history"},
+    {"speaker": "parent", "text": "He's been kind of sleepy today. Like, more than usual. And he didn't want to eat this morning. He usually nurses every two to three hours but he only ate once since last night.", "direction": "worried, detailed"},
+    {"speaker": "doctor", "text": "How many wet diapers has he had today?", "direction": "assessing hydration"},
+    {"speaker": "parent", "text": "Um, maybe two? Usually he has a lot more. Oh god, is that bad?", "direction": "realizing, more scared"},
+    {"speaker": "doctor", "text": "It tells me he's not getting enough fluid, which we need to address. Has he been fussy or is it more that he's too quiet?", "direction": "characterizing illness"},
+    {"speaker": "parent", "text": "Too quiet. He's usually more alert than this. He's just... floppy. Is that the right word? He doesn't seem like himself.", "direction": "trying to describe"},
+    {"speaker": "doctor", "text": "I understand. Any vomiting or diarrhea?", "direction": "systematic"},
+    {"speaker": "parent", "text": "No vomiting. His poops have been normal I think.", "direction": "answering"},
+    {"speaker": "doctor", "text": "Any cough, congestion, or difficulty breathing?", "direction": "continuing"},
+    {"speaker": "parent", "text": "No, nothing like that.", "direction": "answering"},
+    {"speaker": "doctor", "text": "Has anyone at home been sick?", "direction": "exposure history"},
+    {"speaker": "parent", "text": "My older daughter had a cold last week but she's better now. Could he have caught it from her?", "direction": "connecting"},
+    {"speaker": "doctor", "text": "It's possible. Let me examine him now.", "direction": "transitioning"},
+    {"speaker": "doctor", "text": "Okay. His temperature is 100.9 rectally, which is a true fever. His heart rate is a little elevated. He does look pale and less responsive than I'd like to see.", "direction": "examining, concerned"},
+    {"speaker": "parent", "text": "What does that mean? Is he okay?", "direction": "frightened"},
+    {"speaker": "doctor", "text": "I'm going to be very honest with you. A fever in a baby this young is something we take very seriously because their immune systems are still developing and infections can progress quickly.", "direction": "serious, honest"},
+    {"speaker": "parent", "text": "Oh my god.", "direction": "panicking"},
+    {"speaker": "doctor", "text": "I need you to stay with me. We're going to take good care of him. But we need to do a full workup to find out what's causing this. That means blood tests, a urine sample, and a lumbar puncture.", "direction": "calm, explaining plan"},
+    {"speaker": "parent", "text": "A lumbar puncture? You mean a spinal tap? Is it that serious?", "direction": "scared, clarifying"},
+    {"speaker": "doctor", "text": "In babies under one month with a fever, we have to rule out meningitis. Most of the time, the spinal fluid comes back normal and it's a viral infection. But we can't take chances.", "direction": "explaining necessity"},
+    {"speaker": "parent", "text": "Will it hurt him?", "direction": "maternal concern"},
+    {"speaker": "doctor", "text": "It's uncomfortable but quick. We'll give him some sugar water which helps with the pain. The information we get is essential to treating him correctly.", "direction": "reassuring"},
+    {"speaker": "parent", "text": "Okay. Okay. What else do we need to do?", "direction": "trying to stay together"},
+    {"speaker": "doctor", "text": "He's going to need IV fluids because he's not eating well, and we're going to start IV antibiotics until the cultures come back. That takes about 48 hours.", "direction": "treatment plan"},
+    {"speaker": "parent", "text": "Antibiotics before you know what it is?", "direction": "questioning"},
+    {"speaker": "doctor", "text": "Yes. In a baby this young and this sick, we don't wait. We treat first and adjust based on what the tests show. It's the safest approach.", "direction": "explaining rationale"},
+    {"speaker": "parent", "text": "Does he need to be admitted?", "direction": "asking"},
+    {"speaker": "doctor", "text": "Yes. He'll need to stay in the hospital for at least 48 hours while we monitor him and wait for cultures. If everything comes back negative and he's looking better, he can go home.", "direction": "admission plan"},
+    {"speaker": "parent", "text": "I can stay with him right?", "direction": "needing reassurance"},
+    {"speaker": "doctor", "text": "Absolutely. You won't leave his side. I'm going to get the team ready to do the labs and lumbar puncture now. A nurse will come in to start the IV. Do you have any questions?", "direction": "coordinating care"},
+    {"speaker": "parent", "text": "Is he going to be okay?", "direction": "terrified"},
+    {"speaker": "doctor", "text": "I can't make promises, but he's in the right place and we're acting quickly. Most babies with fevers at this age do very well. We're going to take excellent care of him.", "direction": "honest, supportive"},
+    {"speaker": "parent", "text": "Thank you, Doctor. Please help him.", "direction": "desperate"},
+    {"speaker": "doctor", "text": "That's exactly what we're going to do. The nurse will be right in.", "direction": "closing, moving to action"}
+  ]
+}

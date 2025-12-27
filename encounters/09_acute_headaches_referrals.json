@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "id": "09",
+    "encounter_type": "acute",
+    "patient_age": "9 years",
+    "patient_name": "Emma",
+    "chief_complaint": "headaches x1 week, needs glasses Rx, optho referral, follow up",
+    "targets": ["multiple_todos", "referral", "follow_up_scheduling"],
+    "duration_tier": "short"
+  },
+  "speakers": {
+    "doctor": {"voice": "female-1", "style": "efficient, warm"},
+    "parent": {"voice": "female-2", "style": "practical mom"},
+    "child": {"voice": "child-girl", "style": "cooperative"}
+  },
+  "script": [
+    {"speaker": "doctor", "text": "Hi Emma, hi Mom. Headaches for the past week?", "direction": "greeting"},
+    {"speaker": "parent", "text": "Yes, she's been complaining almost every day after school. Sometimes she says the words on the board are blurry too.", "direction": "reporting"},
+    {"speaker": "doctor", "text": "Emma, where does your head hurt?", "direction": "to child"},
+    {"speaker": "child", "text": "In the front, like above my eyes.", "direction": "describing"},
+    {"speaker": "doctor", "text": "Both sides or one side?", "direction": "characterizing"},
+    {"speaker": "child", "text": "Both.", "direction": "answering"},
+    {"speaker": "doctor", "text": "Does light bother your eyes when your head hurts?", "direction": "migraine features"},
+    {"speaker": "child", "text": "A little bit.", "direction": "yes"},
+    {"speaker": "doctor", "text": "Any nausea or vomiting with the headaches?", "direction": "associated symptoms"},
+    {"speaker": "parent", "text": "No, nothing like that.", "direction": "answering"},
+    {"speaker": "doctor", "text": "When did she last have her eyes checked?", "direction": "key question"},
+    {"speaker": "parent", "text": "Um, probably two years ago? At school they said her vision was fine.", "direction": "recalling"},
+    {"speaker": "doctor", "text": "Let me do a quick vision check.", "direction": "examining"},
+    {"speaker": "doctor", "text": "Emma, read the smallest line you can on that chart.", "direction": "testing"},
+    {"speaker": "child", "text": "E, F, P... um... I can't see the rest.", "direction": "struggling"},
+    {"speaker": "doctor", "text": "Okay. She's reading about 20/50 in both eyes. That's enough to cause eye strain headaches, especially with close work and screen time.", "direction": "findings"},
+    {"speaker": "parent", "text": "So she needs glasses?", "direction": "concluding"},
+    {"speaker": "doctor", "text": "Very likely. I'm going to refer her to an optometrist, Dr. Williams, for a full eye exam and glasses prescription. I think once we correct her vision, the headaches will improve significantly.", "direction": "plan"},
+    {"speaker": "parent", "text": "Okay. Is there anything else causing the headaches?", "direction": "thorough"},
+    {"speaker": "doctor", "text": "Let me do a quick neuro exam to be safe.", "direction": "examination"},
+    {"speaker": "doctor", "text": "Follow my finger with your eyes. Good. Squeeze my hands. Push against me. Smile, raise your eyebrows. Everything looks normal neurologically.", "direction": "examining"},
+    {"speaker": "parent", "text": "That's a relief.", "direction": "relieved"},
+    {"speaker": "doctor", "text": "In the meantime, while you wait for the eye appointment, she can take ibuprofen for the headaches. Also make sure she takes breaks from screens every 20 minutes.", "direction": "interim management"},
+    {"speaker": "parent", "text": "How long should we wait to see if the glasses help?", "direction": "asking"},
+    {"speaker": "doctor", "text": "Let's have her come back in four weeks. If she's still having headaches after she has glasses, we'll dig deeper. But I'm optimistic this is vision-related.", "direction": "follow up plan"},
+    {"speaker": "parent", "text": "Sounds good. So the plan is eye doctor referral, ibuprofen as needed, and follow up in four weeks?", "direction": "summarizing"},
+    {"speaker": "doctor", "text": "Exactly right. I'll put in the referral to Dr. Williams and schedule your follow up before you leave.", "direction": "confirming"},
+    {"speaker": "child", "text": "Do I get to pick my glasses?", "direction": "hopeful"},
+    {"speaker": "doctor", "text": "You sure do. That's the fun part.", "direction": "to child, friendly"},
+    {"speaker": "parent", "text": "Thank you, Doctor.", "direction": "closing"}
+  ]
+}

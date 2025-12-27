@@ -1,0 +1,132 @@
+{
+  "metadata": {
+    "id": "syrinx_026",
+    "encounter_type": "acute",
+    "patient_age": "6 months",
+    "patient_name": "Olivia Chen",
+    "chief_complaint": "fever x2 days",
+    "targets": [
+      "detect_missed-allergy"
+    ],
+    "duration_tier": "short",
+    "patient_sex": "female"
+  },
+  "speakers": {
+    "parent": {
+      "voice": "female-2",
+      "style": "anxious first-time mom, asks many questions"
+    },
+    "doctor": {
+      "voice": "female-1",
+      "style": "warm, thorough"
+    }
+  },
+  "script": [
+    {
+      "speaker": "doctor",
+      "text": "Good morning, I'm Dr. Martinez. What brings little Livvy in today?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "parent",
+      "text": "Hi, she's had a fever for two days now and I'm really worried. This is my first baby and I don't know if I should be concerned.",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I understand your concern. Tell me more about the fever - how high has it gotten?",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "It's been around 101 to 102. I've been giving her Tylenol but I'm scared to give her anything else because she had a bad reaction to amoxicillin when she had an ear infection at 4 months - she got a rash all over her body.",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's good that you're being cautious with medications. Any other symptoms besides the fever?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "parent",
+      "text": "She's been fussier than usual, not eating as much, and she seems more sleepy. Oh, and she's been pulling at her right ear a lot.",
+      "direction": "concerned [baby fussing]"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Let me take a look at her. How has she been sleeping and with wet diapers?",
+      "direction": "examining"
+    },
+    {
+      "speaker": "parent",
+      "text": "She's still having wet diapers, maybe not as many as usual. And she's been waking up more at night crying.",
+      "direction": "thoughtful"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Okay, let me examine her ears first. [examining] I can see her right eardrum is quite red and bulging. She definitely has an ear infection.",
+      "direction": "explaining"
+    },
+    {
+      "speaker": "parent",
+      "text": "Oh no, I was afraid of that. Is that why she's been so fussy?",
+      "direction": "anxious [baby crying]"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Yes, ear infections are very painful for little ones. The good news is this is very treatable.",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "What kind of treatment does she need? I'm nervous about giving her antibiotics again.",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I'm going to prescribe Augmentin - it's very effective for ear infections in babies her age. Give it twice daily with food.",
+      "direction": "confident"
+    },
+    {
+      "speaker": "parent",
+      "text": "Wait, is that safe for her? I told you she had a reaction to amoxicillin before.",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Oh, you're absolutely right. Let me prescribe azithromycin instead - that's a completely different class of antibiotic and will be safe for her.",
+      "direction": "apologetic"
+    },
+    {
+      "speaker": "parent",
+      "text": "Thank you for catching that. How long until she should start feeling better?",
+      "direction": "relieved"
+    },
+    {
+      "speaker": "doctor",
+      "text": "She should start improving within 48 hours. Continue the Tylenol for fever and comfort, and call if the fever persists beyond three days.",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "Should I be worried about anything else? When should I bring her back?",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Follow up in two weeks or sooner if she's not improving. You're doing a great job as a new mom.",
+      "direction": "warm [baby cooing]"
+    }
+  ],
+  "_generated": {
+    "tool": "syrinx",
+    "timestamp": "2025-12-27T09:52:21.765591",
+    "errors_injected": [
+      {
+        "category": "clinical",
+        "type": "missed-allergy",
+        "severity": "moderate"
+      }
+    ]
+  }
+}
