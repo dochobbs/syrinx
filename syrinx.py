@@ -27,6 +27,7 @@ from core.input_parser import (
 from core.script_generator import ScriptGenerator
 from core.error_injector import ErrorInjector, ERROR_CATALOG
 from core.encounter_builder import EncounterBuilder
+from core.ground_truth import GroundTruthExtractor, clean_ground_truth, validate_ground_truth
 
 
 def cmd_generate(args):
@@ -166,6 +167,107 @@ def cmd_patients(args):
     return 0
 
 
+def cmd_extract(args):
+    """Handle extract command - extract ground truth from encounter."""
+    print("Syrinx - Ground Truth Extraction")
+    print("=" * 40)
+
+    # Load encounter
+    encounter_path = Path(args.encounter)
+    if not encounter_path.exists():
+        print(f"Error: Encounter file not found: {encounter_path}")
+        return 1
+
+    try:
+        with open(encounter_path) as f:
+            encounter = json.load(f)
+    except json.JSONDecodeError as e:
+        print(f"Error: Invalid JSON: {e}")
+        return 1
+
+    script = encounter.get("script", [])
+    if not script:
+        print("Error: No script found in encounter")
+        return 1
+
+    metadata = encounter.get("metadata", {})
+    print(f"Encounter: {metadata.get('id', 'unknown')}")
+    print(f"Patient: {metadata.get('patient_name', 'unknown')}")
+    print(f"Chief complaint: {metadata.get('chief_complaint', 'unknown')}")
+    print(f"Script lines: {len(script)}")
+
+    # Initialize extractor
+    try:
+        extractor = GroundTruthExtractor()
+    except ValueError as e:
+        print(f"Error: {e}")
+        print("Set ANTHROPIC_API_KEY environment variable")
+        return 1
+
+    # Extract ground truth
+    print("\nExtracting ground truth with Claude...")
+    try:
+        if args.minimal:
+            ground_truth = extractor.extract_minimal(script)
+            print("  (minimal extraction mode)")
+        else:
+            ground_truth = extractor.extract(script)
+            print("  (full extraction mode)")
+    except Exception as e:
+        print(f"Error extracting ground truth: {e}")
+        return 1
+
+    # Clean if requested
+    if args.clean:
+        ground_truth = clean_ground_truth(ground_truth)
+        print("  Cleaned null/empty fields")
+
+    # Validate
+    if args.validate:
+        validation = validate_ground_truth(ground_truth)
+        print(f"\nValidation:")
+        print(f"  Valid: {validation['valid']}")
+        print(f"  Completeness: {validation['completeness_score']:.0%}")
+        print(f"  Sections: {validation['sections_present']}/{validation['sections_total']}")
+        if validation['issues']:
+            print("  Issues:")
+            for issue in validation['issues']:
+                print(f"    - {issue}")
+
+    # Determine output path
+    if args.output:
+        output_path = Path(args.output)
+    else:
+        # Default: same directory with _ground_truth suffix
+        output_path = encounter_path.parent / f"{encounter_path.stem}_ground_truth.json"
+
+    # Save
+    with open(output_path, 'w') as f:
+        json.dump(ground_truth, f, indent=2)
+    print(f"\nSaved: {output_path}")
+
+    # Print summary of key findings
+    print("\nKey Findings:")
+    if ground_truth.get("chief_complaint"):
+        print(f"  Chief Complaint: {ground_truth['chief_complaint']}")
+    if ground_truth.get("assessment"):
+        diagnoses = ground_truth["assessment"]
+        if isinstance(diagnoses, list) and diagnoses:
+            print(f"  Diagnoses: {len(diagnoses)}")
+            for dx in diagnoses[:3]:  # Show first 3
+                name = dx.get("diagnosis", "unknown")
+                certainty = dx.get("certainty", "")
+                print(f"    - {name} ({certainty})")
+    if ground_truth.get("plan", {}).get("medications_prescribed"):
+        meds = ground_truth["plan"]["medications_prescribed"]
+        print(f"  Medications: {len(meds)}")
+        for med in meds[:3]:
+            print(f"    - {med.get('name', 'unknown')}")
+
+    print("\nDone!")
+    return 0
+
+
 def _build_spec_from_args(args) -> EncounterSpec:
     """Build EncounterSpec from CLI arguments."""
     # Parse encounter type
@@ -271,6 +373,19 @@ Examples:
     pat_sub = pat_parser.add_subparsers(dest="patients_action")
     pat_sub.add_parser("list", help="List patient profiles")
 
+    # Extract command (ground truth)
+    ext_parser = subparsers.add_parser("extract", help="Extract ground truth from encounter")
+    ext_parser.add_argument("encounter", help="Path to encounter JSON file")
+    ext_parser.add_argument("--output", "-o", help="Output path for ground truth JSON")
+    ext_parser.add_argument("--minimal", "-m", action="store_true",
+                           help="Minimal extraction (faster, less detailed)")
+    ext_parser.add_argument("--clean", action="store_true", default=True,
+                           help="Remove null/empty fields (default: true)")
+    ext_parser.add_argument("--no-clean", dest="clean", action="store_false",
+                           help="Keep all fields including nulls")
+    ext_parser.add_argument("--validate", "-v", action="store_true",
+                           help="Validate and show completeness report")
+
     args = parser.parse_args()
 
     if not args.command:
@@ -285,6 +400,8 @@ Examples:
         return cmd_personas(args)
     elif args.command == "patients":
         return cmd_patients(args)
+    elif args.command == "extract":
+        return cmd_extract(args)
 
     return 0
 

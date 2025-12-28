@@ -11,6 +11,7 @@ from typing import Dict, Any, List, Optional
 from pathlib import Path
 
 from .input_parser import EncounterSpec, ParticipantConfig, parse_age_string
+from .validator import infer_targets, validate_error_injection, validation_summary
 
 
 # Voice assignments based on role and context
@@ -74,7 +75,8 @@ class EncounterBuilder:
         self,
         spec: EncounterSpec,
         script: List[Dict[str, str]],
-        encounter_id: Optional[str] = None
+        encounter_id: Optional[str] = None,
+        validate_errors: bool = True
     ) -> Dict[str, Any]:
         """
         Build complete encounter JSON.
@@ -83,6 +85,7 @@ class EncounterBuilder:
             spec: Encounter specification
             script: Generated script lines
             encounter_id: Optional custom ID
+            validate_errors: Whether to validate error injection
 
         Returns:
             Complete encounter dictionary
@@ -91,15 +94,22 @@ class EncounterBuilder:
             encounter_id = f"syrinx_{self.encounter_counter:03d}"
             self.encounter_counter += 1
 
+        # Infer targets from spec and script content
+        targets = infer_targets(spec, script)
+
+        metadata = self._build_metadata(spec, encounter_id, targets)
+        metadata["line_count"] = len(script)
+
         encounter = {
-            "metadata": self._build_metadata(spec, encounter_id),
+            "metadata": metadata,
             "speakers": self._build_speakers(spec, script),
             "script": script,
         }
 
         # Add generation info
-        encounter["_generated"] = {
+        generation_info = {
             "tool": "syrinx",
+            "version": "1.1.0",
             "timestamp": datetime.now().isoformat(),
             "errors_injected": [
                 {"category": e.category, "type": e.error_type, "severity": e.severity}
@@ -107,33 +117,31 @@ class EncounterBuilder:
             ] if spec.errors else []
         }
 
+        # Validate error injection if errors were requested
+        if validate_errors and spec.errors:
+            validation_results = validate_error_injection(script, spec.errors)
+            generation_info["error_validation"] = validation_summary(validation_results)
+
+        encounter["_generated"] = generation_info
+
         return encounter
 
-    def _build_metadata(self, spec: EncounterSpec, encounter_id: str) -> Dict[str, Any]:
+    def _build_metadata(
+        self,
+        spec: EncounterSpec,
+        encounter_id: str,
+        targets: List[str]
+    ) -> Dict[str, Any]:
         """Build metadata section."""
-        # Calculate duration tier based on line count expectation
-        duration_tier = spec.duration_tier
-
-        # Build targets list
-        targets = spec.targets.copy() if spec.targets else []
-
-        # Add error-related targets
-        for error in spec.errors:
-            if error.category == "clinical":
-                targets.append(f"detect_{error.error_type}")
-            elif error.category == "communication":
-                targets.append("communication_quality")
-            elif error.category == "documentation":
-                targets.append("documentation_completeness")
-
         metadata = {
             "id": encounter_id,
             "encounter_type": spec.encounter_type.value,
             "patient_age": spec.get_patient_age(),
             "patient_name": spec.get_patient_name(),
             "chief_complaint": spec.chief_complaint,
-            "targets": list(set(targets)),  # Remove duplicates
-            "duration_tier": duration_tier,
+            "targets": targets,
+            "duration_tier": spec.duration_tier,
+            "line_count": 0,  # Will be set by caller if needed
         }
 
         # Add patient sex if known
