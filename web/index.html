@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syrinx | Medical Encounter Simulator</title>
+
+    <!-- Fonts: Editorial style matching Oread -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Icons: Lucide -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ============================================
+         HEADER
+         ============================================ -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-mark">S</div>
+                <span class="logo-text">Syrinx<span>.voice</span></span>
+            </div>
+            <nav>
+                <a href="#" data-view="generate" class="nav-link active">
+                    <i data-lucide="wand-2"></i>
+                    Generate
+                </a>
+                <a href="#" data-view="practice" class="nav-link">
+                    <i data-lucide="mic"></i>
+                    Practice
+                </a>
+                <a href="#" data-view="library" class="nav-link">
+                    <i data-lucide="library"></i>
+                    Library
+                </a>
+                <a href="#" data-view="sessions" class="nav-link">
+                    <i data-lucide="history"></i>
+                    Sessions
+                </a>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <i data-lucide="moon"></i>
+                    <span class="theme-toggle-label">Dark</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================
+         MAIN CONTENT
+         ============================================ -->
+    <main>
+        <!-- GENERATE VIEW -->
+        <section id="view-generate" class="view active">
+            <!-- Hero Section -->
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Create Medical Encounters</h1>
+                    <p>Generate realistic pediatric doctor-patient conversations for training and education</p>
+                </div>
+            </div>
+
+            <div class="content-container">
+                <div class="generate-layout">
+                    <!-- Generation Form -->
+                    <div class="generate-form-card">
+                        <div class="card-header">
+                            <h2><i data-lucide="sparkles"></i> New Encounter</h2>
+                        </div>
+                        <div class="card-body">
+                            <form id="generateForm">
+                                <!-- Natural Language Input -->
+                                <div class="form-group">
+                                    <label for="nlInput">Describe the encounter</label>
+                                    <textarea
+                                        id="nlInput"
+                                        class="form-textarea"
+                                        placeholder="Example: 6-month-old with fever, anxious first-time mom, doctor is rushed and misses the penicillin allergy mention..."
+                                        rows="4"
+                                    ></textarea>
+                                </div>
+
+                                <!-- Quick Presets -->
+                                <div class="form-group">
+                                    <label>Quick Presets</label>
+                                    <div class="preset-chips">
+                                        <button type="button" class="chip" data-preset="acute-fever">
+                                            <i data-lucide="thermometer"></i> Acute Fever
+                                        </button>
+                                        <button type="button" class="chip" data-preset="well-child">
+                                            <i data-lucide="baby"></i> Well Child
+                                        </button>
+                                        <button type="button" class="chip" data-preset="ear-infection">
+                                            <i data-lucide="ear"></i> Ear Infection
+                                        </button>
+                                        <button type="button" class="chip" data-preset="asthma">
+                                            <i data-lucide="wind"></i> Asthma Check
+                                        </button>
+                                        <button type="button" class="chip" data-preset="mental-health">
+                                            <i data-lucide="brain"></i> Mental Health
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Options Row -->
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="duration">Duration</label>
+                                        <select id="duration" class="form-select">
+                                            <option value="short">Short (2-3 min)</option>
+                                            <option value="medium" selected>Medium (4-5 min)</option>
+                                            <option value="long">Long (6-8 min)</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="errorType">Error Injection</label>
+                                        <select id="errorType" class="form-select">
+                                            <option value="none">No errors</option>
+                                            <option value="missed-allergy">Missed Allergy</option>
+                                            <option value="rushed">Rushed Doctor</option>
+                                            <option value="dismissive">Dismissive</option>
+                                            <option value="jargon">Medical Jargon</option>
+                                            <option value="incomplete-history">Incomplete History</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Import Patient -->
+                                <div class="form-group">
+                                    <label>Patient Context</label>
+                                    <div class="import-row">
+                                        <button type="button" class="btn btn-secondary" id="importOread">
+                                            <i data-lucide="upload"></i>
+                                            Import from Oread
+                                        </button>
+                                        <span class="patient-badge" id="patientBadge" style="display: none;">
+                                            <i data-lucide="user"></i>
+                                            <span id="patientName">-</span>
+                                            <button type="button" class="badge-remove" id="clearPatient">
+                                                <i data-lucide="x"></i>
+                                            </button>
+                                        </span>
+                                    </div>
+                                    <input type="file" id="oreadFileInput" accept=".json" style="display: none;">
+                                </div>
+
+                                <!-- Generate Button -->
+                                <button type="submit" class="btn btn-primary btn-large" id="generateBtn">
+                                    <i data-lucide="play"></i>
+                                    Generate Encounter
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Audio Player / Result -->
+                    <div class="result-card" id="resultCard">
+                        <div class="card-header">
+                            <h2><i data-lucide="volume-2"></i> Generated Encounter</h2>
+                            <div class="card-actions">
+                                <button class="btn btn-icon" id="downloadBtn" title="Download">
+                                    <i data-lucide="download"></i>
+                                </button>
+                                <button class="btn btn-icon" id="copyTranscriptBtn" title="Copy Transcript">
+                                    <i data-lucide="copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <!-- Empty State -->
+                            <div class="empty-state" id="emptyState">
+                                <div class="empty-icon">
+                                    <i data-lucide="headphones"></i>
+                                </div>
+                                <p>Generate an encounter to listen</p>
+                            </div>
+
+                            <!-- Loading State -->
+                            <div class="loading-state" id="loadingState" style="display: none;">
+                                <div class="loading-spinner"></div>
+                                <p id="loadingText">Generating script...</p>
+                            </div>
+
+                            <!-- Audio Player -->
+                            <div class="audio-player" id="audioPlayer" style="display: none;">
+                                <div class="waveform-container" id="waveformContainer">
+                                    <canvas id="waveformCanvas"></canvas>
+                                </div>
+                                <div class="player-controls">
+                                    <button class="btn btn-icon btn-large" id="playPauseBtn">
+                                        <i data-lucide="play"></i>
+                                    </button>
+                                    <div class="time-display">
+                                        <span id="currentTime">0:00</span>
+                                        <span class="time-separator">/</span>
+                                        <span id="totalTime">0:00</span>
+                                    </div>
+                                    <input type="range" class="progress-slider" id="progressSlider" min="0" max="100" value="0">
+                                    <div class="volume-control">
+                                        <button class="btn btn-icon" id="volumeBtn">
+                                            <i data-lucide="volume-2"></i>
+                                        </button>
+                                        <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="80">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Transcript -->
+                            <div class="transcript-container" id="transcriptContainer" style="display: none;">
+                                <div class="transcript-header">
+                                    <h3>Transcript</h3>
+                                    <div class="speaker-legend">
+                                        <span class="legend-item doctor"><span class="dot"></span> Doctor</span>
+                                        <span class="legend-item parent"><span class="dot"></span> Parent</span>
+                                        <span class="legend-item child"><span class="dot"></span> Child</span>
+                                    </div>
+                                </div>
+                                <div class="transcript-content" id="transcriptContent">
+                                    <!-- Transcript lines will be inserted here -->
+                                </div>
+                            </div>
+
+                            <!-- Learning Objectives -->
+                            <div class="objectives-container" id="objectivesContainer" style="display: none;">
+                                <div class="objectives-header">
+                                    <h3><i data-lucide="target"></i> Learning Objectives</h3>
+                                </div>
+                                <div class="objectives-list" id="objectivesList">
+                                    <!-- Objectives will be inserted here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRACTICE VIEW -->
+        <section id="view-practice" class="view">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Interactive Practice</h1>
+                    <p>Role-play as a parent or doctor in real-time voice conversations</p>
+                </div>
+            </div>
+
+            <div class="content-container">
+                <div class="practice-layout">
+                    <!-- Role Selection -->
+                    <div class="role-selection" id="roleSelection">
+                        <h2>Choose Your Role</h2>
+                        <p>Select the role you want to practice</p>
+
+                        <div class="role-cards">
+                            <div class="role-card" data-role="doctor">
+                                <div class="role-icon doctor">
+                                    <i data-lucide="stethoscope"></i>
+                                </div>
+                                <h3>Play as Doctor</h3>
+                                <p>Practice clinical interviewing, history-taking, and patient communication</p>
+                                <ul class="role-features">
+                                    <li><i data-lucide="check"></i> Take patient history</li>
+                                    <li><i data-lucide="check"></i> Make diagnostic decisions</li>
+                                    <li><i data-lucide="check"></i> Explain treatment plans</li>
+                                </ul>
+                            </div>
+                            <div class="role-card" data-role="parent">
+                                <div class="role-icon parent">
+                                    <i data-lucide="heart-handshake"></i>
+                                </div>
+                                <h3>Play as Parent</h3>
+                                <p>Experience how parents communicate with doctors about their child's health</p>
+                                <ul class="role-features">
+                                    <li><i data-lucide="check"></i> Describe symptoms</li>
+                                    <li><i data-lucide="check"></i> Ask questions</li>
+                                    <li><i data-lucide="check"></i> Understand diagnoses</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scenario Selection -->
+                    <div class="scenario-selection" id="scenarioSelection" style="display: none;">
+                        <div class="back-button">
+                            <button class="btn btn-ghost" id="backToRoles">
+                                <i data-lucide="arrow-left"></i> Back
+                            </button>
+                        </div>
+                        <h2>Select a Scenario</h2>
+
+                        <div class="scenario-grid" id="scenarioGrid">
+                            <!-- Scenario cards will be inserted dynamically -->
+                        </div>
+
+                        <div class="custom-scenario">
+                            <h3>Or describe your own scenario</h3>
+                            <textarea
+                                id="customScenario"
+                                class="form-textarea"
+                                placeholder="Describe the patient and situation..."
+                                rows="3"
+                            ></textarea>
+                            <button class="btn btn-primary" id="startCustomSession">
+                                <i data-lucide="play"></i> Start Custom Session
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Active Session -->
+                    <div class="active-session" id="activeSession" style="display: none;">
+                        <div class="session-header">
+                            <div class="session-info">
+                                <span class="recording-indicator">
+                                    <span class="recording-dot"></span>
+                                    Recording
+                                </span>
+                                <span class="session-timer" id="sessionTimer">00:00</span>
+                            </div>
+                            <button class="btn btn-danger" id="endSession">
+                                <i data-lucide="square"></i> End Session
+                            </button>
+                        </div>
+
+                        <div class="conversation-container">
+                            <!-- Context Card -->
+                            <div class="context-card" id="contextCard">
+                                <h3><i data-lucide="info"></i> Scenario Context</h3>
+                                <p id="contextText">-</p>
+                            </div>
+
+                            <!-- Conversation -->
+                            <div class="conversation" id="conversation">
+                                <!-- Messages will be inserted here -->
+                            </div>
+
+                            <!-- Voice Input -->
+                            <div class="voice-input-container">
+                                <div class="voice-visualizer" id="voiceVisualizer">
+                                    <canvas id="voiceCanvas"></canvas>
+                                </div>
+                                <div class="voice-controls">
+                                    <button class="btn btn-primary btn-round" id="voiceInputBtn">
+                                        <i data-lucide="mic"></i>
+                                    </button>
+                                    <p class="voice-hint">Hold to speak or click to toggle</p>
+                                </div>
+                                <div class="text-input-fallback">
+                                    <input type="text" id="textInput" placeholder="Type your message..." class="form-input">
+                                    <button class="btn btn-primary" id="sendTextBtn">
+                                        <i data-lucide="send"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LIBRARY VIEW -->
+        <section id="view-library" class="view">
+            <div class="hero hero-small">
+                <div class="hero-content">
+                    <h1>Scenario Library</h1>
+                    <p>Pre-built scenarios for various learning objectives</p>
+                </div>
+            </div>
+
+            <div class="content-container">
+                <div class="library-header">
+                    <div class="search-bar">
+                        <i data-lucide="search"></i>
+                        <input type="text" id="librarySearch" placeholder="Search scenarios..." class="form-input">
+                    </div>
+                    <div class="filter-chips">
+                        <button class="chip active" data-filter="all">All</button>
+                        <button class="chip" data-filter="acute">Acute</button>
+                        <button class="chip" data-filter="well-child">Well Child</button>
+                        <button class="chip" data-filter="mental-health">Mental Health</button>
+                        <button class="chip" data-filter="error">Error Training</button>
+                    </div>
+                </div>
+
+                <div class="library-grid" id="libraryGrid">
+                    <!-- Scenario cards will be inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- SESSIONS VIEW -->
+        <section id="view-sessions" class="view">
+            <div class="hero hero-small">
+                <div class="hero-content">
+                    <h1>Your Sessions</h1>
+                    <p>Review and export your practice sessions</p>
+                </div>
+            </div>
+
+            <div class="content-container">
+                <div class="sessions-header">
+                    <div class="session-stats">
+                        <div class="stat">
+                            <span class="stat-value" id="totalSessions">0</span>
+                            <span class="stat-label">Total Sessions</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value" id="totalTime">0:00</span>
+                            <span class="stat-label">Practice Time</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary" id="exportAllBtn">
+                        <i data-lucide="download"></i> Export All
+                    </button>
+                </div>
+
+                <div class="sessions-list" id="sessionsList">
+                    <!-- Session cards will be inserted here -->
+                    <div class="empty-sessions" id="emptySessions">
+                        <div class="empty-icon">
+                            <i data-lucide="folder-open"></i>
+                        </div>
+                        <p>No sessions yet</p>
+                        <p class="muted">Start practicing to see your sessions here</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================
+         MODALS
+         ============================================ -->
+
+    <!-- Download Modal -->
+    <div class="modal-overlay" id="downloadModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Export Encounter</h2>
+                <button class="btn btn-icon modal-close">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="export-options">
+                    <button class="export-option" data-format="audio">
+                        <i data-lucide="music"></i>
+                        <span>Audio (WAV)</span>
+                    </button>
+                    <button class="export-option" data-format="json">
+                        <i data-lucide="file-json"></i>
+                        <span>JSON</span>
+                    </button>
+                    <button class="export-option" data-format="markdown">
+                        <i data-lucide="file-text"></i>
+                        <span>Markdown</span>
+                    </button>
+                    <button class="export-option" data-format="fhir">
+                        <i data-lucide="heart-pulse"></i>
+                        <span>FHIR R4</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Session Summary Modal -->
+    <div class="modal-overlay" id="sessionSummaryModal">
+        <div class="modal modal-large">
+            <div class="modal-header">
+                <h2>Session Complete</h2>
+                <button class="btn btn-icon modal-close">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="session-summary">
+                    <div class="summary-stats">
+                        <div class="stat">
+                            <span class="stat-value" id="summaryDuration">-</span>
+                            <span class="stat-label">Duration</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value" id="summaryTurns">-</span>
+                            <span class="stat-label">Turns</span>
+                        </div>
+                    </div>
+                    <div class="summary-transcript" id="summaryTranscript">
+                        <!-- Transcript will be inserted here -->
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="discardSession">Discard</button>
+                <button class="btn btn-primary" id="saveSession">
+                    <i data-lucide="save"></i> Save Session
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         SCRIPTS
+         ============================================ -->
+    <script src="app.js"></script>
+</body>
+</html>
