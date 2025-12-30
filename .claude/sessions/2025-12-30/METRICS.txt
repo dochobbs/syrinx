@@ -1,0 +1,26 @@
+Session Date: 2025-12-30
+Project: Syrinx - Medical Encounter Simulator
+Branch: main
+
+Git Stats:
+- Commits This Session: 0 (uncommitted changes)
+- Files Modified: 6
+- Lines Added: +637
+- Lines Removed: -53
+- Net Change: +584 lines
+
+Files Changed:
+- server.py: +59 lines (API endpoint)
+- web/app.js: +276/-51 lines (dynamic loading, Echo widget)
+- web/styles.css: +303 lines (Echo widget styles)
+- web/index.html: +46 lines (Echo widget HTML)
+- README.md: +4 lines
+- requirements.txt: +2/-1 lines
+
+Key Metrics:
+- Scenarios loaded: 29 (was 6 hardcoded)
+- Echo widget components: FAB, panel, messages, input
+- API endpoints added: 1 (/api/scenarios)
+
+Tests: Not run
+Build: Server runs successfully on port 8000
