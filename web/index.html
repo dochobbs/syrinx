@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Syrinx | Medical Encounter Simulator</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
     <!-- Fonts: Editorial style matching Oread -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -499,6 +500,51 @@
                 <button class="btn btn-secondary" id="discardSession">Discard</button>
                 <button class="btn btn-primary" id="saveSession">
                     <i data-lucide="save"></i> Save Session
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         ECHO WIDGET
+         ============================================ -->
+    <div id="echo-widget" class="echo-widget">
+        <!-- Floating Button -->
+        <button class="echo-fab" id="echoFab" title="Ask Echo">
+            <i data-lucide="message-circle"></i>
+        </button>
+
+        <!-- Chat Panel -->
+        <div class="echo-panel" id="echoPanel">
+            <div class="echo-header">
+                <div class="echo-title">
+                    <div class="echo-logo">E</div>
+                    <span>Echo</span>
+                </div>
+                <div class="echo-actions">
+                    <button class="echo-voice-toggle" id="echoVoiceToggle" title="Toggle voice">
+                        <i data-lucide="volume-2"></i>
+                    </button>
+                    <button class="echo-close" id="echoClose">
+                        <i data-lucide="x"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="echo-messages" id="echoMessages">
+                <div class="echo-message echo-assistant">
+                    <div class="echo-avatar">E</div>
+                    <div class="echo-bubble">
+                        Hi! I'm Echo, your clinical tutor. I can answer questions about the encounter you're viewing or help you practice clinical reasoning. What would you like to explore?
+                    </div>
+                </div>
+            </div>
+            <div class="echo-input-area">
+                <button class="echo-mic" id="echoMic" title="Voice input">
+                    <i data-lucide="mic"></i>
+                </button>
+                <input type="text" id="echoInput" placeholder="Ask a question..." />
+                <button class="echo-send" id="echoSend">
+                    <i data-lucide="send"></i>
                 </button>
             </div>
         </div>

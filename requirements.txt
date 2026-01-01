@@ -1,7 +1,7 @@
 # Syrinx - Medical Encounter Simulator
 
 # Core
-anthropic>=0.25.0
+anthropic>=0.40.0
 pydantic>=2.0.0
 
 # Web Server

@@ -44,56 +44,23 @@ const PRESETS = {
     'mental-health': '15-year-old teen, parents concerned about mood changes, isolation, declining grades. Teen initially guarded.'
 };
 
-const SCENARIOS = [
-    {
-        id: 'acute-fever',
-        title: 'Infant with Fever',
-        description: '6-month-old with 2-day fever, first-time anxious parents',
-        difficulty: 'beginner',
-        type: 'acute',
-        duration: '5 min'
-    },
-    {
-        id: 'ear-infection',
-        title: 'Ear Infection',
-        description: 'Toddler with ear pain, recent URI, both parents present',
-        difficulty: 'beginner',
-        type: 'acute',
-        duration: '4 min'
-    },
-    {
-        id: 'well-child-4yo',
-        title: 'Well Child (4 years)',
-        description: 'Routine check, vaccine questions, developmental screening',
-        difficulty: 'intermediate',
-        type: 'well-child',
-        duration: '6 min'
-    },
-    {
-        id: 'asthma-followup',
-        title: 'Asthma Follow-up',
-        description: '8-year-old with poor asthma control, needs plan adjustment',
-        difficulty: 'intermediate',
-        type: 'acute',
-        duration: '5 min'
-    },
-    {
-        id: 'teen-depression',
-        title: 'Teen Mental Health',
-        description: 'Adolescent with mood changes, requires sensitive approach',
-        difficulty: 'advanced',
-        type: 'mental-health',
-        duration: '8 min'
-    },
-    {
-        id: 'missed-allergy',
-        title: 'Hidden Allergy Mention',
-        description: 'Parent casually mentions allergy that could affect treatment',
-        difficulty: 'advanced',
-        type: 'error',
-        duration: '5 min'
+// Scenarios loaded dynamically from API
+let SCENARIOS = [];
+
+async function loadScenarios() {
+    try {
+        const response = await fetch('/api/scenarios');
+        const data = await response.json();
+        SCENARIOS = data.scenarios || [];
+        console.log(`Loaded ${SCENARIOS.length} scenarios from library`);
+        return SCENARIOS;
+    } catch (error) {
+        console.error('Failed to load scenarios:', error);
+        // Fallback to empty array
+        SCENARIOS = [];
+        return SCENARIOS;
     }
-];
+}
 
 // ============================================
 // INITIALIZATION
@@ -835,7 +802,9 @@ function resetPracticeView() {
 // LIBRARY VIEW
 // ============================================
 
-function initLibraryView() {
+async function initLibraryView() {
+    // Load scenarios from API
+    await loadScenarios();
     renderLibrary();
 
     // Search
@@ -1077,3 +1046,210 @@ function encounterToMarkdown(encounter) {
 
     return md;
 }
+
+// ============================================
+// ECHO WIDGET
+// ============================================
+
+const ECHO_API_URL = 'http://localhost:8001';
+
+const echoState = {
+    isOpen: false,
+    voiceEnabled: true,
+    messages: [],
+    isRecording: false,
+    mediaRecorder: null
+};
+
+function initEchoWidget() {
+    const fab = document.getElementById('echoFab');
+    const panel = document.getElementById('echoPanel');
+    const closeBtn = document.getElementById('echoClose');
+    const voiceToggle = document.getElementById('echoVoiceToggle');
+    const input = document.getElementById('echoInput');
+    const sendBtn = document.getElementById('echoSend');
+    const micBtn = document.getElementById('echoMic');
+
+    // Toggle panel
+    fab.addEventListener('click', () => {
+        echoState.isOpen = !echoState.isOpen;
+        fab.classList.toggle('active', echoState.isOpen);
+        panel.classList.toggle('active', echoState.isOpen);
+        if (echoState.isOpen) {
+            input.focus();
+        }
+    });
+
+    // Close panel
+    closeBtn.addEventListener('click', () => {
+        echoState.isOpen = false;
+        fab.classList.remove('active');
+        panel.classList.remove('active');
+    });
+
+    // Voice toggle
+    voiceToggle.addEventListener('click', () => {
+        echoState.voiceEnabled = !echoState.voiceEnabled;
+        voiceToggle.classList.toggle('muted', !echoState.voiceEnabled);
+        const icon = voiceToggle.querySelector('i');
+        icon.setAttribute('data-lucide', echoState.voiceEnabled ? 'volume-2' : 'volume-x');
+        lucide.createIcons();
+    });
+
+    // Send message
+    sendBtn.addEventListener('click', () => sendEchoMessage());
+    input.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') sendEchoMessage();
+    });
+
+    // Voice input
+    micBtn.addEventListener('click', () => toggleEchoRecording());
+
+    // Refresh icons
+    lucide.createIcons();
+}
+
+async function sendEchoMessage() {
+    const input = document.getElementById('echoInput');
+    const text = input.value.trim();
+    if (!text) return;
+
+    // Add user message
+    addEchoMessage('user', text);
+    input.value = '';
+
+    // Show typing indicator
+    showEchoTyping();
+
+    try {
+        // Build context from current state
+        const context = {
+            source: 'syrinx',
+            encounter: state.currentEncounter ? {
+                patientName: state.currentEncounter.metadata?.patient_name,
+                patientAge: state.currentEncounter.metadata?.patient_age,
+                chiefComplaint: state.currentEncounter.metadata?.chief_complaint,
+                encounterType: state.currentEncounter.metadata?.encounter_type
+            } : null,
+            currentView: state.currentView,
+            practiceRole: state.selectedRole
+        };
+
+        const response = await fetch(`${ECHO_API_URL}/api/chat`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                message: text,
+                context: context,
+                voice: echoState.voiceEnabled ? 'eryn' : null
+            })
+        });
+
+        hideEchoTyping();
+
+        if (response.ok) {
+            const data = await response.json();
+            addEchoMessage('assistant', data.response || data.text);
+
+            // Play audio if available
+            if (echoState.voiceEnabled && data.audio_url) {
+                playEchoAudio(data.audio_url);
+            }
+        } else {
+            addEchoMessage('assistant', 'Sorry, I had trouble processing that. Please try again.');
+        }
+    } catch (error) {
+        hideEchoTyping();
+        console.error('Echo API error:', error);
+        addEchoMessage('assistant', 'Echo is not available right now. Make sure the Echo server is running on port 8001.');
+    }
+}
+
+function addEchoMessage(role, text) {
+    const container = document.getElementById('echoMessages');
+    const isUser = role === 'user';
+
+    const msgEl = document.createElement('div');
+    msgEl.className = `echo-message echo-${role}`;
+    msgEl.innerHTML = `
+        <div class="echo-avatar">${isUser ? 'Y' : 'E'}</div>
+        <div class="echo-bubble">${text}</div>
+    `;
+
+    container.appendChild(msgEl);
+    container.scrollTop = container.scrollHeight;
+
+    echoState.messages.push({ role, text });
+}
+
+function showEchoTyping() {
+    const container = document.getElementById('echoMessages');
+    const typing = document.createElement('div');
+    typing.className = 'echo-message echo-assistant';
+    typing.id = 'echoTypingIndicator';
+    typing.innerHTML = `
+        <div class="echo-avatar">E</div>
+        <div class="echo-typing">
+            <span></span><span></span><span></span>
+        </div>
+    `;
+    container.appendChild(typing);
+    container.scrollTop = container.scrollHeight;
+}
+
+function hideEchoTyping() {
+    const typing = document.getElementById('echoTypingIndicator');
+    if (typing) typing.remove();
+}
+
+function playEchoAudio(audioUrl) {
+    const audio = new Audio(audioUrl);
+    audio.play().catch(err => console.log('Audio playback failed:', err));
+}
+
+async function toggleEchoRecording() {
+    const micBtn = document.getElementById('echoMic');
+
+    if (echoState.isRecording) {
+        // Stop recording
+        if (echoState.mediaRecorder) {
+            echoState.mediaRecorder.stop();
+        }
+        echoState.isRecording = false;
+        micBtn.classList.remove('recording');
+    } else {
+        // Start recording
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            echoState.mediaRecorder = new MediaRecorder(stream);
+            const chunks = [];
+
+            echoState.mediaRecorder.ondataavailable = (e) => chunks.push(e.data);
+            echoState.mediaRecorder.onstop = async () => {
+                const blob = new Blob(chunks, { type: 'audio/webm' });
+                stream.getTracks().forEach(t => t.stop());
+                await transcribeAndSend(blob);
+            };
+
+            echoState.mediaRecorder.start();
+            echoState.isRecording = true;
+            micBtn.classList.add('recording');
+            lucide.createIcons();
+        } catch (err) {
+            console.error('Microphone access denied:', err);
+            alert('Please allow microphone access to use voice input.');
+        }
+    }
+}
+
+async function transcribeAndSend(audioBlob) {
+    // For now, just show a placeholder - would integrate with Deepgram
+    const input = document.getElementById('echoInput');
+    input.value = '[Voice input - transcription pending]';
+    sendEchoMessage();
+}
+
+// Initialize Echo widget when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    initEchoWidget();
+});

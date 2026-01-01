@@ -1504,3 +1504,306 @@ nav a i {
         grid-template-columns: 1fr;
     }
 }
+
+/* ============================================
+   ECHO WIDGET
+   ============================================ */
+
+.echo-widget {
+    position: fixed;
+    bottom: var(--space-xl);
+    right: var(--space-xl);
+    z-index: 9999;
+    font-family: var(--font-body);
+}
+
+/* Floating Action Button */
+.echo-fab {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    border: none;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+    transition: all var(--transition-normal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.echo-fab i {
+    width: 24px;
+    height: 24px;
+}
+
+.echo-fab:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 28px rgba(99, 102, 241, 0.5);
+}
+
+.echo-fab.active {
+    transform: rotate(90deg);
+}
+
+/* Chat Panel */
+.echo-panel {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    width: 380px;
+    max-height: 520px;
+    background: var(--bg-card);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px) scale(0.95);
+    transition: all var(--transition-normal);
+}
+
+.echo-panel.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+/* Panel Header */
+.echo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-md) var(--space-lg);
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    color: white;
+}
+
+.echo-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-weight: 600;
+}
+
+.echo-logo {
+    width: 28px;
+    height: 28px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.echo-actions {
+    display: flex;
+    gap: var(--space-xs);
+}
+
+.echo-actions button {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background var(--transition-fast);
+}
+
+.echo-actions button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.echo-actions button i {
+    width: 16px;
+    height: 16px;
+}
+
+.echo-voice-toggle.muted {
+    opacity: 0.5;
+}
+
+/* Messages Area */
+.echo-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    min-height: 280px;
+    max-height: 340px;
+}
+
+.echo-message {
+    display: flex;
+    gap: var(--space-sm);
+    align-items: flex-start;
+}
+
+.echo-message.echo-user {
+    flex-direction: row-reverse;
+}
+
+.echo-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+
+.echo-message.echo-user .echo-avatar {
+    background: var(--accent-primary);
+}
+
+.echo-bubble {
+    max-width: 260px;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-lg);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.echo-message.echo-assistant .echo-bubble {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-bottom-left-radius: var(--radius-sm);
+}
+
+.echo-message.echo-user .echo-bubble {
+    background: var(--accent-primary);
+    color: white;
+    border-bottom-right-radius: var(--radius-sm);
+}
+
+.echo-typing {
+    display: flex;
+    gap: 4px;
+    padding: var(--space-sm) var(--space-md);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    border-bottom-left-radius: var(--radius-sm);
+}
+
+.echo-typing span {
+    width: 6px;
+    height: 6px;
+    background: var(--text-tertiary);
+    border-radius: 50%;
+    animation: echo-typing 1.4s infinite;
+}
+
+.echo-typing span:nth-child(2) { animation-delay: 0.2s; }
+.echo-typing span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes echo-typing {
+    0%, 100% { transform: translateY(0); opacity: 0.5; }
+    50% { transform: translateY(-3px); opacity: 1; }
+}
+
+/* Input Area */
+.echo-input-area {
+    display: flex;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    border-top: 1px solid var(--border);
+    background: var(--bg-card);
+    border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+}
+
+.echo-input-area input {
+    flex: 1;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-sm) var(--space-md);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.echo-input-area input:focus {
+    outline: none;
+    border-color: #6366f1;
+}
+
+.echo-input-area input::placeholder {
+    color: var(--text-tertiary);
+}
+
+.echo-mic,
+.echo-send {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+}
+
+.echo-mic {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+}
+
+.echo-mic:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.echo-mic.recording {
+    background: var(--error);
+    color: white;
+    animation: pulse 1.5s infinite;
+}
+
+.echo-send {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+}
+
+.echo-send:hover {
+    opacity: 0.9;
+}
+
+.echo-mic i,
+.echo-send i {
+    width: 18px;
+    height: 18px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .echo-widget {
+        bottom: var(--space-md);
+        right: var(--space-md);
+    }
+
+    .echo-panel {
+        width: calc(100vw - 32px);
+        max-height: 70vh;
+        right: -8px;
+    }
+}

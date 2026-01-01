@@ -2,9 +2,13 @@
 
 Synthetic Pediatric Encounter Generator for AI scribe training and medical education.
 
+Part of the **MedEd Platform** - see `metis/` for platform orchestration.
+
 ## Overview
 
 Syrinx generates realistic doctor-patient encounter scripts with optional error injection. It uses Claude API for script generation and ElevenLabs for text-to-speech audio synthesis.
+
+**Port:** 8003
 
 ## Features
 

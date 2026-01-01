@@ -31,7 +31,7 @@ from core.ground_truth import GroundTruthExtractor
 # CONFIG
 # ============================================
 
-BASE_DIR = Path(__file__).parent
+BASE_DIR = Path(__file__).resolve().parent
 WEB_DIR = BASE_DIR / "web"
 ENCOUNTERS_DIR = BASE_DIR / "encounters"
 AUDIO_DIR = BASE_DIR / "audio_output"
@@ -104,6 +104,61 @@ async def styles():
 async def app_js():
     """Serve JavaScript."""
     return FileResponse(WEB_DIR / "app.js", media_type="application/javascript")
+
+# ============================================
+# ROUTES - SCENARIOS
+# ============================================
+
+@app.get("/api/scenarios")
+async def list_scenarios():
+    """List all available pre-built scenarios from encounters directory."""
+    scenarios = []
+
+    for filepath in sorted(ENCOUNTERS_DIR.glob("*.json")):
+        try:
+            with open(filepath) as f:
+                encounter = json.load(f)
+
+            metadata = encounter.get("metadata", {})
+            enc_id = metadata.get("id", filepath.stem)
+            enc_type = metadata.get("encounter_type", "acute")
+            patient_name = metadata.get("patient_name", "Patient")
+            patient_age = metadata.get("patient_age", "")
+            chief_complaint = metadata.get("chief_complaint", "")
+            line_count = metadata.get("line_count", len(encounter.get("script", [])))
+
+            # Estimate duration from line count
+            if line_count < 20:
+                duration = "2-3 min"
+                difficulty = "beginner"
+            elif line_count < 35:
+                duration = "4-5 min"
+                difficulty = "intermediate"
+            else:
+                duration = "6-8 min"
+                difficulty = "advanced"
+
+            # Check for error injection
+            errors = encounter.get("_generated", {}).get("errors_injected", [])
+            has_errors = len(errors) > 0
+
+            scenarios.append({
+                "id": enc_id,
+                "filename": filepath.name,
+                "title": f"{patient_name} - {chief_complaint[:40]}",
+                "description": f"{patient_age} {enc_type} visit: {chief_complaint}",
+                "type": enc_type,
+                "difficulty": difficulty,
+                "duration": duration,
+                "patient_age": patient_age,
+                "has_errors": has_errors,
+                "line_count": line_count
+            })
+        except Exception as e:
+            print(f"Error loading {filepath}: {e}")
+            continue
+
+    return {"scenarios": scenarios, "count": len(scenarios)}
 
 # ============================================
 # ROUTES - GENERATION
@@ -528,4 +583,4 @@ def encounter_to_fhir(encounter: Dict) -> Dict:
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("server:app", host="0.0.0.0", port=8003, reload=True)
