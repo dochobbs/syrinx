@@ -1,14 +1,16 @@
 # Syrinx
 
-Synthetic Pediatric Encounter Generator for AI scribe training and medical education.
+**Synthetic Pediatric Encounter Generator** for AI scribe training and medical education.
 
-Part of the **MedEd Platform** - see `metis/` for platform orchestration.
+Part of the **MedEd Platform** -- see [metis/](../metis/) for platform orchestration.
+
+**Port:** 8003
+
+---
 
 ## Overview
 
-Syrinx generates realistic doctor-patient encounter scripts with optional error injection. It uses Claude API for script generation and ElevenLabs for text-to-speech audio synthesis.
-
-**Port:** 8003
+Syrinx generates realistic doctor-patient encounter scripts with optional error injection. It uses Claude for script generation and ElevenLabs for text-to-speech audio synthesis. Encounters can include intentional clinical, communication, or documentation errors for AI scribe training and learner evaluation.
 
 ## Features
 
@@ -225,23 +227,65 @@ python generate_audio.py --encounters-dir encounters/testbench --output-dir audi
 | elderly-male | Bill | Grandparents |
 | elderly-female | Alice | Grandparents |
 
+## API Endpoints (Server Mode)
+
+Syrinx also runs as a FastAPI server for integration with the Metis Dashboard:
+
+```bash
+python server.py
+# API at http://localhost:8003
+```
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/patients/import` | POST | Import Oread patient JSON |
+| `/api/patients/{id}` | GET | Get imported patient |
+| `/api/patients` | GET | List imported patients |
+| `/api/generate` | POST | Generate encounter script |
+| `/health` | GET | Health check |
+
+Imported patients are stored **in-memory only** -- restarting the server clears them.
+
+## Ground Truth Extraction
+
+Extract structured clinical data from generated encounters for AI scribe evaluation:
+
+```bash
+# Full extraction (uses Claude for analysis)
+python syrinx.py extract encounters/syrinx_001.json
+
+# Minimal extraction (faster, less detail)
+python syrinx.py extract encounters/syrinx_001.json --minimal
+
+# With validation report
+python syrinx.py extract encounters/syrinx_001.json --validate
+```
+
+Ground truth includes: chief complaint, HPI, review of systems, physical exam findings, assessment, plan, medications ordered, follow-up instructions, and injected errors.
+
 ## Project Structure
 
 ```
 synvoice/
 ├── syrinx.py              # Main CLI entry point
+├── server.py              # FastAPI server (port 8003)
 ├── generate_audio.py      # ElevenLabs TTS generator
 ├── core/
 │   ├── __init__.py
 │   ├── input_parser.py    # Parse NL and structured inputs
 │   ├── script_generator.py # Claude API script generation
 │   ├── error_injector.py  # Error catalog and injection
-│   └── encounter_builder.py # Build encounter JSON
+│   ├── encounter_builder.py # Build encounter JSON
+│   ├── ground_truth.py    # Ground truth extraction + validation
+│   └── validator.py       # Encounter validation
 ├── patients/              # Patient profile JSONs
 ├── encounters/            # Generated encounter JSONs
 │   └── testbench/         # Test bench encounters
 ├── audio_output/          # Generated WAV files
 │   └── testbench/         # Test bench audio
+├── docs/                  # Documentation
+│   ├── GROUND_TRUTH.md    # Ground truth extraction guide
+│   └── ERROR_REFERENCE.md # Error injection reference
 └── venv/                  # Python virtual environment
 ```
 
@@ -275,6 +319,16 @@ python syrinx.py generate \
     --duration long
 ```
 
+## Cross-Service Integration
+
+Syrinx connects to the MedEd platform through:
+
+- **Oread** -- Imports patient profiles for encounter generation
+- **Echo** -- Encounter scripts can be sent to Echo for debrief analysis
+- **Metis** -- Dashboard sends Oread patients via `/api/patients/import`
+
+See [docs/INTEGRATION.md](../docs/INTEGRATION.md) for the full integration guide.
+
 ## Dependencies
 
 - Python 3.9+
@@ -282,6 +336,13 @@ python syrinx.py generate \
 - requests (HTTP client)
 - numpy, scipy (Audio processing)
 
+## Documentation
+
+- [GROUND_TRUTH.md](docs/GROUND_TRUTH.md) -- Ground truth extraction guide
+- [ERROR_REFERENCE.md](docs/ERROR_REFERENCE.md) -- Error injection details
+- [CLAUDE.md](CLAUDE.md) -- Development context for AI assistants
+- [Integration Guide](../docs/INTEGRATION.md) -- Cross-service data flow
+
 ## License
 
-Internal use only - Medical education and AI scribe training.
+Internal use only -- Medical education and AI scribe training.

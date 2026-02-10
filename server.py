@@ -86,6 +86,9 @@ active_sessions: Dict[str, Dict] = {}
 # Cached encounters
 encounters_cache: Dict[str, Dict] = {}
 
+# Imported patients from Oread
+imported_patients: Dict[str, Dict] = {}
+
 # ============================================
 # ROUTES - STATIC
 # ============================================
@@ -159,6 +162,59 @@ async def list_scenarios():
             continue
 
     return {"scenarios": scenarios, "count": len(scenarios)}
+
+# ============================================
+# ROUTES - PATIENT IMPORT
+# ============================================
+
+@app.post("/api/patients/import")
+async def import_patient(data: Dict[str, Any]):
+    """Import an Oread patient JSON. Stores in memory for encounter generation."""
+    try:
+        patient_id = data.get("id") or str(uuid.uuid4())[:8]
+        profile = parse_oread_patient(data)
+        imported_patients[patient_id] = {
+            "id": patient_id,
+            "profile": {
+                "name": profile.name,
+                "age": profile.age,
+                "sex": profile.sex,
+                "allergies": profile.allergies,
+                "medications": profile.medications,
+                "chronic_conditions": profile.chronic_conditions,
+            },
+            "raw": data,
+            "imported_at": datetime.now().isoformat(),
+        }
+        return {
+            "success": True,
+            "patient_id": patient_id,
+            "name": profile.name,
+            "age": profile.age,
+        }
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Failed to import patient: {str(e)}")
+
+
+@app.get("/api/patients/{patient_id}")
+async def get_patient(patient_id: str):
+    """Get an imported patient by ID."""
+    if patient_id not in imported_patients:
+        raise HTTPException(status_code=404, detail="Patient not found")
+    return imported_patients[patient_id]
+
+
+@app.get("/api/patients")
+async def list_patients():
+    """List all imported patients."""
+    return {
+        "patients": [
+            {"id": pid, "name": p["profile"]["name"], "age": p["profile"]["age"]}
+            for pid, p in imported_patients.items()
+        ],
+        "count": len(imported_patients),
+    }
+
 
 # ============================================
 # ROUTES - GENERATION

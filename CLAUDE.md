@@ -325,6 +325,20 @@ python server.py
 # API at http://localhost:8003
 ```
 
+### Cross-Service Integration (February 2026)
+
+Syrinx now accepts Oread patients via API (in addition to local JSON files):
+
+| Endpoint | Purpose | Consumer |
+|----------|---------|----------|
+| `POST /api/patients/import` | Accept Oread patient JSON | Metis Dashboard ("Send to Syrinx" button) |
+| `GET /api/patients/{id}` | Retrieve imported patient | Internal |
+| `GET /api/patients` | List imported patients | Internal |
+
+Imported patients are stored **in-memory only** (`imported_patients` dict in `server.py`). Restart clears them.
+
+See **`docs/INTEGRATION.md`** for the full cross-service integration guide, architecture diagrams, and test procedures.
+
 ### Data Flow
 
 ```
