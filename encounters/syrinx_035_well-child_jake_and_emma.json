@@ -1,0 +1,297 @@
+{
+  "metadata": {
+    "id": "syrinx_035",
+    "encounter_type": "well-child",
+    "patient_age": "multiple patients",
+    "patient_name": "Jake and Emma",
+    "chief_complaint": "well-child checkups for 2 year old boy and 5 year old girl",
+    "targets": [
+      "growth_assessment",
+      "developmental_screening",
+      "anticipatory_guidance",
+      "immunization_review",
+      "toddler_safety_counseling",
+      "vaccine_counseling",
+      "antibiotic_stewardship",
+      "social_determinants",
+      "mental_health_screening",
+      "safety_screening",
+      "feeding_assessment",
+      "growth_monitoring",
+      "developmental_milestone",
+      "sleep_assessment",
+      "detect_medication review issues"
+    ],
+    "duration_tier": "long",
+    "line_count": 45,
+    "patient_sex": "both"
+  },
+  "speakers": {
+    "parent": {
+      "voice": "female-2",
+      "style": "concerned"
+    },
+    "doctor": {
+      "voice": "female-1",
+      "style": "thorough"
+    },
+    "child": {
+      "voice": "child-girl",
+      "style": "toddler, simple speech"
+    }
+  },
+  "script": [
+    {
+      "speaker": "doctor",
+      "text": "Good morning! I'm Dr. Martinez. I see we have Jake for his two-year checkup and Emma for her five-year checkup today. How are you both doing?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "parent",
+      "text": "Hi Dr. Martinez. We're doing okay, though I have some concerns about both of them. Jake's been having some tantrums lately, and Emma's been complaining about her tummy hurting.",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "child",
+      "text": "My belly hurts sometimes after I eat",
+      "direction": "shy"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Hi Emma! Thank you for telling me about your tummy. We'll talk about that. And tantrums are very normal for two-year-olds, but let's discuss both kids thoroughly today.",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "Jake's tantrums seem worse than other kids his age. He throws himself on the floor and screams for like twenty minutes. And Emma's stomach pain happens maybe three times a week.",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Let's start with Jake's development. Is he saying any words yet? Walking well? How's his eating and sleeping?",
+      "direction": "calm"
+    },
+    {
+      "speaker": "parent",
+      "text": "He says maybe fifteen words clearly - mama, dada, more, up, no. He's been walking since thirteen months. He eats okay but he's picky. Sleeps through the night now, finally.",
+      "direction": "relieved"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That sounds very appropriate for his age. Now Emma, can you tell me more about when your tummy hurts? Does it happen before meals or after?",
+      "direction": "gentle"
+    },
+    {
+      "speaker": "child",
+      "text": "It hurts after I eat lunch at school sometimes. And sometimes at dinner. It feels like twisty",
+      "direction": "thoughtful"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Twisty is a good way to describe it. Does it hurt anywhere else? Does it make you feel sick to your stomach?",
+      "direction": "encouraging"
+    },
+    {
+      "speaker": "child",
+      "text": "No, just my belly. Sometimes I don't want to finish eating when it hurts",
+      "direction": "matter-of-fact"
+    },
+    {
+      "speaker": "parent",
+      "text": "The school nurse called once because Emma said her stomach hurt, but by the time I got there she was fine and wanted to go back to class.",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Let me ask about medications and allergies. Are either of the children on any medications or supplements currently?",
+      "direction": "professional"
+    },
+    {
+      "speaker": "parent",
+      "text": "Jake takes a daily vitamin, and Emma has been on that pink antibiotic for her ear infection - amoxicillin I think? She finished it about two weeks ago.",
+      "direction": "thinking"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Okay, and any known allergies to medications or foods for either child?",
+      "direction": "documenting"
+    },
+    {
+      "speaker": "parent",
+      "text": "No known allergies for either of them. Emma did throw up once after taking the amoxicillin, but the pharmacist said that could be normal.",
+      "direction": "uncertain"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's good to note. One episode of vomiting with amoxicillin is usually not concerning. Now let me examine both children. Jake first - can you help him up on the table?",
+      "direction": "transitioning"
+    },
+    {
+      "speaker": "parent",
+      "text": "Come on Jake, up you go. He's been pretty good with doctors lately.",
+      "direction": "encouraging"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Let me listen to your heart and lungs, Jake. You're such a big boy!",
+      "direction": "examining, warm"
+    },
+    {
+      "speaker": "doctor",
+      "text": "His heart sounds perfect, lungs are clear. Growth looks excellent - he's in the 60th percentile for both height and weight. Very healthy two-year-old.",
+      "direction": "pleased"
+    },
+    {
+      "speaker": "parent",
+      "text": "That's such a relief. What about the tantrums though? Are they normal or should I be worried?",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Tantrums at two are completely normal part of development. He's learning to communicate his needs but doesn't have all the words yet. Consistency with responses helps.",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Now Emma, your turn up here. Let me listen to your heart and check your tummy since that's been bothering you.",
+      "direction": "gentle"
+    },
+    {
+      "speaker": "child",
+      "text": "Will it hurt? I don't like when doctors push on my belly",
+      "direction": "nervous"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I'll be very gentle, I promise. Just light touches. You can tell me if anything feels uncomfortable, okay?",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Her heart sounds great, lungs clear. Now let me feel around your belly, Emma. Does this hurt at all?",
+      "direction": "examining, gentle"
+    },
+    {
+      "speaker": "child",
+      "text": "No, that's okay. It doesn't hurt right now",
+      "direction": "cooperative"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Perfect. I don't feel anything concerning. Her abdomen feels completely normal. Sometimes growing kids get stomach aches from eating too fast or stress.",
+      "direction": "explaining"
+    },
+    {
+      "speaker": "parent",
+      "text": "Could it be something she's eating? She loves milk - drinks probably three glasses a day. And she's been stressed about starting kindergarten.",
+      "direction": "thinking"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Three glasses of milk daily could potentially cause some stomach discomfort. Let's try reducing it to one or two glasses and see if that helps.",
+      "direction": "thoughtful"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Both children are due for vaccinations today. Jake needs his MMR and varicella boosters, and Emma needs her kindergarten shots - DTaP and MMR boosters.",
+      "direction": "professional"
+    },
+    {
+      "speaker": "parent",
+      "text": "Oh, I forgot about shots today. Will they both need them? Emma was so brave last time but Jake screams.",
+      "direction": "worried"
+    },
+    {
+      "speaker": "child",
+      "text": "I don't want shots! They hurt!",
+      "direction": "upset"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I know shots aren't fun, Emma, but they keep you healthy and strong. We'll make it as quick as possible, and you can get a sticker after.",
+      "direction": "encouraging"
+    },
+    {
+      "speaker": "parent",
+      "text": "Should we continue the amoxicillin for Emma since she had that stomach upset? I still have some left from her prescription.",
+      "direction": "uncertain"
+    },
+    {
+      "speaker": "doctor",
+      "text": "If she completed the full course for her ear infection two weeks ago, there's no need to continue it. The stomach issues seem unrelated to the antibiotic at this point.",
+      "direction": "explaining"
+    },
+    {
+      "speaker": "parent",
+      "text": "Okay, good. I wasn't sure. What about follow-up? When should we come back for both of them?",
+      "direction": "practical"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Jake should come back in six months for his 2.5-year visit, and Emma can come back in a year unless the stomach pain gets worse or more frequent.",
+      "direction": "planning"
+    },
+    {
+      "speaker": "doctor",
+      "text": "For Emma's stomach aches, try smaller, more frequent meals, less milk, and maybe some quiet time before meals to help with any anxiety about school.",
+      "direction": "advising"
+    },
+    {
+      "speaker": "child",
+      "text": "Can I have a sticker even if I cry during the shots?",
+      "direction": "hopeful"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Of course! Crying is okay - even grown-ups don't like shots. You'll get a sticker no matter what, and I'll be as gentle as possible.",
+      "direction": "warm"
+    },
+    {
+      "speaker": "parent",
+      "text": "Thank you Dr. Martinez. I feel much better about both of them. Should I call if Emma's stomach pain doesn't improve?",
+      "direction": "grateful"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Absolutely. Call if the pain becomes more severe, happens daily, or if she develops fever, vomiting, or diarrhea. Otherwise, try the dietary changes for a few weeks.",
+      "direction": "thorough"
+    },
+    {
+      "speaker": "parent",
+      "text": "Perfect. I'll make those follow-up appointments at the desk. Thank you for being so patient with both kids today.",
+      "direction": "appreciative"
+    },
+    {
+      "speaker": "doctor",
+      "text": "You're very welcome. Both children are developing beautifully. Let's get those vaccines done and you'll be all set.",
+      "direction": "concluding, warm"
+    }
+  ],
+  "_generated": {
+    "tool": "syrinx",
+    "version": "1.1.0",
+    "timestamp": "2026-01-25T17:06:13.433951",
+    "errors_injected": [
+      {
+        "category": "clinical",
+        "type": "medication review issues",
+        "severity": "moderate"
+      }
+    ],
+    "error_validation": {
+      "total_errors_requested": 1,
+      "high_confidence_detected": 0,
+      "likely_present": 0,
+      "success_rate": 0.0,
+      "details": {
+        "medication review issues": {
+          "likely_present": false,
+          "confidence": "unknown",
+          "evidence": [
+            "No validator available for this error type"
+          ]
+        }
+      }
+    }
+  }
+}

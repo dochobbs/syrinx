@@ -1,0 +1,217 @@
+{
+  "metadata": {
+    "id": "syrinx_030",
+    "encounter_type": "acute",
+    "patient_age": "6 months",
+    "patient_name": "Child",
+    "chief_complaint": "fever for 2 days",
+    "targets": [
+      "history_of_present_illness",
+      "differential_diagnosis",
+      "treatment_plan",
+      "infant_developmental_screening",
+      "pain_management",
+      "diagnostic_workup",
+      "mental_health_screening",
+      "safety_screening",
+      "feeding_assessment",
+      "growth_monitoring",
+      "sleep_assessment"
+    ],
+    "duration_tier": null,
+    "line_count": 35
+  },
+  "speakers": {
+    "parent": {
+      "voice": "female-2",
+      "style": "anxious first-time mom"
+    },
+    "doctor": {
+      "voice": "female-1",
+      "style": null
+    }
+  },
+  "script": [
+    {
+      "speaker": "doctor",
+      "text": "Good morning! I'm Dr. Martinez. I understand your little one has been having a fever?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "parent",
+      "text": "Yes, she started running a fever two days ago and I'm really worried. This is my first baby and I don't know if I should have brought her in sooner.",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "You absolutely did the right thing bringing her in. Fever in babies this young is always something we want to evaluate. Can you tell me what her temperature has been?",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "It's been between 101 and 102.5. I've been checking it constantly with the ear thermometer. Is that too high?",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "For a 6-month-old, any fever over 100.4 is concerning. How has she been acting otherwise? Eating, sleeping, wet diapers?",
+      "direction": "calm"
+    },
+    {
+      "speaker": "parent",
+      "text": "She's been so fussy and clingy. Her appetite is definitely down - she's only taking about half her normal bottles. [baby fussing]",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I can hear she's not feeling well. What about wet diapers? Has she been having normal wet diapers?",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "parent",
+      "text": "Maybe a little less than usual? I've been counting them like you're supposed to, but I think it's been fewer.",
+      "direction": "uncertain"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Good job keeping track. Any vomiting, diarrhea, or changes in her stool?",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "No vomiting, but her poop has been a little looser than normal. Not quite diarrhea though.",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Has she had any cough, runny nose, or seem to have trouble breathing?",
+      "direction": "calm"
+    },
+    {
+      "speaker": "parent",
+      "text": "No cough or runny nose. Her breathing seems okay, but she's been breathing a little faster when the fever is high.",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's very observant of you. Any rash anywhere on her body?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "parent",
+      "text": "I don't think so. I've been checking her all over. Should I be looking for something specific?",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "You're doing great. Let me examine her now. Has she had any medications or vaccines recently?",
+      "direction": "[examining] reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "She had her 4-month shots about 6 weeks ago. I gave her some infant Tylenol yesterday when her fever was really high.",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "[examining] Good, and how much Tylenol did you give her? Let me listen to her chest first.",
+      "direction": "calm"
+    },
+    {
+      "speaker": "parent",
+      "text": "The package said 2.5 milliliters for her weight. Was that right? [baby crying]",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "[examining] That sounds about right for her size. Her lungs sound clear. Now let me check her ears and throat.",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "She hates having her ears looked at. Is she going to be okay?",
+      "direction": "[baby fussing] anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "[examining] I know it's uncomfortable for her. Her ears look good, no infection there. Let me feel her belly and check her fontanelle.",
+      "direction": "gentle"
+    },
+    {
+      "speaker": "parent",
+      "text": "What's a fontanelle? Her soft spot? Is something wrong with it?",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "[examining] The fontanelle is her soft spot, and it looks normal - not sunken or bulging. Her belly feels fine too. Let me take her temperature.",
+      "direction": "calm"
+    },
+    {
+      "speaker": "parent",
+      "text": "It was 101.8 about an hour ago. Has it gotten worse?",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "It's 102.1 now. Given her age and the fever pattern, I'd like to run some tests to make sure there's no serious infection.",
+      "direction": "serious"
+    },
+    {
+      "speaker": "parent",
+      "text": "Tests? What kind of tests? Is she really sick?",
+      "direction": "frightened"
+    },
+    {
+      "speaker": "doctor",
+      "text": "For babies under 3 months, we're very cautious with fever, but even at 6 months, we want to be thorough. I'd like to get some blood work and a urine sample.",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "How do you get urine from a baby? Will the blood test hurt her?",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "We'll use a special bag for the urine, and the blood draw is just a small poke. Most babies cry for just a moment. This will help us rule out any bacterial infections.",
+      "direction": "gentle"
+    },
+    {
+      "speaker": "parent",
+      "text": "Okay, if you think it's necessary. What happens after the tests?",
+      "direction": "reluctant but trusting"
+    },
+    {
+      "speaker": "doctor",
+      "text": "We should have results in about an hour. In the meantime, you can continue the Tylenol every 6 hours, and we'll keep her comfortable here.",
+      "direction": "calm"
+    },
+    {
+      "speaker": "parent",
+      "text": "Should I be giving her anything else? More fluids? I feel so helpless.",
+      "direction": "emotional"
+    },
+    {
+      "speaker": "doctor",
+      "text": "You're doing everything right. Keep offering her bottles frequently, even small amounts. If the tests are normal, this is likely just a viral infection that will resolve on its own.",
+      "direction": "warm"
+    },
+    {
+      "speaker": "parent",
+      "text": "How long do these things usually last? When should I worry?",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Viral fevers typically last 3-5 days. Bring her back if the fever goes above 103, if she becomes very lethargic, or stops having wet diapers. But let's see what these tests show first.",
+      "direction": "reassuring"
+    }
+  ],
+  "_generated": {
+    "tool": "syrinx",
+    "version": "1.1.0",
+    "timestamp": "2026-01-25T16:40:56.021303",
+    "errors_injected": []
+  }
+}

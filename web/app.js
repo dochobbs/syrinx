@@ -1122,26 +1122,24 @@ async function sendEchoMessage() {
     showEchoTyping();
 
     try {
-        // Build context from current state
-        const context = {
+        // Build patient context from current encounter (Echo API format)
+        const patient = state.currentEncounter ? {
+            patientId: state.currentEncounter.id || 'syrinx-encounter',
             source: 'syrinx',
-            encounter: state.currentEncounter ? {
-                patientName: state.currentEncounter.metadata?.patient_name,
-                patientAge: state.currentEncounter.metadata?.patient_age,
-                chiefComplaint: state.currentEncounter.metadata?.chief_complaint,
-                encounterType: state.currentEncounter.metadata?.encounter_type
-            } : null,
-            currentView: state.currentView,
-            practiceRole: state.selectedRole
-        };
+            name: state.currentEncounter.metadata?.patient_name,
+            age: state.currentEncounter.metadata?.patient_age,
+            chiefComplaint: state.currentEncounter.metadata?.chief_complaint,
+        } : null;
 
-        const response = await fetch(`${ECHO_API_URL}/api/chat`, {
+        // Call Echo /question endpoint with correct payload
+        const response = await fetch(`${ECHO_API_URL}/question`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                message: text,
-                context: context,
-                voice: echoState.voiceEnabled ? 'eryn' : null
+                learner_question: text,
+                patient: patient,
+                learner_level: state.selectedRole === 'attending' ? 'attending' : 'student',
+                voice_response: echoState.voiceEnabled
             })
         });
 
@@ -1149,7 +1147,8 @@ async function sendEchoMessage() {
 
         if (response.ok) {
             const data = await response.json();
-            addEchoMessage('assistant', data.response || data.text);
+            // Echo returns { question, hint, topic, audio_url }
+            addEchoMessage('assistant', data.question || data.response || data.text);
 
             // Play audio if available
             if (echoState.voiceEnabled && data.audio_url) {

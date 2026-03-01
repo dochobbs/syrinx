@@ -1,0 +1,206 @@
+{
+  "metadata": {
+    "id": "syrinx_033",
+    "encounter_type": "acute",
+    "patient_age": "3 years and 6 years",
+    "patient_name": "Child",
+    "chief_complaint": "fever and upper respiratory symptoms in both children",
+    "targets": [
+      "history_of_present_illness",
+      "differential_diagnosis",
+      "treatment_plan",
+      "preschool_readiness",
+      "pain_management",
+      "social_determinants",
+      "mental_health_screening",
+      "safety_screening",
+      "shared_decision_making",
+      "feeding_assessment",
+      "sleep_assessment"
+    ],
+    "duration_tier": null,
+    "line_count": 32
+  },
+  "speakers": {
+    "child": {
+      "voice": "child-girl",
+      "style": "toddler, simple speech"
+    },
+    "doctor": {
+      "voice": "female-1",
+      "style": null
+    },
+    "parent": {
+      "voice": "female-2",
+      "style": "worried"
+    }
+  },
+  "script": [
+    {
+      "speaker": "doctor",
+      "text": "Good morning! I'm Dr. Martinez. I see we have two little ones today who aren't feeling well. Can you tell me what's been going on?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "parent",
+      "text": "Yes, both Emma and Jake have been sick for the past three days. They both have fevers and runny noses, and I'm just so worried because Emma's only three and Jake is six.",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "child",
+      "text": "My nose is yucky and I can't breathe good.",
+      "direction": "congested voice"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I can hear that in your voice, Jake. That doesn't feel good, does it? Mom, when did the fevers start exactly?",
+      "direction": "gentle"
+    },
+    {
+      "speaker": "parent",
+      "text": "Tuesday night. Emma's fever got up to 102.5 and Jake's was 101.8. I gave them both Tylenol but I'm scared it might be something serious.",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I understand your concern. Have either of them had any trouble breathing, like working harder to breathe or any wheezing?",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "No, nothing like that. Just the congestion and coughs. Emma's cough sounds worse at night.",
+      "direction": "thoughtful"
+    },
+    {
+      "speaker": "child",
+      "text": "I coughed all night and mommy had to give me water lots of times.",
+      "direction": "tired"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That must have been hard for everyone. Jake, have you been eating and drinking okay?",
+      "direction": "caring"
+    },
+    {
+      "speaker": "child",
+      "text": "I don't want to eat much but I like the popsicles mommy gives me.",
+      "direction": "quiet"
+    },
+    {
+      "speaker": "parent",
+      "text": "Neither of them has much appetite, but they're drinking fluids. Should I be more worried about Emma since she's younger?",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Let's take a look at both of them. Any allergies to medications I should know about?",
+      "direction": "professional"
+    },
+    {
+      "speaker": "parent",
+      "text": "No allergies. They don't take any regular medications either.",
+      "direction": "quick response"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Perfect. Jake, can you sit up here on the table for me? I'm going to listen to your chest first.",
+      "direction": "[examining]"
+    },
+    {
+      "speaker": "child",
+      "text": "Will it hurt?",
+      "direction": "hesitant"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Not at all. The stethoscope might feel a little cold, but it won't hurt. Can you take some big deep breaths for me?",
+      "direction": "encouraging"
+    },
+    {
+      "speaker": "parent",
+      "text": "He's been such a brave boy. Is his breathing okay?",
+      "direction": "watching closely"
+    },
+    {
+      "speaker": "doctor",
+      "text": "His lungs sound clear, which is great news. Let me check his throat and ears now. Jake, can you open your mouth wide like a lion?",
+      "direction": "[examining]"
+    },
+    {
+      "speaker": "child",
+      "text": "Roaaaaar!",
+      "direction": "playful despite illness"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Perfect! His throat is red but I don't see any white spots. Ears look fine too. Now let's check Emma.",
+      "direction": "gentle transition"
+    },
+    {
+      "speaker": "parent",
+      "text": "She might be fussier. She didn't sleep well last night and she's been clingy all morning.",
+      "direction": "preparing doctor"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's completely normal when they don't feel well. Emma's lungs also sound clear, and her exam is very similar to Jake's - red throat, congestion, but no signs of anything more serious.",
+      "direction": "[examining]"
+    },
+    {
+      "speaker": "parent",
+      "text": "So what do you think it is? I keep reading scary things online about RSV and flu.",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I understand those concerns. Based on their symptoms and exam, this looks like a typical viral upper respiratory infection - a common cold. Their breathing is good and their energy levels seem appropriate.",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "child",
+      "text": "Does that mean I can go to school tomorrow?",
+      "direction": "hopeful"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Not quite yet, buddy. You need to be fever-free for 24 hours first. Mom, continue the Tylenol as needed for fever and comfort. Use a humidifier and saline nose drops to help with congestion.",
+      "direction": "explaining"
+    },
+    {
+      "speaker": "parent",
+      "text": "How long should this last? And when should I call if I'm worried?",
+      "direction": "seeking guidance"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Typically 7-10 days total. Call if either develops a fever over 103, trouble breathing, ear pain, or if they stop drinking fluids. Also if they're not improving after a week.",
+      "direction": "clear instructions"
+    },
+    {
+      "speaker": "parent",
+      "text": "Thank you so much. I feel better knowing it's just a cold. Should I keep them separated from each other?",
+      "direction": "relieved but practical"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Since they likely caught it from the same source and are already sharing germs, separation isn't necessary at this point. Just focus on rest, fluids, and comfort measures.",
+      "direction": "practical advice"
+    },
+    {
+      "speaker": "child",
+      "text": "Can we watch movies together then?",
+      "direction": "brightening up"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That sounds like a perfect plan for getting better. Take care, and don't hesitate to call if you have any concerns.",
+      "direction": "warm farewell"
+    }
+  ],
+  "_generated": {
+    "tool": "syrinx",
+    "version": "1.1.0",
+    "timestamp": "2026-01-25T17:01:25.687998",
+    "errors_injected": []
+  }
+}

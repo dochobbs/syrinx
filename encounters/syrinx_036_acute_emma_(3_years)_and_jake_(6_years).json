@@ -1,0 +1,225 @@
+{
+  "metadata": {
+    "id": "syrinx_036",
+    "encounter_type": "acute",
+    "patient_age": "multiple patients",
+    "patient_name": "Emma (3 years) and Jake (6 years)",
+    "chief_complaint": "fever and upper respiratory symptoms in both children",
+    "targets": [
+      "history_of_present_illness",
+      "differential_diagnosis",
+      "treatment_plan",
+      "toddler_safety_counseling",
+      "antibiotic_stewardship",
+      "social_determinants",
+      "mental_health_screening",
+      "safety_screening",
+      "feeding_assessment",
+      "sleep_assessment"
+    ],
+    "duration_tier": "medium",
+    "line_count": 36
+  },
+  "speakers": {
+    "doctor": {
+      "voice": "female-1",
+      "style": null
+    },
+    "child": {
+      "voice": "child-girl",
+      "style": "toddler, simple speech"
+    },
+    "parent": {
+      "voice": "female-2",
+      "style": "worried"
+    }
+  },
+  "script": [
+    {
+      "speaker": "doctor",
+      "text": "Good morning! I'm Dr. Martinez. I see we have Emma and Jake here today. What's been going on with them?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "parent",
+      "text": "Hi, thank you for seeing us. Both kids have been really sick since yesterday. They both have fevers and Jake's been coughing a lot.",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I'm sorry to hear they're not feeling well. Let me get some details. When did the fevers start exactly?",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "parent",
+      "text": "Emma's fever started yesterday evening, around 101. Jake's started this morning and got up to 102.5. I'm really worried about both of them being sick at the same time.",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That must be stressful having both children sick. Jake, can you tell me how you're feeling today?",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "child",
+      "text": "My throat hurts and I keep coughing. And my head feels funny.",
+      "direction": "tired"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Your head feels funny? Can you tell me more about that? Does it hurt?",
+      "direction": "gentle"
+    },
+    {
+      "speaker": "child",
+      "text": "Yeah, it hurts a little bit. And I'm really hot.",
+      "direction": "complaining"
+    },
+    {
+      "speaker": "parent",
+      "text": "Emma's been more fussy than usual and not eating well. She keeps pulling at her ears too.",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Ear pulling can definitely be a sign of something. Have either of them had runny noses or congestion?",
+      "direction": "thinking"
+    },
+    {
+      "speaker": "parent",
+      "text": "Yes, both of them have had stuffy noses since yesterday. Jake's nose has been running more today.",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Any vomiting or diarrhea with either child?",
+      "direction": "calm"
+    },
+    {
+      "speaker": "parent",
+      "text": "No, thankfully no stomach issues. They're just not eating much because they don't feel good.",
+      "direction": "relieved"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's good. Jake, I'm going to listen to your chest now. Take some big deep breaths for me.",
+      "direction": "examining, gentle"
+    },
+    {
+      "speaker": "child",
+      "text": "Okay. Is that going to hurt?",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Not at all, it's just going to feel a little cold. You're doing great. Deep breath in... and out.",
+      "direction": "examining, reassuring"
+    },
+    {
+      "speaker": "doctor",
+      "text": "His lungs sound clear, which is good. Now let me look in your throat, Jake. Open wide like a lion.",
+      "direction": "examining, playful"
+    },
+    {
+      "speaker": "child",
+      "text": "Roar! Like this?",
+      "direction": "cooperative"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Perfect! I can see your throat is quite red and a little swollen. Now let me check Emma's ears since mom mentioned the ear pulling.",
+      "direction": "examining, warm"
+    },
+    {
+      "speaker": "parent",
+      "text": "She's been cranky about her ears since last night. Is it an ear infection?",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Let me take a look. Emma, I'm just going to peek in your ears with this special light.",
+      "direction": "examining, gentle"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Her right ear looks a bit red and there's some fluid behind the eardrum. The left ear looks fine.",
+      "direction": "examining, explaining"
+    },
+    {
+      "speaker": "parent",
+      "text": "So she does have an ear infection? And what about Jake's throat?",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Emma has the beginning of an ear infection, and Jake has what looks like a viral upper respiratory infection with some throat irritation.",
+      "direction": "explaining"
+    },
+    {
+      "speaker": "parent",
+      "text": "Are they contagious? Should I keep them home from daycare?",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Yes, they should stay home until they're fever-free for 24 hours. For Emma's ear infection, I'll prescribe amoxicillin.",
+      "direction": "explaining"
+    },
+    {
+      "speaker": "parent",
+      "text": "Okay, and what about Jake? Does he need antibiotics too?",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Jake's infection appears to be viral, so antibiotics won't help. We'll focus on comfort measures - lots of fluids, rest, and fever control.",
+      "direction": "explaining"
+    },
+    {
+      "speaker": "child",
+      "text": "Do I have to take yucky medicine?",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Jake, you won't need the liquid medicine, but Emma will need to take some pink medicine that tastes like bubble gum.",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "How long should I expect them to feel sick? This is my first time dealing with both kids being sick together.",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Emma should start feeling better within 48 hours of starting the antibiotic. Jake's symptoms may last 7-10 days but should gradually improve.",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "When should I call you back or be worried?",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Call if fevers persist after 3 days, if they seem to be getting worse instead of better, or if you notice any breathing difficulties.",
+      "direction": "explaining"
+    },
+    {
+      "speaker": "parent",
+      "text": "Thank you so much. I feel better having a plan for both of them.",
+      "direction": "relieved"
+    },
+    {
+      "speaker": "doctor",
+      "text": "You're welcome. You're doing a great job caring for both of them. Jake, feel better soon, buddy!",
+      "direction": "warm, reassuring"
+    }
+  ],
+  "_generated": {
+    "tool": "syrinx",
+    "version": "1.1.0",
+    "timestamp": "2026-01-25T17:06:44.898926",
+    "errors_injected": []
+  }
+}

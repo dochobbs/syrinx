@@ -8,6 +8,7 @@ Designed for Python 3.14+ compatibility by avoiding audioop/pydub dependencies.
 
 import os
 import json
+import re
 import numpy as np
 from pathlib import Path
 import argparse
@@ -42,6 +43,22 @@ VOICE_ID_MAP = {
 
 # Default voice ID (Jessica)
 DEFAULT_VOICE_ID = "cgSgspJ2msm6clMCkdW9"
+
+
+def clean_text_for_tts(text: str) -> str:
+    """
+    Remove bracketed annotations and stage directions from text before TTS.
+    These should only appear in the 'direction' field, but strip them as a safety net.
+
+    Examples:
+        "[examining] Let me check your ears" -> "Let me check your ears"
+        "I see [baby crying] she's upset" -> "I see she's upset"
+    """
+    # Remove bracketed content like [examining], [baby crying], [pause]
+    cleaned = re.sub(r'\[[\w\s\-]+\]\s*', '', text)
+    # Clean up any double spaces left behind
+    cleaned = re.sub(r'\s+', ' ', cleaned).strip()
+    return cleaned
 
 
 def check_api_key():
@@ -130,7 +147,10 @@ def process_encounter(encounter_path: str, output_dir: str, verbose: bool = True
 
     for i, line in enumerate(script):
         speaker_key = line['speaker']
-        text = line['text']
+        raw_text = line['text']
+
+        # Clean bracketed annotations before TTS (e.g., [examining], [baby crying])
+        text = clean_text_for_tts(raw_text)
 
         speaker_info = speakers.get(speaker_key, {})
         voice_key = speaker_info.get('voice', 'female-1')

@@ -1,0 +1,226 @@
+{
+  "metadata": {
+    "id": "syrinx_031",
+    "encounter_type": "well-child",
+    "patient_age": "4 years",
+    "patient_name": "Child",
+    "chief_complaint": "well-child checkup and sick visit for cough and congestion",
+    "targets": [
+      "growth_assessment",
+      "developmental_screening",
+      "anticipatory_guidance",
+      "immunization_review",
+      "preschool_readiness",
+      "multi_caregiver_communication",
+      "vaccine_counseling",
+      "feeding_assessment",
+      "growth_monitoring",
+      "developmental_milestone",
+      "sleep_assessment"
+    ],
+    "duration_tier": null,
+    "line_count": 35,
+    "patient_sex": "female"
+  },
+  "speakers": {
+    "mom": {
+      "voice": "female-2",
+      "style": "concerned"
+    },
+    "child": {
+      "voice": "child-girl",
+      "style": "young child, cooperative"
+    },
+    "doctor": {
+      "voice": "female-1",
+      "style": null
+    },
+    "dad": {
+      "voice": "male-1",
+      "style": "supportive"
+    }
+  },
+  "script": [
+    {
+      "speaker": "doctor",
+      "text": "Good morning! I'm Dr. Martinez. Please come in and have a seat. So this is Emma's 4-year well-child visit, and I see you also have some concerns about a cough?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "mom",
+      "text": "Yes, thank you. She's been coughing for about three days now, and she's pretty congested. We didn't want to wait since her well-visit was already scheduled.",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "dad",
+      "text": "The cough seems worse at night. She's been waking up because of it.",
+      "direction": "calm"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I understand your concern. Let's start with the cough and congestion, then we'll do her regular checkup. When did you first notice the symptoms?",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "mom",
+      "text": "It started Sunday night. At first it was just a little runny nose, but then the cough developed.",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Has she had any fever?",
+      "direction": "calm"
+    },
+    {
+      "speaker": "dad",
+      "text": "No fever. We've been checking regularly.",
+      "direction": "calm"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Good. Any appetite changes or difficulty eating or drinking?",
+      "direction": "calm"
+    },
+    {
+      "speaker": "mom",
+      "text": "She's eating okay, maybe a little less than usual. She's been drinking fine though.",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "How about energy level? Is she her usual active self?",
+      "direction": "calm"
+    },
+    {
+      "speaker": "dad",
+      "text": "Maybe a bit more tired, but she's still playing and running around.",
+      "direction": "calm"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Hi Emma! How are you feeling today, sweetie?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "child",
+      "text": "My nose is stuffy and my throat hurts a little.",
+      "direction": "quiet"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Thank you for telling me that. You're being very brave. Now, let me ask about her regular health. How has she been growing and developing?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "mom",
+      "text": "She's been doing really well. Potty training is complete, she's talking in full sentences, knows her colors and some letters.",
+      "direction": "calm"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Excellent. Any concerns about her behavior or development?",
+      "direction": "calm"
+    },
+    {
+      "speaker": "dad",
+      "text": "No concerns there. She's actually starting preschool next month.",
+      "direction": "calm"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Wonderful. Is she up to date on all her vaccines?",
+      "direction": "calm"
+    },
+    {
+      "speaker": "mom",
+      "text": "Yes, we have her vaccination record here if you need it.",
+      "direction": "calm"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Perfect. Now let me examine Emma. Emma, I'm going to listen to your heart and lungs, okay?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "child",
+      "text": "Okay.",
+      "direction": "quiet"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Her heart sounds good, normal rate and rhythm. Lungs are clear bilaterally, no wheezing or crackles. Let me check her throat.",
+      "direction": "[examining]"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Throat is mildly red but no exudate. Ears look good, no fluid or redness. This looks like a typical viral upper respiratory infection.",
+      "direction": "[examining]"
+    },
+    {
+      "speaker": "mom",
+      "text": "So antibiotics won't help?",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's correct. Since this is viral, antibiotics won't be effective. The good news is she's not having any breathing difficulties and her lungs sound clear.",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "doctor",
+      "text": "For her growth, she's 36 inches tall and weighs 34 pounds, which puts her right in the 50th percentile for both height and weight. Perfect growth!",
+      "direction": "warm"
+    },
+    {
+      "speaker": "dad",
+      "text": "That's great to hear. What can we do for the cough and congestion?",
+      "direction": "calm"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Keep her well hydrated, use a humidifier in her room at night, and you can give her honey for the cough - one teaspoon as needed. Saline drops can help with the congestion.",
+      "direction": "calm"
+    },
+    {
+      "speaker": "mom",
+      "text": "How long should this last?",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Typically 7 to 10 days. Call if she develops fever, has trouble breathing, or if you're concerned about worsening symptoms.",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "doctor",
+      "text": "For her well-visit, everything looks excellent. She needs her flu vaccine today, and we'll schedule her 5-year visit for next year.",
+      "direction": "warm"
+    },
+    {
+      "speaker": "dad",
+      "text": "Sounds good. Thank you for fitting in both the sick visit and well-check today.",
+      "direction": "calm"
+    },
+    {
+      "speaker": "doctor",
+      "text": "You're very welcome. Emma was such a good patient today! Any other questions before we finish up?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "mom",
+      "text": "I think we're all set. Thank you so much, Dr. Martinez.",
+      "direction": "calm"
+    },
+    {
+      "speaker": "doctor",
+      "text": "You're welcome. Take care, Emma! Feel better soon, sweetie.",
+      "direction": "warm"
+    }
+  ],
+  "_generated": {
+    "tool": "syrinx",
+    "version": "1.1.0",
+    "timestamp": "2026-01-25T17:00:06.169203",
+    "errors_injected": []
+  }
+}

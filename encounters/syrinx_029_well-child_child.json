@@ -1,0 +1,227 @@
+{
+  "metadata": {
+    "id": "syrinx_029",
+    "encounter_type": "well-child",
+    "patient_age": "4 years",
+    "patient_name": "Child",
+    "chief_complaint": "routine well-child check with questions about vaccines and preschool readiness",
+    "targets": [
+      "growth_assessment",
+      "developmental_screening",
+      "anticipatory_guidance",
+      "immunization_review",
+      "preschool_readiness",
+      "vaccine_counseling",
+      "social_determinants",
+      "safety_screening",
+      "sleep_assessment",
+      "detect_jargon"
+    ],
+    "duration_tier": "medium",
+    "line_count": 32,
+    "patient_sex": "female"
+  },
+  "speakers": {
+    "doctor": {
+      "voice": "female-1",
+      "style": null
+    },
+    "child": {
+      "voice": "child-girl",
+      "style": "young child, cooperative"
+    },
+    "parent": {
+      "voice": "female-2",
+      "style": "concerned"
+    }
+  },
+  "script": [
+    {
+      "speaker": "doctor",
+      "text": "Good morning! I'm Dr. Martinez. You must be Emma, and you're here for your four-year checkup today.",
+      "direction": "warm"
+    },
+    {
+      "speaker": "child",
+      "text": "Hi. I'm four!",
+      "direction": "shy"
+    },
+    {
+      "speaker": "parent",
+      "text": "Yes, she just turned four last month. I have some concerns about her vaccines and whether she's ready for preschool.",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's wonderful, Emma! Four is such a fun age. Let's talk about those concerns first. What specific worries do you have about vaccines?",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "Well, I've been reading online about vaccine reactions, and she's supposed to start preschool in the fall. I want to make sure the timing is right.",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I understand your concerns. Let me review Emma's immunization history first. Has she had any reactions to previous vaccines?",
+      "direction": "calm"
+    },
+    {
+      "speaker": "parent",
+      "text": "No, she's been fine with all her shots so far. Just the usual fussiness for a day.",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's good to hear. Emma, can you tell me about preschool? Are you excited?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "child",
+      "text": "I want to play with other kids! But I don't want shots.",
+      "direction": "excited then worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I know shots aren't fun, but they help keep you healthy so you can play with your friends. Now, let's do a quick examination. Can you hop up on the table for me?",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "child",
+      "text": "Okay... will it hurt?",
+      "direction": "hesitant"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Just listening and looking today, no shots yet. Let me listen to your heart first.",
+      "direction": "gentle [examining]"
+    },
+    {
+      "speaker": "parent",
+      "text": "She's been having some trouble with potty training. Is that normal for her age?",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Heart sounds great, Emma! Potty training varies a lot. Some children master it by three, others take until four or five. What specific challenges are you having?",
+      "direction": "reassuring [examining]"
+    },
+    {
+      "speaker": "parent",
+      "text": "She does fine during the day but still has accidents at night. The preschool requires full potty training.",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Nocturnal enuresis is completely physiologic at this age - her antidiuretic hormone regulation and bladder capacity haven't fully matured yet.",
+      "direction": "explaining"
+    },
+    {
+      "speaker": "parent",
+      "text": "I'm sorry, can you explain that in simpler terms?",
+      "direction": "confused"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Of course, sorry. Nighttime accidents are very normal at four. Her body is still learning to wake up when her bladder is full during sleep.",
+      "direction": "apologetic"
+    },
+    {
+      "speaker": "child",
+      "text": "I try to wake up but sometimes I don't!",
+      "direction": "defensive"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's exactly right, Emma. You're doing great! Most preschools understand this too. Let me check your ears now.",
+      "direction": "encouraging [examining]"
+    },
+    {
+      "speaker": "parent",
+      "text": "So she can still start preschool even with nighttime accidents?",
+      "direction": "hopeful"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Absolutely. Many four-year-olds aren't dry at night yet. Now, about those vaccines - Emma needs her pre-K boosters today.",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "child",
+      "text": "Do I have to get them today?",
+      "direction": "worried"
+    },
+    {
+      "speaker": "parent",
+      "text": "Which vaccines exactly? And are they safe to give all at once?",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "She needs DTaP, IPV, MMR, and Varicella boosters. It's perfectly safe to give them together - that's the standard schedule.",
+      "direction": "explaining"
+    },
+    {
+      "speaker": "parent",
+      "text": "Four shots sounds like a lot. Will she have a reaction?",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "She might have some soreness or low fever, but serious reactions are very rare. These vaccines will protect her and her classmates.",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "child",
+      "text": "Can I have a sticker after?",
+      "direction": "hopeful"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Of course! You can pick out several stickers. You're being so brave, Emma.",
+      "direction": "warm"
+    },
+    {
+      "speaker": "parent",
+      "text": "Okay, let's do them today then. I want her protected before school starts.",
+      "direction": "determined"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Perfect. I'll have the nurse prepare them. Emma, you're doing wonderfully and you're definitely ready for preschool!",
+      "direction": "encouraging"
+    },
+    {
+      "speaker": "child",
+      "text": "Yay! I'm ready for school!",
+      "direction": "excited"
+    }
+  ],
+  "_generated": {
+    "tool": "syrinx",
+    "version": "1.1.0",
+    "timestamp": "2025-12-28T07:30:10.155177",
+    "errors_injected": [
+      {
+        "category": "clinical",
+        "type": "jargon",
+        "severity": "moderate"
+      }
+    ],
+    "error_validation": {
+      "total_errors_requested": 1,
+      "high_confidence_detected": 0,
+      "likely_present": 0,
+      "success_rate": 0.0,
+      "details": {
+        "jargon": {
+          "likely_present": false,
+          "confidence": "unknown",
+          "evidence": [
+            "No validator available for this error type"
+          ]
+        }
+      }
+    }
+  }
+}

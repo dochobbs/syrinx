@@ -1,0 +1,131 @@
+{
+  "metadata": {
+    "id": "syrinx_037",
+    "encounter_type": "acute",
+    "patient_age": "8 years",
+    "patient_name": "Child",
+    "chief_complaint": "wart on finger",
+    "targets": [
+      "history_of_present_illness",
+      "differential_diagnosis",
+      "treatment_plan",
+      "school_age_wellness",
+      "safety_screening"
+    ],
+    "duration_tier": "short",
+    "line_count": 18,
+    "patient_sex": "male"
+  },
+  "speakers": {
+    "parent": {
+      "voice": "female-2",
+      "style": "calm"
+    },
+    "child": {
+      "voice": "child-boy",
+      "style": "older child, articulate"
+    },
+    "doctor": {
+      "voice": "female-1",
+      "style": "rushed"
+    }
+  },
+  "script": [
+    {
+      "speaker": "doctor",
+      "text": "Hi there! I'm Dr. Martinez. What brings you in today?",
+      "direction": "rushed, friendly"
+    },
+    {
+      "speaker": "parent",
+      "text": "Hi doctor. My son Jake has this wart on his finger that's been bothering him.",
+      "direction": "calm"
+    },
+    {
+      "speaker": "child",
+      "text": "It's gross and bumpy!",
+      "direction": "pointing at finger"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Let me take a look at that finger, Jake. Can you show me which one?",
+      "direction": "examining"
+    },
+    {
+      "speaker": "child",
+      "text": "This one right here. It hurts when I touch it.",
+      "direction": "showing finger"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I can see it's on your index finger. How long has this been there?",
+      "direction": "examining, rushed"
+    },
+    {
+      "speaker": "parent",
+      "text": "About three weeks now. It started small but seems to be getting bigger.",
+      "direction": "calm"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Has he had any other warts before or anyone in the family with warts recently?",
+      "direction": "typing quickly"
+    },
+    {
+      "speaker": "parent",
+      "text": "No, this is the first one. His sister had one last year but it went away on its own.",
+      "direction": "calm"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Jake, does it hurt when you use your hands for writing or playing?",
+      "direction": "examining"
+    },
+    {
+      "speaker": "child",
+      "text": "Sometimes when I write it bumps on my pencil.",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "This is definitely a common wart. It's caused by a virus and is very treatable.",
+      "direction": "reassuring, rushed"
+    },
+    {
+      "speaker": "parent",
+      "text": "What are our options for treatment?",
+      "direction": "calm"
+    },
+    {
+      "speaker": "doctor",
+      "text": "We can try over-the-counter wart medicine first or freeze it here in the office. The freezing works faster.",
+      "direction": "explaining quickly"
+    },
+    {
+      "speaker": "child",
+      "text": "Does the freezing hurt?",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "It stings for just a few seconds, like putting ice on your skin. You're brave enough to handle it.",
+      "direction": "reassuring, rushed"
+    },
+    {
+      "speaker": "parent",
+      "text": "Let's try the freezing treatment today if that's what you recommend.",
+      "direction": "calm, decisive"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Perfect. I'll get the supplies and we'll take care of this right now.",
+      "direction": "rushed, moving"
+    }
+  ],
+  "_generated": {
+    "tool": "syrinx",
+    "version": "1.1.0",
+    "timestamp": "2026-01-25T17:08:31.530653",
+    "errors_injected": []
+  }
+}

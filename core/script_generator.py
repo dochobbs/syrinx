@@ -37,10 +37,16 @@ SPEAKER ROLES:
 - "child" - Speaking child (4+ years)
 - "teen" - Adolescent patient
 
-DIRECTION ANNOTATIONS (for TTS prosody):
+DIRECTION ANNOTATIONS (put in "direction" field ONLY, never in "text"):
 - Tones: "warm", "concerned", "reassuring", "rushed", "dismissive", "anxious", "frustrated", "calm"
-- Actions: "[examining]", "[typing]", "[thinking]", "[explaining]"
-- Ambient: "[baby fussing]", "[child coughing]", "[pause]"
+- Actions: "examining", "typing", "thinking", "explaining" (e.g., direction: "examining, reassuring")
+- Ambient context: "baby fussing", "child coughing", "pause" (e.g., direction: "baby crying in background")
+
+CRITICAL - TEXT FIELD RULES:
+- The "text" field contains ONLY spoken dialogue - words the person actually says out loud
+- NEVER put bracketed annotations like [examining] or [baby crying] in the "text" field
+- Actions and ambient sounds go ONLY in the "direction" field
+- The doctor should naturally verbalize what they're doing: "Let me listen to your chest" NOT "[examining] Let me listen"
 
 SCRIPT GUIDELINES:
 1. Natural conversational flow with realistic pauses and interruptions
@@ -64,8 +70,9 @@ def get_participant_prompt(config: ParticipantConfig) -> str:
         ParticipantConfig.PARENT_INFANT: """
 PARTICIPANTS: One parent with non-speaking infant/toddler (<2 years)
 - Only "doctor" and "parent" speak
-- Include baby sounds in directions: [baby fussing], [baby crying], [baby cooing]
-- Parent may narrate baby's behavior: "She's been so fussy..."
+- Baby sounds noted in "direction" field only (e.g., direction: "baby fussing")
+- Parent naturally narrates baby's behavior in dialogue: "She's been so fussy..." or "Oh, she's getting upset"
+- Doctor may acknowledge: "I can hear she's not happy about this"
 """,
         ParticipantConfig.PARENT_CHILD: """
 PARTICIPANTS: One parent with speaking child (4+ years)
@@ -84,9 +91,9 @@ PARTICIPANTS: Two parents (mom and dad) with child
         ParticipantConfig.PARENT_FUSSY_TODDLER: """
 PARTICIPANTS: Parent with fussy/crying toddler (1-3 years)
 - "doctor" and "parent" speak
-- Include frequent: [child crying], [child whining], [parent soothing child]
-- Parent may be distracted trying to calm child
-- Doctor may need to repeat questions or pause
+- Note child state in "direction" field only (e.g., direction: "child crying, parent distracted")
+- Parent naturally acknowledges fussiness in dialogue: "Sorry, he's really upset today" or "Shh, it's okay sweetie"
+- Doctor may need to pause or acknowledge: "I know this is hard with him so upset. Let's take a moment."
 """,
     }
     return prompts.get(config, prompts[ParticipantConfig.PARENT_INFANT])

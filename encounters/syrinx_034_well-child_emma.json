@@ -1,0 +1,227 @@
+{
+  "metadata": {
+    "id": "syrinx_034",
+    "encounter_type": "well-child",
+    "patient_age": "4 years",
+    "patient_name": "Emma",
+    "chief_complaint": "well-child checkup and sick visit for cough and congestion",
+    "targets": [
+      "growth_assessment",
+      "developmental_screening",
+      "anticipatory_guidance",
+      "immunization_review",
+      "preschool_readiness",
+      "multi_caregiver_communication",
+      "vaccine_counseling",
+      "social_determinants",
+      "safety_screening",
+      "feeding_assessment",
+      "developmental_milestone",
+      "sleep_assessment"
+    ],
+    "duration_tier": "medium",
+    "line_count": 35,
+    "patient_sex": "female"
+  },
+  "speakers": {
+    "child": {
+      "voice": "child-girl",
+      "style": "young child, cooperative"
+    },
+    "dad": {
+      "voice": "male-1",
+      "style": "supportive"
+    },
+    "doctor": {
+      "voice": "female-1",
+      "style": null
+    },
+    "mom": {
+      "voice": "female-2",
+      "style": "concerned"
+    }
+  },
+  "script": [
+    {
+      "speaker": "doctor",
+      "text": "Good morning! I'm Dr. Martinez. Emma, it's nice to see you again. How are you feeling today?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "child",
+      "text": "My nose is stuffy and I have a cough.",
+      "direction": "quiet"
+    },
+    {
+      "speaker": "mom",
+      "text": "She's been coughing for about four days now, and the congestion started maybe two days ago. I wasn't sure if we should wait or bring her in.",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "dad",
+      "text": "The cough seems worse at night. She was up a few times last night.",
+      "direction": "calm"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I understand your concern. Let's talk about the cough first, and then we'll do her regular four-year checkup. Has she had any fever?",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "mom",
+      "text": "No fever that I've noticed. I've been checking pretty regularly.",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's good. Any runny nose or change in appetite?",
+      "direction": "examining"
+    },
+    {
+      "speaker": "dad",
+      "text": "Her nose has been pretty runny, clear stuff mostly. She's been eating okay, maybe a little less than usual.",
+      "direction": "calm"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Emma, can you tell me if your throat hurts or if it's hard to swallow?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "child",
+      "text": "It doesn't hurt. Just coughy.",
+      "direction": "quiet"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Okay, sweetie. Let me listen to your chest first. Can you take some big breaths for me?",
+      "direction": "examining"
+    },
+    {
+      "speaker": "child",
+      "text": "Like this?",
+      "direction": "cooperative"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Perfect! You're doing great. Her lungs sound clear, which is reassuring. Let me check her ears and throat now.",
+      "direction": "examining, reassuring"
+    },
+    {
+      "speaker": "mom",
+      "text": "Do you think it's just a cold? I worry about her missing preschool.",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Let me finish the exam and we'll talk about that. Emma, can you open your mouth wide like a lion? Say 'ahh'.",
+      "direction": "examining, warm"
+    },
+    {
+      "speaker": "child",
+      "text": "Ahhhhh!",
+      "direction": "cooperative"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Excellent! Her throat looks fine, just a little red. Ears look good too. This does appear to be a viral upper respiratory infection - a common cold.",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "dad",
+      "text": "So antibiotics won't help then?",
+      "direction": "calm"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's right. Since it's viral, antibiotics won't be effective. The good news is these typically resolve on their own in seven to ten days.",
+      "direction": "explaining"
+    },
+    {
+      "speaker": "mom",
+      "text": "What can we do to help her feel better? And when can she go back to school?",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "For comfort, you can use saline nose drops, a cool mist humidifier, and honey for the cough if needed - just a half teaspoon. She can return to school when she's fever-free for 24 hours.",
+      "direction": "explaining"
+    },
+    {
+      "speaker": "dad",
+      "text": "Since she hasn't had a fever, could she go back tomorrow?",
+      "direction": "calm"
+    },
+    {
+      "speaker": "doctor",
+      "text": "If she's feeling well enough and the cough isn't too disruptive, yes. Now let's move on to her regular four-year checkup. How has her development been?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "mom",
+      "text": "She's doing really well. Potty trained, knows her colors and letters, plays well with other kids.",
+      "direction": "proud"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's wonderful. Any concerns about her behavior, sleep, or eating habits?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "dad",
+      "text": "She's been sleeping through the night, except for this week with the cough. Eats pretty well, maybe a little picky sometimes.",
+      "direction": "calm"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Emma, let me check how tall you've grown. Can you stand up straight against this wall for me?",
+      "direction": "examining, warm"
+    },
+    {
+      "speaker": "child",
+      "text": "Am I bigger?",
+      "direction": "excited"
+    },
+    {
+      "speaker": "doctor",
+      "text": "You are! You've grown two inches since last year. You're right on track. She'll need some vaccines today - her four-year immunizations.",
+      "direction": "warm, explaining"
+    },
+    {
+      "speaker": "mom",
+      "text": "Which ones does she need?",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "She needs DTaP, IPV, MMR, and Varivax boosters. These help protect her before starting kindergarten.",
+      "direction": "explaining"
+    },
+    {
+      "speaker": "dad",
+      "text": "Will she be okay to get them with this cold?",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Yes, mild cold symptoms don't prevent vaccination. Emma, you're going to get some quick shots to keep you healthy, okay?",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "child",
+      "text": "Will it hurt?",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Just for a second, like a quick pinch. You're such a brave girl, and your mom and dad will be right here with you.",
+      "direction": "reassuring"
+    }
+  ],
+  "_generated": {
+    "tool": "syrinx",
+    "version": "1.1.0",
+    "timestamp": "2026-01-25T17:05:25.361114",
+    "errors_injected": []
+  }
+}

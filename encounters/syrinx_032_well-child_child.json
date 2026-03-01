@@ -1,0 +1,317 @@
+{
+  "metadata": {
+    "id": "syrinx_032",
+    "encounter_type": "well-child",
+    "patient_age": "2 years and 5 years",
+    "patient_name": "Child",
+    "chief_complaint": "well-child checkups for both children",
+    "targets": [
+      "growth_assessment",
+      "developmental_screening",
+      "anticipatory_guidance",
+      "immunization_review",
+      "preschool_readiness",
+      "vaccine_counseling",
+      "pain_management",
+      "social_determinants",
+      "mental_health_screening",
+      "safety_screening",
+      "feeding_assessment",
+      "growth_monitoring",
+      "developmental_milestone",
+      "sleep_assessment",
+      "detect_medication review issues"
+    ],
+    "duration_tier": "long",
+    "line_count": 49,
+    "patient_sex": "male and female"
+  },
+  "speakers": {
+    "child": {
+      "voice": "child-girl",
+      "style": "toddler, simple speech"
+    },
+    "parent": {
+      "voice": "female-2",
+      "style": "concerned"
+    },
+    "doctor": {
+      "voice": "female-1",
+      "style": null
+    }
+  },
+  "script": [
+    {
+      "speaker": "doctor",
+      "text": "Good morning! I'm Dr. Martinez. I see we have both Emma and little Jake here for their well-child visits today.",
+      "direction": "warm"
+    },
+    {
+      "speaker": "parent",
+      "text": "Yes, thank you for fitting them both in. Emma just turned 5 last month and Jake is 2 and a half now.",
+      "direction": "slightly anxious"
+    },
+    {
+      "speaker": "child",
+      "text": "I'm five! I can count to one hundred!",
+      "direction": "excited"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Wow, that's impressive Emma! Let's start with you since you're the big sister. How has she been doing overall?",
+      "direction": "encouraging"
+    },
+    {
+      "speaker": "parent",
+      "text": "She's been pretty good. I'm a little worried about her eating though - she's gotten very picky lately. And she's been complaining about her tummy hurting sometimes.",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's very common at this age. When does the tummy pain usually happen?",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "Usually in the mornings before preschool, but then she seems fine once she gets there. I wonder if it's just nerves?",
+      "direction": "thoughtful"
+    },
+    {
+      "speaker": "child",
+      "text": "My tummy hurts when I don't want to go to school.",
+      "direction": "matter-of-fact"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That sounds like it could be some anxiety about school transitions. Very normal. Let me check Emma's growth first.",
+      "direction": "[examining]"
+    },
+    {
+      "speaker": "doctor",
+      "text": "She's 41 inches tall and weighs 38 pounds - right on track for her age. Any concerns about her development or behavior?",
+      "direction": "professional"
+    },
+    {
+      "speaker": "parent",
+      "text": "She's doing well in preschool. Reading some words already. But she still has accidents sometimes, especially when she's really focused on playing.",
+      "direction": "slightly embarrassed"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's completely normal at 5. Emma, can you hop on one foot for me?",
+      "direction": "encouraging"
+    },
+    {
+      "speaker": "child",
+      "text": "Like this? One, two, three, four!",
+      "direction": "[hopping] excited"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Perfect! Now let me listen to your heart. Can you take big breaths like a dragon?",
+      "direction": "[examining] playful"
+    },
+    {
+      "speaker": "child",
+      "text": "Roooooaaaaar! Am I healthy?",
+      "direction": "giggling"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Very healthy! Now let's check on Jake. How's he been doing?",
+      "direction": "warm"
+    },
+    {
+      "speaker": "parent",
+      "text": "He's been good but he's had some trouble sleeping through the night lately. And I'm worried he's not talking as much as Emma did at this age.",
+      "direction": "worried"
+    },
+    {
+      "speaker": "doctor",
+      "text": "What kind of words is he using? Can he put two words together?",
+      "direction": "professional"
+    },
+    {
+      "speaker": "parent",
+      "text": "He says 'mama,' 'dada,' 'more,' 'no' - that's his favorite. He can say 'want cookie' or 'go car' but not much more.",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That sounds appropriate for 2 and a half. Boys often develop language a bit later than girls. Let me examine him.",
+      "direction": "[examining] reassuring"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Jake is 34 inches and 28 pounds - great growth. His ears look clear, throat looks good. Any medications for either child?",
+      "direction": "[examining]"
+    },
+    {
+      "speaker": "parent",
+      "text": "Emma takes those Flintstones vitamins daily, and Jake gets children's Tylenol when he's teething or has a fever.",
+      "direction": "informative"
+    },
+    {
+      "speaker": "doctor",
+      "text": "The vitamins are fine to continue. For the Tylenol, you can give Jake up to 240 milligrams every 4 hours as needed for pain or fever.",
+      "direction": "instructional"
+    },
+    {
+      "speaker": "parent",
+      "text": "Okay, I usually just follow what's on the box. Is that the right amount for his weight?",
+      "direction": "questioning"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Yes, that dose should work well for him. Any allergies to medications for either child?",
+      "direction": "professional"
+    },
+    {
+      "speaker": "parent",
+      "text": "No known allergies. Emma did get a rash from some bubble bath once, but nothing with medicines.",
+      "direction": "thoughtful"
+    },
+    {
+      "speaker": "child",
+      "text": "The bubbles made me itchy!",
+      "direction": "remembering"
+    },
+    {
+      "speaker": "doctor",
+      "text": "We'll note that. Now, are both children up to date on their vaccines?",
+      "direction": "[typing]"
+    },
+    {
+      "speaker": "parent",
+      "text": "I think so. Emma got some shots at her 4-year visit, and Jake had his 2-year shots a few months ago.",
+      "direction": "uncertain"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Let me check their records. Emma needs her pre-K boosters today - DTaP, IPV, MMR, and Varicella. Jake looks current.",
+      "direction": "[reviewing chart]"
+    },
+    {
+      "speaker": "parent",
+      "text": "Oh no, Emma hates shots. Will she need all of those?",
+      "direction": "anxious"
+    },
+    {
+      "speaker": "child",
+      "text": "I don't want shots! They hurt!",
+      "direction": "whining"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I know sweetheart, but these vaccines keep you healthy and protect your friends too. We can use a numbing cream to help.",
+      "direction": "gentle"
+    },
+    {
+      "speaker": "parent",
+      "text": "What about Jake's sleep issues? He's been waking up 2-3 times a night for the past month.",
+      "direction": "concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Is he having nightmares, or just waking up? Any changes in his routine lately?",
+      "direction": "professional"
+    },
+    {
+      "speaker": "parent",
+      "text": "No nightmares that I know of. He just wakes up crying. We did move him to a toddler bed last month.",
+      "direction": "thinking"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's likely the culprit. Big transitions can disrupt sleep. Try a consistent bedtime routine and maybe a comfort object.",
+      "direction": "explaining"
+    },
+    {
+      "speaker": "parent",
+      "text": "He has his stuffed elephant. Should I let him cry it out or go to him?",
+      "direction": "seeking advice"
+    },
+    {
+      "speaker": "doctor",
+      "text": "You can try briefly comforting him without picking him up, then gradually reduce your response time. It may take a few weeks.",
+      "direction": "instructional"
+    },
+    {
+      "speaker": "parent",
+      "text": "Okay. And about Emma's eating - she basically only wants mac and cheese and chicken nuggets now.",
+      "direction": "frustrated"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Very typical for her age. Keep offering variety alongside her preferred foods. Don't turn meals into battles.",
+      "direction": "reassuring"
+    },
+    {
+      "speaker": "child",
+      "text": "I like mac and cheese! It's yellow!",
+      "direction": "happy"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Yellow is a great color! Maybe we can find other yellow foods you might like too.",
+      "direction": "engaging"
+    },
+    {
+      "speaker": "parent",
+      "text": "Any other concerns I should watch for at these ages?",
+      "direction": "proactive"
+    },
+    {
+      "speaker": "doctor",
+      "text": "For Emma, continue working on independence and emotional regulation. For Jake, watch for more language development over the next six months.",
+      "direction": "professional"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Let's get Emma's vaccines done, and I'll see both of them again in a year unless you have concerns before then.",
+      "direction": "wrapping up"
+    },
+    {
+      "speaker": "parent",
+      "text": "Thank you. This has been really helpful. Emma, you ready to be brave?",
+      "direction": "encouraging"
+    },
+    {
+      "speaker": "child",
+      "text": "Will I get a sticker after?",
+      "direction": "hopeful"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Of course! You can pick two stickers since you're being so brave.",
+      "direction": "warm"
+    }
+  ],
+  "_generated": {
+    "tool": "syrinx",
+    "version": "1.1.0",
+    "timestamp": "2026-01-25T17:00:52.030536",
+    "errors_injected": [
+      {
+        "category": "clinical",
+        "type": "medication review issues",
+        "severity": "moderate"
+      }
+    ],
+    "error_validation": {
+      "total_errors_requested": 1,
+      "high_confidence_detected": 0,
+      "likely_present": 0,
+      "success_rate": 0.0,
+      "details": {
+        "medication review issues": {
+          "likely_present": false,
+          "confidence": "unknown",
+          "evidence": [
+            "No validator available for this error type"
+          ]
+        }
+      }
+    }
+  }
+}
