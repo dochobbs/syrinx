@@ -1,6 +1,6 @@
 # CLAUDE.md - Syrinx Development Context
 
-**Last Updated:** December 2025
+**Last Updated:** April 2026
 
 This file provides context for AI assistants working on Syrinx.
 
@@ -282,11 +282,12 @@ Syrinx is part of the **MedEd Platform**, orchestrated by Metis.
 
 | Project | Greek Name | Port | Purpose |
 |---------|------------|------|---------|
-| synpat | Oread | 8004 | Patient generation |
-| synvoice | **Syrinx** | 8003 | Encounter scripts |
-| synchart | Mneme | 8002 | EMR interface |
-| echo | Echo | 8001 | AI tutor |
-| metis | Metis | 3000 | Portal (planned) |
+| synpat | Oread | 9104 | Patient generation |
+| synvoice | **Syrinx** | 9103 | Encounter scripts |
+| synchart | Mneme | 9102 | EMR interface |
+| echo | Echo | 9101 | AI tutor |
+| metis | Metis | 9100 | Portal (planned) |
+| athena | Athena | 9105 | Curriculum & knowledge |
 
 ### Shared Models
 
@@ -322,7 +323,7 @@ Syrinx can run independently without Metis:
 cd /Users/dochobbs/Downloads/Consult/MedEd/synvoice
 source venv/bin/activate
 python server.py
-# API at http://localhost:8003
+# API at http://localhost:9103
 ```
 
 ### Cross-Service Integration (February 2026)
