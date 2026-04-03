@@ -1051,7 +1051,7 @@ function encounterToMarkdown(encounter) {
 // ECHO WIDGET
 // ============================================
 
-const ECHO_API_URL = 'http://localhost:8001';
+const ECHO_API_URL = 'http://localhost:9101';
 
 const echoState = {
     isOpen: false,
