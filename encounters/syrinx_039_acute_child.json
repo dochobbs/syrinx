@@ -1,0 +1,134 @@
+{
+  "metadata": {
+    "id": "syrinx_039",
+    "encounter_type": "acute",
+    "patient_age": "6 months",
+    "patient_name": "Child",
+    "chief_complaint": "fever and fussiness x2 days",
+    "targets": [
+      "history_of_present_illness",
+      "differential_diagnosis",
+      "treatment_plan",
+      "infant_developmental_screening",
+      "pain_management",
+      "mental_health_screening",
+      "feeding_assessment",
+      "growth_monitoring"
+    ],
+    "duration_tier": "short",
+    "line_count": 19
+  },
+  "speakers": {
+    "parent": {
+      "voice": "female-2",
+      "style": "anxious first-time mom"
+    },
+    "doctor": {
+      "voice": "female-1",
+      "style": "warm, reassuring"
+    }
+  },
+  "script": [
+    {
+      "speaker": "doctor",
+      "text": "Good morning! I'm Dr. Martinez. What brings you and little Emma in today?",
+      "direction": "warm, greeting"
+    },
+    {
+      "speaker": "parent",
+      "text": "Hi, um, she's had a fever for two days now and she's just been so fussy. I'm really worried something's wrong.",
+      "direction": "anxious, holding baby"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I can understand why you're concerned. Let's figure out what's going on. What's her temperature been running?",
+      "direction": "reassuring, sitting down"
+    },
+    {
+      "speaker": "parent",
+      "text": "It got up to 101.8 yesterday and this morning it was 101.2. I've been giving her Tylenol but I don't know if I'm doing it right.",
+      "direction": "anxious, voice trembling"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's a good fever to keep track of. How much Tylenol have you been giving her and how often?",
+      "direction": "calm, taking notes"
+    },
+    {
+      "speaker": "parent",
+      "text": "The bottle said 1.25 milliliters every four hours, so that's what I've been doing. Is that okay?",
+      "direction": "worried, seeking validation"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's exactly right for her weight. Good job. Any other symptoms like vomiting, diarrhea, or changes in eating?",
+      "direction": "reassuring, nodding"
+    },
+    {
+      "speaker": "parent",
+      "text": "She's been eating less, maybe half her normal bottles. And she seems more sleepy but also more cranky at the same time.",
+      "direction": "anxious, adjusting baby"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's pretty typical when babies don't feel well. Let me take a look at her now. I'm going to check her ears first.",
+      "direction": "warm, approaching baby"
+    },
+    {
+      "speaker": "parent",
+      "text": "Oh, she's starting to fuss again. She hates having her ears looked at.",
+      "direction": "concerned, trying to comfort"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I can see she's not happy about this, but her ears actually look good. Now let me listen to her chest.",
+      "direction": "calm, examining"
+    },
+    {
+      "speaker": "parent",
+      "text": "Really? Her ears are okay? I was sure it was an ear infection.",
+      "direction": "relieved, surprised"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Her lungs sound clear too. I'm going to check her throat now - this might make her cry a bit more.",
+      "direction": "gentle, preparing examination"
+    },
+    {
+      "speaker": "parent",
+      "text": "Okay, I've got her. Poor baby.",
+      "direction": "sympathetic, holding baby steady"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Her throat looks a little red but not severely inflamed. Based on everything I'm seeing, this looks like a viral infection.",
+      "direction": "reassuring, finishing exam"
+    },
+    {
+      "speaker": "parent",
+      "text": "So no antibiotics? How long will this last? I just want her to feel better.",
+      "direction": "anxious, seeking answers"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Viruses typically run their course in 5 to 7 days. Keep doing exactly what you're doing with the Tylenol. You're taking great care of her.",
+      "direction": "warm, reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "Thank you. When should I worry and bring her back?",
+      "direction": "calmer, but still concerned"
+    },
+    {
+      "speaker": "doctor",
+      "text": "If her fever goes above 102.5 or she stops eating completely, call us right away. Otherwise, you're doing everything right.",
+      "direction": "reassuring, providing clear guidance"
+    }
+  ],
+  "_generated": {
+    "tool": "syrinx",
+    "version": "1.1.0",
+    "timestamp": "2026-04-16T04:48:07.917891",
+    "errors_injected": []
+  }
+}
