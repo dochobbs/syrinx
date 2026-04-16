@@ -204,6 +204,23 @@ python generate_audio.py --encounters-dir encounters/testbench --output-dir audi
 | `elderly-male` | Bill | Grandparents |
 | `elderly-female` | Alice | Grandparents |
 
+### Emotional Voice Modulation
+
+Syrinx supports per-line emotional voice modulation for generating sentiment analysis benchmarking corpora.
+
+**Emotion Keywords** (used in script `direction` field):
+`anxious`, `frustrated`, `reassuring`, `calm`, `concerned`, `dismissive`, `rushed`, `warm`, `relieved`, `urgent`
+
+Each keyword maps to:
+1. ElevenLabs voice parameters (stability, style, similarity_boost)
+2. Coarse sentiment label (positive/negative/neutral)
+3. Specific emotion label (anxiety, frustration, warmth, etc.)
+
+**Ground Truth Output:**
+When audio is generated, a companion `{encounter_id}_ground_truth.json` is written alongside the WAV file with per-line labels and approximate timestamps.
+
+See `core/emotion_map.py` for the full taxonomy.
+
 ## Patient Profiles
 
 Patient profiles in `patients/` contain reusable medical history:
