@@ -15,6 +15,7 @@ import argparse
 from scipy.io.wavfile import write as wav_write
 import time
 import requests
+from core.emotion_map import lookup_emotion
 
 # Configuration
 ELEVEN_API_KEY = os.environ.get("ELEVEN_API_KEY")
@@ -75,10 +76,15 @@ def get_voice_id(voice_key: str) -> str:
     return VOICE_ID_MAP.get(voice_key, DEFAULT_VOICE_ID)
 
 
-def generate_speech_pcm(text: str, voice_id: str) -> bytes:
+def generate_speech_pcm(text: str, voice_id: str, voice_settings: dict = None) -> bytes:
     """
     Generate speech using ElevenLabs API with PCM output.
     Returns raw 16-bit signed little-endian PCM data at 24kHz.
+
+    Args:
+        text: The dialogue text to speak.
+        voice_id: ElevenLabs voice ID.
+        voice_settings: Per-line voice settings dict. Falls back to VOICE_SETTINGS.
     """
     url = f"{API_BASE}/text-to-speech/{voice_id}?output_format=pcm_24000"
 
@@ -90,7 +96,7 @@ def generate_speech_pcm(text: str, voice_id: str) -> bytes:
     data = {
         "text": text,
         "model_id": "eleven_multilingual_v2",
-        "voice_settings": VOICE_SETTINGS,
+        "voice_settings": voice_settings or VOICE_SETTINGS,
     }
 
     response = requests.post(url, json=data, headers=headers, timeout=30)
@@ -124,6 +130,9 @@ def process_encounter(encounter_path: str, output_dir: str, verbose: bool = True
     """
     Process a single encounter JSON and generate audio.
     Returns path to generated audio file.
+
+    Also writes a companion ground truth JSON with per-line emotion labels
+    and approximate timestamps for sentiment analysis benchmarking.
     """
     with open(encounter_path, 'r') as f:
         encounter = json.load(f)
@@ -144,13 +153,19 @@ def process_encounter(encounter_path: str, output_dir: str, verbose: bool = True
         print('='*60)
 
     audio_segments = []
+    ground_truth_lines = []
+    cumulative_ms = 0
 
     for i, line in enumerate(script):
         speaker_key = line['speaker']
         raw_text = line['text']
+        direction = line.get('direction', '')
 
         # Clean bracketed annotations before TTS (e.g., [examining], [baby crying])
         text = clean_text_for_tts(raw_text)
+
+        # Look up emotion from direction field
+        emotion_data = lookup_emotion(direction)
 
         speaker_info = speakers.get(speaker_key, {})
         voice_key = speaker_info.get('voice', 'female-1')
@@ -158,19 +173,41 @@ def process_encounter(encounter_path: str, output_dir: str, verbose: bool = True
 
         if verbose:
             truncated = text[:50] + "..." if len(text) > 50 else text
-            print(f"  [{i+1}/{len(script)}] {speaker_key}: {truncated}")
+            emotion_tag = f"[{emotion_data['emotion']}]"
+            print(f"  [{i+1}/{len(script)}] {speaker_key} {emotion_tag}: {truncated}")
+
+        # Record ground truth entry
+        gt_entry = {
+            "index": i,
+            "speaker": speaker_key,
+            "text": text,
+            "direction": direction,
+            "coarse_sentiment": emotion_data["coarse"],
+            "emotion": emotion_data["emotion"],
+            "voice_params": emotion_data["voice"],
+            "approx_start_ms": cumulative_ms,
+        }
 
         try:
-            pcm_data = generate_speech_pcm(text, voice_id)
+            pcm_data = generate_speech_pcm(text, voice_id, emotion_data["voice"])
             audio = pcm_to_numpy(pcm_data)
             audio_segments.append(audio)
 
+            # Calculate duration from PCM data (16-bit = 2 bytes per sample)
+            line_duration_ms = int(len(pcm_data) / 2 / SAMPLE_RATE * 1000)
+            cumulative_ms += line_duration_ms
+
             pause_ms = 500 if "?" in text else 350
             audio_segments.append(generate_silence(pause_ms))
+            cumulative_ms += pause_ms
 
         except Exception as e:
             print(f"    Warning: Failed line {i+1}: {e}")
-            audio_segments.append(generate_silence(2000))
+            fallback_ms = 2000
+            audio_segments.append(generate_silence(fallback_ms))
+            cumulative_ms += fallback_ms
+
+        ground_truth_lines.append(gt_entry)
 
     full_audio = np.concatenate(audio_segments)
 
@@ -189,8 +226,22 @@ def process_encounter(encounter_path: str, output_dir: str, verbose: bool = True
 
     duration_sec = len(full_audio) / SAMPLE_RATE
 
+    # Write ground truth JSON
+    gt_filename = f"{encounter_id}_ground_truth.json"
+    gt_path = os.path.join(output_dir, gt_filename)
+    ground_truth = {
+        "encounter_id": encounter_id,
+        "audio_file": output_filename,
+        "sample_rate": SAMPLE_RATE,
+        "duration_sec": round(duration_sec, 2),
+        "lines": ground_truth_lines,
+    }
+    with open(gt_path, 'w') as f:
+        json.dump(ground_truth, f, indent=2)
+
     if verbose:
-        print(f"\n  Output: {output_filename}")
+        print(f"\n  Audio: {output_filename}")
+        print(f"  Ground truth: {gt_filename}")
         print(f"  Duration: {duration_sec:.1f}s ({duration_sec/60:.1f} min)")
 
     return output_path
