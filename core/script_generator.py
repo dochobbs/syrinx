@@ -38,9 +38,19 @@ SPEAKER ROLES:
 - "teen" - Adolescent patient
 
 DIRECTION ANNOTATIONS (put in "direction" field ONLY, never in "text"):
-- Tones: "warm", "concerned", "reassuring", "rushed", "dismissive", "anxious", "frustrated", "calm"
-- Actions: "examining", "typing", "thinking", "explaining" (e.g., direction: "examining, reassuring")
-- Ambient context: "baby fussing", "child coughing", "pause" (e.g., direction: "baby crying in background")
+- The FIRST WORD of every direction MUST be one of these emotion keywords:
+  anxious, frustrated, reassuring, calm, concerned, dismissive, rushed, warm, relieved, urgent
+- You may append a brief action after a comma (e.g., "anxious, examining child" or "warm, greeting")
+- The first word MUST always be an emotion keyword from the list above
+- Choose emotions that match the speaker's state in context
+
+EMOTIONAL DIALOGUE PATTERNS (reflect emotion naturally in spoken text):
+- Anxious speakers may hesitate, repeat themselves, or use filler words
+- Frustrated speakers use shorter sentences, may interrupt
+- Calm/reassuring speakers use measured, complete sentences
+- Rushed speakers abbreviate, skip pleasantries
+- Concerned speakers ask follow-up questions, seek clarity
+- Keep it natural — these are real people in a clinic, not actors performing
 
 CRITICAL - TEXT FIELD RULES:
 - The "text" field contains ONLY spoken dialogue - words the person actually says out loud
