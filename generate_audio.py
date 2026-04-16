@@ -16,6 +16,7 @@ from scipy.io.wavfile import write as wav_write
 import time
 import requests
 from core.emotion_map import lookup_emotion
+from generate_emotion_key import generate_key
 
 # Configuration
 ELEVEN_API_KEY = os.environ.get("ELEVEN_API_KEY")
@@ -239,9 +240,14 @@ def process_encounter(encounter_path: str, output_dir: str, verbose: bool = True
     with open(gt_path, 'w') as f:
         json.dump(ground_truth, f, indent=2)
 
+    # Generate emotion answer key
+    key_path = generate_key(gt_path, output_dir)
+    key_filename = os.path.basename(key_path)
+
     if verbose:
         print(f"\n  Audio: {output_filename}")
         print(f"  Ground truth: {gt_filename}")
+        print(f"  Emotion key: {key_filename}")
         print(f"  Duration: {duration_sec:.1f}s ({duration_sec/60:.1f} min)")
 
     return output_path

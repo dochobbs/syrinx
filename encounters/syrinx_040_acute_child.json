@@ -1,0 +1,288 @@
+{
+  "metadata": {
+    "id": "syrinx_040",
+    "encounter_type": "acute",
+    "patient_age": "3 years",
+    "patient_name": "Child",
+    "chief_complaint": "recurring ear infections, parent frustrated with multiple ER visits",
+    "targets": [
+      "history_of_present_illness",
+      "differential_diagnosis",
+      "treatment_plan",
+      "preschool_readiness",
+      "antibiotic_stewardship",
+      "pain_management",
+      "disposition_decision",
+      "social_determinants",
+      "feeding_assessment",
+      "sleep_assessment",
+      "communication_quality"
+    ],
+    "duration_tier": "long",
+    "line_count": 45
+  },
+  "speakers": {
+    "parent": {
+      "voice": "female-2",
+      "style": "frustrated, sleep-deprived, feels dismissed by previous doctors"
+    },
+    "doctor": {
+      "voice": "female-1",
+      "style": "initially rushed but becomes warm and thorough"
+    }
+  },
+  "script": [
+    {
+      "speaker": "doctor",
+      "text": "Hi, I'm Dr. Martinez. What brings you in today?",
+      "direction": "rushed, entering room quickly"
+    },
+    {
+      "speaker": "parent",
+      "text": "We're here about Emma's ears again. This is like the fifth time in two months and I'm just... I don't know what else to do.",
+      "direction": "frustrated, adjusting fussy toddler"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Okay, so recurring ear infections. When did this current episode start?",
+      "direction": "rushed, looking at chart"
+    },
+    {
+      "speaker": "parent",
+      "text": "Three days ago. She's been pulling at her right ear, crying all night. We were just at Children's ER on Sunday and they said it looked fine, but I know something's wrong.",
+      "direction": "frustrated, bouncing child"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Has she had a fever with this episode?",
+      "direction": "rushed, preparing otoscope"
+    },
+    {
+      "speaker": "parent",
+      "text": "Yes, it got up to 102.5 yesterday. She's just miserable and I haven't slept in weeks. The ER doctor barely looked at her and said it was probably viral, but\u2014",
+      "direction": "frustrated, voice breaking slightly"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Let me take a look at her ears. Any discharge?",
+      "direction": "rushed, interrupting"
+    },
+    {
+      "speaker": "parent",
+      "text": "I... well, I was trying to tell you that we've been to three different doctors and no one seems to listen. There was some yellow stuff on her pillow yesterday morning.",
+      "direction": "frustrated, feeling unheard"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I'm sorry, I know this has been really hard on both of you. Let me slow down and really listen to what's been going on. You mentioned yellow discharge?",
+      "direction": "warm, putting down otoscope"
+    },
+    {
+      "speaker": "parent",
+      "text": "Thank you. Yes, and she's not eating anything. Usually she loves her crackers but she won't even take a sip of milk. She just cries and points to her ear.",
+      "direction": "relieved, child starting to fuss"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That sounds really tough. How many ear infections has she had total?",
+      "direction": "warm, sitting down"
+    },
+    {
+      "speaker": "parent",
+      "text": "This would be number six since January. The pediatrician said something about tubes but then said to wait and see. I'm tired of waiting and seeing her suffer.",
+      "direction": "frustrated, patting child's back"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Six infections in eight months is definitely concerning. Has she been in daycare?",
+      "direction": "concerned, taking notes"
+    },
+    {
+      "speaker": "parent",
+      "text": "Yes, since she was 18 months. I know that's probably part of it, but I have to work. Oh honey, I know you don't feel good.",
+      "direction": "frustrated, child whimpering"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Of course, and daycare exposure is very common. Any allergies or medications she's currently taking?",
+      "direction": "warm, understanding tone"
+    },
+    {
+      "speaker": "parent",
+      "text": "No allergies that we know of. She just finished amoxicillin last week for the last infection. The ER gave us more amoxicillin on Sunday but I haven't started it because they said her ears looked fine.",
+      "direction": "frustrated, child getting more agitated"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's actually good thinking on your part. Let's take a look at those ears now. Emma, I'm going to look in your ears with this special flashlight, okay?",
+      "direction": "warm, showing otoscope to child"
+    },
+    {
+      "speaker": "parent",
+      "text": "She's not going to like this. She's been through this so many times. Come here, baby girl.",
+      "direction": "anxious, holding child closer"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I'll be as gentle as I can. Looking at the right ear first... oh my. This is definitely infected. The eardrum is very red and bulging.",
+      "direction": "concerned, examining"
+    },
+    {
+      "speaker": "parent",
+      "text": "I knew it! I knew something was wrong. Why didn't they see this at the ER?",
+      "direction": "frustrated, vindicated"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Sometimes these can develop quickly, and you know your daughter best. Left ear looks okay. Let me check her throat and feel her neck.",
+      "direction": "reassuring, moving to examine throat"
+    },
+    {
+      "speaker": "parent",
+      "text": "Her throat's been looking red too. She's been drooling more than usual. Shh, Emma, almost done sweetie.",
+      "direction": "concerned, comforting crying child"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Her throat is quite red and I can feel some swollen lymph nodes. This looks like it could be related to the ear infection.",
+      "direction": "concerned, palpating neck"
+    },
+    {
+      "speaker": "parent",
+      "text": "So what do we do? I can't keep giving her the same antibiotic over and over. This is the third time with amoxicillin.",
+      "direction": "frustrated, child calming slightly"
+    },
+    {
+      "speaker": "doctor",
+      "text": "You're absolutely right. Since she's had multiple infections and recent amoxicillin, we need something stronger. I'm thinking azithromycin.",
+      "direction": "warm, explaining treatment"
+    },
+    {
+      "speaker": "parent",
+      "text": "Will that actually work this time? I'm just so tired of her being sick and me missing work and nobody taking this seriously.",
+      "direction": "frustrated, near tears"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I hear you, and I'm taking this very seriously. With six infections in eight months, we also need to talk about prevention.",
+      "direction": "warm, validating concerns"
+    },
+    {
+      "speaker": "parent",
+      "text": "The other doctor mentioned tubes but said to wait. How long are we supposed to wait while she suffers?",
+      "direction": "frustrated, seeking answers"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Given her history, I think it's time for an ENT referral. Six infections in eight months definitely meets the criteria for considering tubes.",
+      "direction": "warm, making decision"
+    },
+    {
+      "speaker": "parent",
+      "text": "Really? Finally, someone who's listening. What does that involve exactly?",
+      "direction": "relieved, hopeful"
+    },
+    {
+      "speaker": "doctor",
+      "text": "It's a very short outpatient procedure where tiny tubes are placed in the eardrums to help drain fluid and prevent infections.",
+      "direction": "reassuring, explaining"
+    },
+    {
+      "speaker": "parent",
+      "text": "Is it safe? She's still so little. Oh Emma, you're being such a good girl.",
+      "direction": "anxious, stroking child's hair"
+    },
+    {
+      "speaker": "doctor",
+      "text": "It's one of the most common pediatric procedures. Very safe and very effective for kids with recurrent infections like Emma.",
+      "direction": "reassuring, confident"
+    },
+    {
+      "speaker": "parent",
+      "text": "Okay, and in the meantime? She's still miserable and I need to get this infection cleared up.",
+      "direction": "concerned, practical"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I'll prescribe the azithromycin and some ibuprofen for pain and fever. The antibiotic is once daily for five days, much easier than amoxicillin.",
+      "direction": "warm, writing prescription"
+    },
+    {
+      "speaker": "parent",
+      "text": "Thank you. Should I keep her home from daycare?",
+      "direction": "concerned, thinking practically"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Yes, keep her home until she's fever-free for 24 hours and feeling better. Probably Wednesday or Thursday she could return.",
+      "direction": "warm, giving guidance"
+    },
+    {
+      "speaker": "parent",
+      "text": "And if this doesn't work? I mean, I really hope it does, but what if we're back here in a week?",
+      "direction": "anxious, worried about recurrence"
+    },
+    {
+      "speaker": "doctor",
+      "text": "If you're not seeing improvement by Thursday, or if she gets worse, call me directly. And I'll get that ENT referral submitted today.",
+      "direction": "reassuring, providing clear plan"
+    },
+    {
+      "speaker": "parent",
+      "text": "Thank you so much for actually listening and taking this seriously. I was starting to think I was crazy.",
+      "direction": "relieved, grateful"
+    },
+    {
+      "speaker": "doctor",
+      "text": "You're not crazy at all. You're being a good advocate for your daughter. Trust your instincts - you know her best.",
+      "direction": "warm, validating"
+    },
+    {
+      "speaker": "parent",
+      "text": "When should we hear about the ENT appointment?",
+      "direction": "calm, planning ahead"
+    },
+    {
+      "speaker": "doctor",
+      "text": "I'll put it in as urgent given her history. You should hear within a few days. They'll probably want to see her after this infection clears.",
+      "direction": "warm, reassuring"
+    },
+    {
+      "speaker": "parent",
+      "text": "Perfect. Come on Emma, let's go get your medicine and hopefully you'll feel better soon.",
+      "direction": "relieved, gathering belongings"
+    },
+    {
+      "speaker": "doctor",
+      "text": "Call if you have any questions or concerns. And remember, you did the right thing bringing her in.",
+      "direction": "warm, closing encounter"
+    }
+  ],
+  "_generated": {
+    "tool": "syrinx",
+    "version": "1.1.0",
+    "timestamp": "2026-04-16T05:10:46.728814",
+    "errors_injected": [
+      {
+        "category": "communication",
+        "type": "interrupted",
+        "severity": "moderate"
+      }
+    ],
+    "error_validation": {
+      "total_errors_requested": 1,
+      "high_confidence_detected": 0,
+      "likely_present": 0,
+      "success_rate": 0.0,
+      "details": {
+        "interrupted": {
+          "likely_present": false,
+          "confidence": "unknown",
+          "evidence": [
+            "No validator available for this error type"
+          ]
+        }
+      }
+    }
+  }
+}
