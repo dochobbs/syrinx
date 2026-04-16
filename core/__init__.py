@@ -15,3 +15,4 @@ from .ground_truth import (
     clean_ground_truth,
     validate_ground_truth
 )
+from .emotion_map import EMOTION_MAP, DEFAULT_EMOTION, EMOTION_KEYWORDS, lookup_emotion
