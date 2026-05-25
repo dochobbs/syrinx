@@ -50,6 +50,42 @@ app = FastAPI(
     version="1.0.0"
 )
 
+
+@app.on_event("startup")
+async def _validate_config():
+    """Fail fast if required API keys missing; warn on optional ones."""
+    import sys
+    if not os.environ.get("ANTHROPIC_API_KEY"):
+        print(
+            "FATAL: ANTHROPIC_API_KEY not set. Syrinx requires Claude API "
+            "for script generation. Set the env var and restart.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+    if not os.environ.get("ELEVEN_API_KEY"):
+        print(
+            "WARN: ELEVEN_API_KEY not set. /api/generate/audio will return "
+            "503 if invoked.",
+            file=sys.stderr,
+        )
+
+
+@app.get("/health")
+async def health():
+    """Liveness check. Reports whether optional API keys are configured."""
+    try:
+        patient_count = len(imported_patients)
+    except NameError:
+        patient_count = None
+    return {
+        "status": "healthy",
+        "service": "syrinx",
+        "anthropic_configured": bool(os.environ.get("ANTHROPIC_API_KEY")),
+        "eleven_configured": bool(os.environ.get("ELEVEN_API_KEY")),
+        "imported_patients": patient_count,
+    }
+
+
 # Serve static files
 app.mount("/assets", StaticFiles(directory=WEB_DIR / "assets"), name="assets")
 
