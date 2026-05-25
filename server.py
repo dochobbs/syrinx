@@ -414,8 +414,12 @@ async def session_websocket(websocket: WebSocket):
     }
 
     try:
-        # Initialize Anthropic client
+        # Initialize Anthropic client and register the session so disconnect
+        # cleanup actually has something to clear (previously sessions were
+        # never inserted into active_sessions, so the del-on-disconnect was a
+        # no-op — see W5.9).
         session["client"] = anthropic.Anthropic()
+        active_sessions[session_id] = session
 
         while True:
             data = await websocket.receive_json()
@@ -462,8 +466,20 @@ async def session_websocket(websocket: WebSocket):
     except Exception as e:
         print(f"WebSocket error: {e}")
     finally:
-        if session_id in active_sessions:
-            del active_sessions[session_id]
+        # W5.9: fully tear down session state on disconnect. The anthropic
+        # client doesn't hold a persistent socket but it does keep an httpx
+        # client with a connection pool, so close it explicitly if available.
+        stored = active_sessions.pop(session_id, None)
+        if stored is not None:
+            stored.get("history", []).clear()
+            stored["scenario"] = None
+            client = stored.get("client")
+            if client is not None and hasattr(client, "close"):
+                try:
+                    client.close()
+                except Exception:
+                    pass
+            stored["client"] = None
 
 @app.post("/api/session/message")
 async def session_message(request: MessageRequest):
