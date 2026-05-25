@@ -122,8 +122,23 @@ active_sessions: Dict[str, Dict] = {}
 # Cached encounters
 encounters_cache: Dict[str, Dict] = {}
 
-# Imported patients from Oread
-imported_patients: Dict[str, Dict] = {}
+# Imported patients from Oread.
+# Bounded LRU — older entries evicted when over MAX_PATIENTS, so a long-running
+# server doesn't accumulate memory. Restart still clears everything (in-memory
+# only, by design for the demo); persistent storage is roadmap work.
+from collections import OrderedDict
+
+MAX_IMPORTED_PATIENTS = int(os.environ.get("SYRINX_MAX_PATIENTS", "500"))
+imported_patients: "OrderedDict[str, Dict]" = OrderedDict()
+
+
+def _store_patient(patient_id: str, record: Dict) -> None:
+  """Insert/refresh a patient in the LRU; evict oldest if over capacity."""
+  if patient_id in imported_patients:
+    imported_patients.move_to_end(patient_id)
+  imported_patients[patient_id] = record
+  while len(imported_patients) > MAX_IMPORTED_PATIENTS:
+    imported_patients.popitem(last=False)
 
 # ============================================
 # ROUTES - STATIC
@@ -209,7 +224,7 @@ async def import_patient(data: Dict[str, Any]):
     try:
         patient_id = data.get("id") or str(uuid.uuid4())[:8]
         profile = parse_oread_patient(data)
-        imported_patients[patient_id] = {
+        _store_patient(patient_id, {
             "id": patient_id,
             "profile": {
                 "name": profile.name,
@@ -221,7 +236,12 @@ async def import_patient(data: Dict[str, Any]):
             },
             "raw": data,
             "imported_at": datetime.now().isoformat(),
-        }
+        })
+        print(
+            f"Imported patient {patient_id} (in-memory; lost on restart). "
+            f"Store size: {len(imported_patients)}/{MAX_IMPORTED_PATIENTS}",
+            file=sys.stderr,
+        )
         return {
             "success": True,
             "patient_id": patient_id,
@@ -339,6 +359,41 @@ async def serve_audio(filename: str):
     if not audio_path.exists():
         raise HTTPException(status_code=404, detail="Audio not found")
     return FileResponse(audio_path, media_type="audio/wav")
+
+
+@app.get("/api/audio")
+async def list_audio():
+    """List all generated audio files with size + mtime."""
+    files = []
+    for path in AUDIO_DIR.glob("*.wav"):
+        stat = path.stat()
+        files.append({
+            "filename": path.name,
+            "size_bytes": stat.st_size,
+            "modified": datetime.fromtimestamp(stat.st_mtime).isoformat(),
+        })
+    total_bytes = sum(f["size_bytes"] for f in files)
+    return {"count": len(files), "total_bytes": total_bytes, "files": files}
+
+
+@app.post("/api/audio/cleanup")
+async def cleanup_audio(days: int = 30):
+    """Delete audio files older than N days. Use ?days=0 to delete all."""
+    import time
+    cutoff = time.time() - (days * 86400)
+    deleted = []
+    bytes_freed = 0
+    for path in AUDIO_DIR.glob("*.wav"):
+        stat = path.stat()
+        if stat.st_mtime < cutoff:
+            bytes_freed += stat.st_size
+            deleted.append(path.name)
+            path.unlink()
+    return {
+        "deleted_count": len(deleted),
+        "bytes_freed": bytes_freed,
+        "files": deleted,
+    }
 
 # ============================================
 # ROUTES - INTERACTIVE SESSION
