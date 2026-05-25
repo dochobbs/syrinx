@@ -210,7 +210,14 @@ class ScriptGenerator:
         return "\n".join(lines)
 
     def _parse_json_response(self, content: str) -> Dict[str, Any]:
-        """Parse JSON from Claude's response, handling various formats."""
+        """Parse JSON from Claude's response, handling various formats.
+
+        Uses json.JSONDecoder().raw_decode() to find the first valid JSON
+        object in the response. This correctly handles cases where Claude
+        emits trailing prose after the JSON (the previous greedy
+        regex ``\\{[\\s\\S]*\\}`` would gobble everything up to the LAST
+        ``}`` and could swallow trailing text into the JSON blob).
+        """
         content = content.strip()
 
         # Remove markdown code blocks if present
@@ -227,16 +234,16 @@ class ScriptGenerator:
                     break
                 elif in_json:
                     json_lines.append(line)
-            content = "\n".join(json_lines)
+            content = "\n".join(json_lines).strip()
 
-        # Try to find JSON object
-        if not content.startswith("{"):
-            # Look for JSON object in the response
-            match = re.search(r'\{[\s\S]*\}', content)
-            if match:
-                content = match.group(0)
+        # Locate the first '{' and let raw_decode find a balanced object
+        start = content.find("{")
+        if start == -1:
+            raise json.JSONDecodeError("No JSON object found in response", content, 0)
 
-        return json.loads(content)
+        decoder = json.JSONDecoder()
+        obj, _end = decoder.raw_decode(content[start:])
+        return obj
 
     def parse_natural_language(self, nl_input: str) -> EncounterSpec:
         """

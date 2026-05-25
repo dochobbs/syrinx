@@ -6,6 +6,8 @@ Maps emotion keywords (from script direction fields) to:
 2. Benchmark labels (coarse sentiment + specific emotion)
 """
 
+import os
+import sys
 from typing import Dict, Any, Optional
 
 
@@ -78,6 +80,11 @@ def lookup_emotion(direction: Optional[str]) -> Dict[str, Any]:
   against EMOTION_MAP. Falls back to DEFAULT_EMOTION for unrecognized
   or missing directions.
 
+  When a non-empty ``direction`` is supplied but the first word is not a
+  recognized emotion keyword, a warning is printed to stderr so operators
+  notice that sentiment-label fidelity for that line has degraded to the
+  neutral default. Set ``SYRINX_EMOTION_WARN=0`` to silence (e.g. in tests).
+
   Args:
     direction: The direction field from a script line, e.g. "anxious, examining child"
 
@@ -88,4 +95,15 @@ def lookup_emotion(direction: Optional[str]) -> Dict[str, Any]:
     return DEFAULT_EMOTION
 
   first_word = direction.strip().split(",")[0].strip().lower()
-  return EMOTION_MAP.get(first_word, DEFAULT_EMOTION)
+  if first_word in EMOTION_MAP:
+    return EMOTION_MAP[first_word]
+
+  # Unrecognized keyword — surface the degradation so it isn't silent.
+  if os.environ.get("SYRINX_EMOTION_WARN", "1") != "0":
+    print(
+      f"WARN: emotion direction {first_word!r} not in EMOTION_MAP "
+      f"(from direction={direction!r}); falling back to DEFAULT_EMOTION. "
+      f"Known keywords: {', '.join(EMOTION_KEYWORDS)}",
+      file=sys.stderr,
+    )
+  return DEFAULT_EMOTION
