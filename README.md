@@ -4,7 +4,7 @@
 
 Part of the **MedEd Platform** -- see [metis/](../metis/) for platform orchestration.
 
-**Port:** 8003
+**Port:** 9103
 
 ---
 
@@ -233,7 +233,7 @@ Syrinx also runs as a FastAPI server for integration with the Metis Dashboard:
 
 ```bash
 python server.py
-# API at http://localhost:8003
+# API at http://localhost:9103
 ```
 
 | Endpoint | Method | Description |
@@ -268,7 +268,7 @@ Ground truth includes: chief complaint, HPI, review of systems, physical exam fi
 ```
 synvoice/
 ├── syrinx.py              # Main CLI entry point
-├── server.py              # FastAPI server (port 8003)
+├── server.py              # FastAPI server (port 9103)
 ├── generate_audio.py      # ElevenLabs TTS generator
 ├── core/
 │   ├── __init__.py
